@@ -1,0 +1,208 @@
+.bac {
+    background-color: rgb(45, 79, 107);
+    height: auto;
+}
+
+.form-control {
+    height: 31px;
+    width: 11rem;
+    padding: 0px;
+}
+
+label {
+    color: white;
+}
+
+th {
+    padding: 2px;
+    font-size: 15px;
+}
+
+#custom-search-input {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+}
+
+#custom-search-input .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#custom-search-input button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: black;
+}
+
+.search-query:focus+button {
+    z-index: 3;
+}
+
+.dd {
+    margin-left: 750px;
+}
+
+th {
+    background-color: #2bc0c7;
+    color: white;
+}
+
+.but {
+    margin-left: 780px;
+}
+
+.btn-info {
+    background-color: rgb(45, 79, 107);
+}
+
+.fa-plus-circle {
+    color: rgb(45, 79, 107)
+}
+
+span {
+    font-size: 16px;
+}
+
+.mat-form-field {
+    float: right;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: 0px;
+}
+
+.mat-input-element {
+    width: 80%;
+    background-color: white;
+    height: 30px;
+    margin-top: -2px;
+    border-radius: 5px;
+    margin-left: -6px;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
+.mat-header-cell {
+    border-right: 1px solid #dee2e6;
+    background-color: #2bc0c7;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.mat-cell,
+.mat-footer-cell {
+    padding: .75rem;
+    vertical-align: top;
+    color: #212529;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+::ng-deep .mat-paginator-range-actions {
+    width: 80%;
+    padding-left: 42%;
+}
+
+::ng-deep .mat-paginator-container button {
+    width: 21%;
+    background: rgb(45, 79, 107);
+    border-radius: 10px;
+    margin-right: 13px;
+    height: 30px;
+}
+
+::ng-deep .mat-paginator-container button:focus {
+    outline: 1px dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+::ng-deep .mat-paginator-navigation-previous:after {
+    content: "Previous";
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    top: -3px;
+    left: 17%;
+    position: absolute;
+}
+
+::ng-deep .mat-paginator-navigation-next:after {
+    content: "Next";
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    top: -3px;
+    left: 35%;
+    position: absolute;
+}
+
+::ng-deep .mat-paginator-icon {
+    width: 0px !important;
+}
+
+.noRecords {
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.excise-remittance-table {
+    padding: 0px;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.exciseremittance-back-btn {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    background: rgb(45, 79, 107);
+    border-radius: 10px;
+    height: 30px;
+    float: right;
+    margin: 15px 0;
+    width: 150px;
+    padding: 0 15px;
+}
+
+.btn-success {
+    cursor: pointer;
+    position: absolute;
+    right: 24px;
+}
+
+.fa-search {
+    font-size: 2rem;
+    color: #ffffff;
+}

@@ -1,0 +1,78 @@
+<section class="content-header">
+  <div class="header-icon">
+    <i class="fa fa-flask"></i>
+  </div>
+  <div class="header-title">
+    <h1>Lab Samples</h1>
+    <small>Detailed Sample Reports</small>
+  </div>
+</section>
+<!-- Content Wrapper. Contains page content -->
+<section class="content cmn-all">
+  <div class="row">
+    <div class="panel panel-bd lobipanel lobidrag">
+      <div class="panel-body">
+        <div class="buttonexport" *ngIf="isAddPermission">
+          <a (click)="sampleFormWindow()" class="btn btn-add"> <i class="fa fa-plus"></i>
+            Sample</a>
+        </div>
+        <div class="colxs-12 col-md-6 float-left form-group" [formGroup]="labSampleListForm">
+          <label class="col-sm-3 pl-0 control-label" for="startDate">Start Date :</label>
+          <div class="col-sm-4 float-left">
+            <input class="form-control" placeholder="Start Date..." type="date" id="startDate" formControlName="startDate" (change)="validateDate()">
+          </div>
+          <label class="col-sm-3 pr-0 control-label" for="endDate">End Date :</label>
+          <div class="col-sm-4 float-left">
+            <input class="form-control" placeholder="End Date..." type="date" id="endDate" formControlName="endDate" (change)="validateDate()">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 float-left form-group">
+          <div class="col-sm-2 float-left">
+            <select name="" id="">
+              <option value="">1</option>
+              <option value="">2</option>
+            </select>
+          </div>
+          <label class="col-sm-3 pr-0 control-label" for="search">Search :</label>
+          <div class="col-sm-7 float-left">
+            <input class="form-control" type="search" [(ngModel)]="searchParam" name="searchParam" type="text" placeholder="Search"
+              (ngModelChange)="searchRecords()">
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr class="info">
+                <th>Referrence No</th>
+                <th>Excise Lab</th>
+                <th>Date</th>
+                <th>Sample Type</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let labSample of labSampleList | paginate: { itemsPerPage: recordsPerPage, currentPage: page }">
+                <td>{{ labSample.referenceNum }}</td>
+                <td>{{ labSample.exciseLab }}</td>
+                <td>{{ labSample.date }}</td>
+                <td>{{ labSample.sampleType }}</td>
+                <td>
+                  <div (click)="indentFormEvent()" class="checkbox checkbox-info">
+                    <input id="checkbox1" type="checkbox">
+                    <label for="checkbox1">01</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="text-right">
+          <button class="btn btn-success" style="border-radius: 37px;margin-right: 1rem;" [ngClass]="{ disabled: pager.currentPage === 1 }" [disabled]="pager.currentPage === 1" (click)="setPage(pager.currentPage - 1)">Previous</button>
+          <button class="btn btn-success"
+            style="border-radius: 37px;padding-right: 21px;padding-left: 21px;" [ngClass]="{ disabled: pager.currentPage === pager.totalPages }" [disabled]="pager.currentPage === pager.totalPages" (click)="setPage(pager.currentPage + 1)">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Content Wrapper. Contains page content -->

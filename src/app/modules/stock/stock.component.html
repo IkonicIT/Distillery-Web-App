@@ -1,0 +1,53 @@
+<div *ngIf="hasStockPerm">
+<div style="display: inline-block;">
+    <div style="float: inline-start;">
+<ejs-accumulationchart [title]='allStockTitle' [legendSettings]='allStockLegend' [tooltip]='allStockToolTip'>
+    <e-accumulation-series-collection>
+        <e-accumulation-series type='Pie' [dataSource]='data' xName='name' yName='value' [dataLabel]='allStockLabel' >
+
+        </e-accumulation-series>
+    </e-accumulation-series-collection>
+</ejs-accumulationchart></div>
+<div style="float: left;">
+<ejs-accumulationchart [title]='distilleryTitle' [legendSettings]='allStockLegend' [tooltip]='allStockToolTip'>
+    <e-accumulation-series-collection>
+        <e-accumulation-series type='Pie' [dataSource]='data' xName='name' yName='value' [dataLabel]='allStockLabel' >
+
+        </e-accumulation-series>
+    </e-accumulation-series-collection>
+</ejs-accumulationchart></div>
+<div style="float: left;">
+<ejs-accumulationchart [title]='retailTitle' [legendSettings]='allStockLegend' [tooltip]='allStockToolTip'>
+    <e-accumulation-series-collection>
+        <e-accumulation-series type='Pie' [dataSource]='data' xName='name' yName='value' [dataLabel]='allStockLabel' >
+
+        </e-accumulation-series>
+    </e-accumulation-series-collection>
+</ejs-accumulationchart></div>
+</div>
+
+
+<!-- <div class="example-button-row row">
+    <div class="col-md-12">
+    <button class="pull-right" mat-raised-button color="primary" (click)="openPopup()">Add</button>
+</div>
+</div> -->
+<div class="container">
+    <div style="height: 40px;">&nbsp;</div>
+    <!-- <div class="col-md-3 select-language">
+        <select class="form-control">
+        <option>IML STOCK</option>
+        <option>BEER STOCK</option>
+        <option>SALE PERCENTAGE</option>
+    </select>
+    </div> -->
+    <div class="col-md-9"></div>
+</div>
+<custom-grid [rowData]="rowData" [columnDefs]="columnDefs">
+</custom-grid>
+</div>
+<div *ngIf="!hasStockPerm">
+    <app-no-privileges></app-no-privileges>
+</div>
+
+

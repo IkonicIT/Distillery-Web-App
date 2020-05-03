@@ -1,0 +1,27 @@
+li{
+    display: inline;
+}
+img{
+    padding-left: 1rem;
+    /* padding-right: 0.55rem; */
+    
+}
+
+a{
+    text-decoration: none;
+    color: rgb(8, 8, 8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+sub{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.item{
+    width: 20%;
+    display: inline-block;
+    margin-right: 2%;
+}
+.card-label{
+    margin:0;
+    text-align: center;
+}

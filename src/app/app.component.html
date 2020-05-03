@@ -1,0 +1,11 @@
+<div [ngClass]="{'sidebar-collapse' : !toggleSideBar}">
+<app-dist-header *ngIf="isLoggedIn"></app-dist-header>
+ <app-loader></app-loader> 
+<div style="overflow-y:auto;background-color:#f1f3f6;overflow-x:hidden;">
+    <div style="height: calc(100vh - 147px);overflow: auto;display: flex;float:left" *ngIf="isLoggedIn">
+        <app-sidebar></app-sidebar>
+      </div>
+    <router-outlet></router-outlet>
+</div>
+<app-dist-footer *ngIf="isLoggedIn"></app-dist-footer>
+</div>

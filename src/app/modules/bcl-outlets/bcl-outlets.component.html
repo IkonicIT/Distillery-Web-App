@@ -1,0 +1,167 @@
+
+<div *ngIf="hasBclOutperm">
+<table>
+    <thead>
+        <th *ngxPermissionsOnly="['home/bcl-outlets/outlet-profiles']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/bcl-outlets/outlet-profiles'" [routerLink]="['../bcl-outlets/outlet-profiles']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/BCL.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Outlet Profiles</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/bcl-outlets/outlet-returns']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/bcl-outlets/outlet-returns'" [routerLink]="['../bcl-outlets/outlet-returns']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/BCL.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Outlet Returns</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/bcl-outlets/outlet-sales']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/bcl-outlets/outlet-sales'" [routerLink]="['../bcl-outlets/outlet-sales']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/BCL.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Outlet Sales</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/bcl-outlets/outlet-status']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/bcl-outlets/outlet-status'" [routerLink]="['../bcl-outlets/outlet-status']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/BCL.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Outlet Status</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasBclOutperm">
+    <app-no-privileges></app-no-privileges>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fliud">
+    <div class="row background">
+      <div class="col">
+         
+      </div>
+      <div class="col-12 text-right col-lg-4">
+             
+      </div>
+  </div>
+  <div class="row" id="wrapper">
+    
+    <div class="col-10" style="padding-top: 1%;">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../bcl-outlets/outlet-profiles']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/11.png" style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Outlet Profiles</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../bcl-outlets/outlet-returns']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/11.png" style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Outlet Returns</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../bcl-outlets/outlet-sales']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/11.png" style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Outlet Sales</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../bcl-outlets/outlet-status']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/11.png" style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Outlet Status</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+             -->

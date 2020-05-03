@@ -1,0 +1,74 @@
+.bac{background-color: rgb(45, 79, 107);height: auto;}
+.form-control{height: 30px;}
+label{color: white;}
+
+
+#custom-search-input {
+    margin:0;
+    margin-top: 10px;
+    padding: 0;
+    
+}
+
+#custom-search-input .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#custom-search-input button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color:black;
+}
+
+.search-query:focus + button {
+    z-index: 3;   
+}
+.dd{margin-left: 750px;}
+th{background-color: #2bc0c7;color: white;}
+.but{margin-left: 1050px;}
+.btn-info{background-color:rgb(45, 79, 107) ;}
+.fa-plus-circle{color:rgb(45, 79, 107) }
+span{font-size: 16px;}
+
+button{
+    background-color:#2e5d74;
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px;
+
+}
+#button{
+    margin-left: 1rem;
+    margin-top: 48px;
+    
+} 
+.form-inline .form-control {
+    display: inline-block;
+    width: 140px;
+    vertical-align: middle;
+}

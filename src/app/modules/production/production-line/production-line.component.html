@@ -1,0 +1,57 @@
+
+
+
+<nav class="navbar navbar-expand-lg navbar navbar-dark ">
+    <div style="margin-top: -5rem;" >
+        <select name="" id="">
+            <option value="">1</option>
+            <option value="">2</option>
+        </select>
+        <label for="" id="search" style="margin-left: 38rem;">
+            Search :
+            <input type="search">
+        </label>
+    </div>
+</nav>
+
+<div class="bs-example">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Line Name</th>
+                <th>Created On</th>
+                <th>Action</th>
+                <th>Heal Feed</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>line -07</td>
+                <td>11-11-19</td>
+                <td><img src="https://img.icons8.com/dotty/20/000000/hashtag-activity-feed.png"></td>
+                <td style="color: blue;cursor: pointer;" (click)="allocate()">Allocate Spools</td>
+
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>12=3=18</td>
+                <td><img src="https://img.icons8.com/dotty/20/000000/hashtag-activity-feed.png"></td>
+                <td style="color: blue;cursor: pointer;" (click)="allocate()">Allocate Spools</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>12-2-18</td>
+                <td><img src="https://img.icons8.com/dotty/20/000000/hashtag-activity-feed.png"></td>
+                <td style="color: blue;cursor: pointer;" (click)="allocate()">Allocate Spools</td>
+            </tr>            
+        </tbody>
+    </table>
+</div>
+<p *ngIf="isAddPerm"><img src="https://img.icons8.com/color/48/000000/plus--v1.png" style="cursor: pointer;" width="15" height="15" (click)="productionLine()"> Production Line</p>
+<div id="button">
+    
+    <button>previous</button>
+    <button>Next</button>
+</div>

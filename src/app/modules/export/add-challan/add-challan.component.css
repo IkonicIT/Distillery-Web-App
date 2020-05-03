@@ -1,0 +1,43 @@
+input{
+    width:100px;
+    margin-right: 20px;
+} 
+label{
+    color: white;
+}
+
+
+.navbar-dark{
+    background-color: #2e5d74!important;
+    height: 48px;
+}
+
+.table-striped{
+    background: white;
+    
+}
+thead{
+    background: #2e5d74;
+    color: white;
+}
+tbody{
+    font-weight: 450;
+}
+button{
+    background-color:#2e5d74;
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px;
+
+}
+#button{
+    float: right;
+    margin-top: -48px;
+    
+} 

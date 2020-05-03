@@ -1,0 +1,87 @@
+<div [formGroup]="labSampleForm">
+<div>
+    <h1 mat-dialog-header >Excise Lab Information</h1>
+    </div>
+    <div mat-dialog-content class="type" >
+        <label for="">Sample Type
+            <select name="ENA" id="" formControlName="sampleType">
+                <option value="ENA">ENA</option>
+            </select>
+        </label>
+    </div>
+    <div class="refNo">
+        <label for="">
+            Ref.No 
+            <input type="text" style="height: 24px;" formControlName="referenceNum">
+        </label>
+    </div>
+    <div class="date">
+        <label for="">Date
+            <input type="date" style="height: 24px;" formControlName="date">
+        </label>
+    </div>
+    <div style="margin-left: 19rem;">
+        <label for="">Sent Through
+        <textarea name="" id="" cols="30" rows="2"  formControlName="sentThrough"></textarea>
+    </label>
+    </div>
+    <div style="margin-left: 15rem;" >
+        <label for="">
+            Signature of the EC/HC 
+            <input type="file" placeholder="browse" style="font-weight: 500;" formControlName="signatureFile">
+        </label>
+    </div>
+    <div class="table" style="font-size: small;">
+    <table class="table table-bordered"  >
+        <thead>
+        <tr style="background-color:#2e5d74;color: white;"  >
+            <th colspan="6"  >Lab Information</th>
+        </tr  >
+        <tr>
+            <th><img src="https://img.icons8.com/material-sharp/24/000000/overview-pages-3.png"></th>
+            <th>Sl.No</th>
+            <th>Description of Sample</th>
+            <th>DTP No. / Lot No.</th>
+            <th>Sample Qty(ml)</th>
+            <th>Sender's Facsimile Seal</th>
+            <th></th>
+        </tr> 
+    </thead>
+    <tbody>
+        <ng-container formArrayName="labInformation" *ngIf="labInformation['controls'].length">
+            <ng-container *ngFor="let lab of labInformation['controls']; let i = index">
+                <tr [formGroupName]="i">
+                    <td><img src="https://img.icons8.com/material-sharp/24/000000/overview-pages-3.png"></td>
+                    <td>
+                        <input type="text" name="slNo" formControlName="slNo">
+                    </td>
+                    <td>
+                        <input type="text" formControlName="description" placeholder="start typing product code or name">
+                    </td>
+                    <td>
+                        <input type="text" formControlName="lotNo">
+                    </td>
+                    <td>
+                        <input type="text" formControlName="sampleQnty">
+                    </td>
+                    <td>
+                     <input type="file" style="font-size: small;" formControlName="dataFile">   
+                    </td>
+                    <td>
+                        <button style="background-color: #2e5d74;width: 100px;border-radius: 7px;margin-left: 0.5rem;" (click)="removeRow(i)" >Remove Row</button>
+                    </td>
+                </tr>
+            </ng-container>
+            </ng-container>
+    </tbody>
+         </table>
+    </div>
+</div>
+        
+                
+            <button style="background-color: #2e5d74;width: 100px;border-radius: 7px;" (click)="addNewRow()">New Row</button>
+            <button style="background-color: #2e5d74;width: 100px;border-radius: 7px;margin-left: 33.5rem;"  (click)="save()" >Save</button>
+            <button mat-dialog-close style="background-color: #2e5d74;width: 100px;border-radius: 7px;margin-left: 0.5rem;"   >Cancel</button>
+        
+        
+        

@@ -1,0 +1,31 @@
+<div class="content-wrapper">
+  <section class="content-header">
+    <div class="header-icon">
+      <i class="fa fa-tachometer"></i>
+    </div>
+    <div class="header-title">
+      <h1>Dashboard</h1>
+      <small>Detailed all Modules</small>
+    </div>
+  </section>
+  <section class="content">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngFor="let item of sideNavData?.featuresData">
+        <div id="cardbox1">
+          <div class="statistic-box">
+              <div class="row">
+                <div class="col-12">
+                  <a (click)="navigate(item)"><img [src]="item.imageURL" style="height: 40px;" class="img-fluid" /></a>
+                  <div class="counter-number pull-right">
+                    <i title="Add to Favorite" class="fa fa-heart fa-1x float-right" [ngClass]="{'dark-favourite': item.isFav}"(click)="addFav($event, item.key)"></i>
+                  </div>
+                  <a (click)="navigate(item)"><h3>{{item.title}}</h3></a>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

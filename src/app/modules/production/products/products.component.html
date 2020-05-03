@@ -1,0 +1,67 @@
+<div class="container-fluid">
+    <div class="row">
+     
+        <div class="col-12 bac">
+         
+            <div class="example-header">
+              <mat-form-field>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+              </mat-form-field>
+            </div>
+           </div>
+          
+  
+<div class="col-md-12">
+    
+  
+  <div class="example-container mat-elevation-z8">
+  
+    <mat-table [dataSource]="dataSource" matSort>
+  
+      <ng-container matColumnDef="productCode">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Product Code </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.productCode}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="brandName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Brand Name </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.brandName}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="size">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Size </mat-header-cell>
+        <mat-cell *matCellDef="let row" > {{row.size}} </mat-cell>
+      </ng-container>
+     
+      <ng-container matColumnDef="packType">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Pack Type </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.packType}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="basePrice">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Base Price </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.basePrice }} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="exciseDuty">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Excise Duty </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.exciseDuty }} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="mrp">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> MRP </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.mrp}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="segment">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Segment </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.segment}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+    <p class="noRecords" *ngIf="response.length<=0">No Records found</p>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>
+
+
+</div>
+</div>

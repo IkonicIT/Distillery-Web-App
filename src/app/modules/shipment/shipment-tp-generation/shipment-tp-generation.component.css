@@ -1,0 +1,26 @@
+h1{
+    padding: 6px;
+    font-size: 1rem;
+    text-align: center;
+}
+th{
+    background: #2e5d74;
+    border: 1px solid;
+    border-color: white;
+    color: white;
+    padding-right: 30px;
+    width:12rem;
+    
+}
+td{
+    text-align: center;
+    
+}
+button{
+    margin-left: 19rem;
+    background: #2e5d74;
+    color: white;
+}
+label{
+    font-weight: 500;
+}

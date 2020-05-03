@@ -1,0 +1,25 @@
+button{
+    background: #2e5d74;
+    
+    padding: 8px 8px 8px 8px;
+    margin-left: 55rem;
+    margin-bottom: 1rem;
+}
+
+th{
+    background: #2e5d74;
+    border-right: 1px solid;
+    border-color: white;
+    color: white;
+    font-weight: 500;
+}
+table{
+    border: 1px solid;
+    border-color: black;
+    text-align:center;
+}
+
+td{
+    border-right: 1px solid;
+    border-right-color: gray;
+}

@@ -1,0 +1,14 @@
+.container {
+    width: 70%;
+  }
+  body {
+    background-color: #2bc0c7;
+  }
+  label {
+    font-size: 1.1em;
+    font-style: oblique;
+  }
+  input[type="text"] {
+    font-size: 1em;
+  }
+  

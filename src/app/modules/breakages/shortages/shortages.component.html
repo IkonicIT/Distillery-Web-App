@@ -1,0 +1,80 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-12 bac">
+            <p></p>
+            <form class="form-inline" action="/action_page.php">
+                <label for="date">Start Date :</label>
+                <input type="date" class="form-control" placeholder="" id="email" (change)="selectStartDate($event)">&nbsp;
+                <label for="pwd">End Date:</label>
+                <input type="date" class="form-control" placeholder="" id="pwd" (change)="selectEndDate($event)">&nbsp;
+                <!-- <select class="form-control">
+                    <option>Bottle Breakage</option> -->
+                <!-- <option>CSD</option> -->
+                <!--                  
+                </select>&nbsp; -->
+                &nbsp;
+                <i class="fa fa-search" (click)="searchBreakage($event)" aria-hidden="true"></i> &nbsp;
+                <i class="fa fa-print" (click)="print()"></i> &nbsp;
+                <button type="button" class="btn btn-success" (click)="exportexcel()">Export to Excel</button>
+                <!-- <img src="https://img.icons8.com/officel/30/000000/label-printer.png" class="img-print"> -->
+            </form>
+            <div class="example-header">
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="col-md-12 shortage-table">
+
+
+            <div class="example-container mat-elevation-z8">
+
+                <mat-table [dataSource]="dataSource" matSort>
+
+                    <ng-container matColumnDef="shortageId">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Shortage ID </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.shortageId}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="scannedDate">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.scannedDate | date: 'dd-MM-yyyy'}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="caseBarNo">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Case BarNo </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.caseBarNo}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="healNumber">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Heal Number </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.healNumber}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="productCode">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Product Code </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.productCode }} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="productType">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Product Type </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.productType }} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="batchNo">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Batch No </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.batchNo }} </mat-cell>
+                    </ng-container>
+
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;">
+                    </mat-row>
+                </mat-table>
+                <p class="noRecords" *ngIf="response.length<=0">No Records found</p>
+                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+                <button class="shortages-back-btn" (click)="navToShortages()"> Back</button>
+            </div>
+
+
+        </div>
+    </div>

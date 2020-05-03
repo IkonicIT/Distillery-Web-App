@@ -1,0 +1,282 @@
+<div *ngIf="hasShipmentPerm">
+<table>
+
+    <thead>
+        <th *ngxPermissionsOnly="['home/shipment/shipment-ofs']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/shipment/shipment-ofs'" [routerLink]="['../shipment/shipment-ofs']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/17.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>OFS</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/shipment/shipment-shipments']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/shipment/shipment-shipments'" [routerLink]="['../shipment/shipment-shipments']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/17.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Shipments</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/shipment/shipment-router']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/shipment/shipment-router'" [routerLink]="['../shipment/shipment-router']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/17.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Route</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+       
+
+
+    </thead>
+</table>
+
+<table>
+    
+    <thead>
+        <th *ngxPermissionsOnly="['home/shipment/shipment-distillery']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/shipment/shipment-distillery'" [routerLink]="['../shipment/shipment-distillery']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/17.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Shipment-Distillery</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+</div>
+</th>
+<th *ngxPermissionsOnly="['home/shipment/shipment-revalidation']"><div class="col-10" style="padding-top: 1%;">
+    <div class="row">
+        <div class="col-xl-2 col-md-3 col-6" >
+            <div class="card card1">
+                <a [appSubMenu]="'home/shipment/shipment-revalidation'" [routerLink]="['../shipment/shipment-revalidation']">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="../../assets/img/17.png" style="height: 40px;" class="img-fluid" />
+                            <h6>TP Revalidation</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</th>
+<th *ngxPermissionsOnly="['home/shipment/shipment-depot']"><div class="col-10" style="padding-top: 1%;">
+    <div class="row">
+        <div class="col-xl-2 col-md-3 col-6" >
+            <div class="card card1">
+                <a [appSubMenu]="'home/shipment/shipment-depot'" [routerLink]="['../shipment/shipment-depot']">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="../../assets/img/17.png" style="height: 40px;" class="img-fluid" />
+                            <h6>Depot</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</th>
+       
+
+
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasShipmentPerm">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fliud">
+    <div class="row background">
+      <div class="col">
+         
+      </div>
+      <div class="col-12 text-right col-lg-4">
+             
+      </div>
+  </div>
+  <div class="row" id="wrapper">
+    
+    <div class="col-10" style="padding-top: 1%;">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../shipment/shipment-ofs']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="https://img.icons8.com/ultraviolet/40/000000/robot.png">
+                            </div>
+                            <div class="col-9">
+                                <h3>OFS</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../shipment/shipment-shipments']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="https://img.icons8.com/ultraviolet/40/000000/robot.png">
+                            </div>
+                            <div class="col-9">
+                                <h3>Shipments</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../shipment/shipt-tp-vehicle-accident']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="https://img.icons8.com/ultraviolet/40/000000/robot.png">
+                            </div>
+                            <div class="col-9">
+                                <h3>TP Vehicle Accident </h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            
+
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../shipment/shipment-router']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="https://img.icons8.com/ultraviolet/40/000000/robot.png">
+                            </div>
+                            <div class="col-9">
+                                <h3>Route </h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+            
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../shipment/shipment-revalidation']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="https://img.icons8.com/ultraviolet/40/000000/robot.png">
+                            </div>
+                            <div class="col-9">
+                                <h3>TP Revalidation</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+            <!-- <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../home']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/img/12.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Alerts</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+            <!-- <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../home']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/img/18.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Feedback</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+        <!-- </div>
+    </div>
+  </div> -->
+  <!-- <div class="row background">
+    <div class="col-12">
+        <h6>Excise Department,Andhra Pradesh,India</h6>
+    </div>
+  </div> -->
+  <!-- </div> -->
+
+
+
+
+
+
+
+
+ 

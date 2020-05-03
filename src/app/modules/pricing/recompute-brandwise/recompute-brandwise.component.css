@@ -1,0 +1,14 @@
+table{
+    border: 1px solid;
+    border-color: thistle;
+    border-right: 1px solid;
+    border-right-color: thistle;
+}
+button{
+    background: rgb(45,79,107);
+    color: white;
+    padding: 13px;
+    font-weight: 700;
+    border-style: hidden;
+    border-radius: 11px;
+}

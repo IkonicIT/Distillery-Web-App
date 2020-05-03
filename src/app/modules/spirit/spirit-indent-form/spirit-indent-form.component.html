@@ -1,0 +1,48 @@
+<div class="modal-body-cont">
+  <div class="btn-group">
+    <button class="btn btn-exp btn-sm" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bars"></i> CPE
+      Indent Form</button>
+    <ul class="dropdown-menu exp-drop" role="menu">
+      <li>
+        <a href="#">
+          <img src="../../../../assets/images/printer-door-open.png" width="24" alt="logo"> Print</a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="../../../../assets/images/pdf.png" width="24" alt="logo"> PDF</a>
+      </li>
+
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped cmn-table-td">
+          <thead>
+            <tr class="info">
+              <th>Ref.No</th>
+              <th>Request Qty</th>
+              <th>Subject</th>
+              <th>Liecnse Qty</th>
+              <th>Recived Qty</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{spiritData.refNum}}</td>
+              <td>{{spiritData.requestedQty}}</td>
+              <td>{{spiritData.subject}}</td>
+              <td>NA</td>
+              <td>{{spiritData.receivedQty}}</td>
+              <td>{{spiritData.type}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button mat-dialog-close type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
+</div>

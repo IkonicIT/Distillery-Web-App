@@ -1,0 +1,10 @@
+{
+    "/posts": {
+      "target": "http://18.216.158.31:9081",
+      "secure": true,
+      "pathRewrite": {
+      "^/posts": ""
+    },
+      "changeOrigin": true
+    }
+  }

@@ -1,0 +1,12 @@
+.exciseduty-back-btn {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    background: rgb(45, 79, 107);
+    border-radius: 10px;
+    height: 30px;
+    float: right;
+    margin: 15px 0;
+    width: 150px;
+    padding: 0 15px;
+}

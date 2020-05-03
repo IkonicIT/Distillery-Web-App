@@ -1,0 +1,36 @@
+.ag-theme-balham .ag-header-cell {
+    background-color: #000;
+}
+
+::ng-deep .ag-theme-balham .ag-header {
+    background-color: #2d4f6b;
+    color: #ffffff;
+}
+
+.custom-grid {
+    height: 100%;
+    margin-left: 5px;
+}
+
+.search-container {
+    margin-top: -40px;
+    display: flex;
+}
+
+.searchlabel {
+    width: 120px;
+    color: #337ab7;
+}
+
+.gotohome-btn {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    background: rgb(45, 79, 107);
+    border-radius: 10px;
+    height: 30px;
+    width: 150px;
+    padding: 0 15px;
+    position: absolute;
+    right: 0px;
+}

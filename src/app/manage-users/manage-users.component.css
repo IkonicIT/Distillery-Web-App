@@ -1,0 +1,128 @@
+.navbar {
+    border-radius: 0px;
+    background-color: #2BC0C7 !important;
+    padding-bottom: 25px;
+}
+
+a.navbar-brand {
+    color: white;
+    padding-top: 30px;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+ul.navbar-nav.ml-auto {
+    display: grid;
+    padding-top: 13px;
+    float: right;
+}
+
+ul.navbar-nav.ml-auto h4,
+ul.navbar-nav.ml-auto h6 {
+    color: white;
+}
+
+ul.navbar-nav.ml-auto {
+    display: grid;
+    padding-top: 13px;
+    float: right;
+}
+
+.footer {
+    background: #2bc0c7;
+    padding: 53px;
+}
+
+.footer a {
+    color: white;
+    font-size: 20px;
+}
+
+section.suply-login {
+    width: 100%;
+    margin: 0 auto;
+    background-image: url(../../assets/images/loginbg.jpg);
+    margin-top: -20px;
+    background-size: contain;
+    padding: 49.5px;
+}
+
+.select-language {
+    float: right;
+}
+
+.login-form {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.login-form label {
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    color: #403866;
+    line-height: 1.2;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    height: 46px;
+    padding: 0 14px 0 13px;
+}
+
+.inline-btn button {
+    font-size: 16px;
+    color: #fff;
+    width: 45%;
+    margin: 0 auto;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    height: 45px;
+    background-color: #2bc0c7;
+    border-radius: 3px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    border: 1px solid #2bc0c7;
+}
+
+.inline-btn {
+    display: inline-flex;
+    width: 100%;
+}
+
+@media only screen and (min-width:300px) and (max-width:700px) {
+    section.suply-login {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: -20px;
+        background-size: cover;
+        padding: 30px;
+    }
+    .login-form {
+        width: 100%;
+        margin: 0 auto;
+    }
+    a.navbar-brand {
+        color: white;
+        padding-top: 5px;
+    }
+}

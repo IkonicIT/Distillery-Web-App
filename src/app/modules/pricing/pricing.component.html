@@ -1,0 +1,335 @@
+
+<div *ngIf="hasPricingPerm">
+<table>
+    <thead>
+        <th *ngxPermissionsOnly="['home/pricing/basic-price-rules']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/pricing/basic-price-rules'" [routerLink]="['../pricing/basic-price-rules']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/pricing.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Basic Price Rules</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/pricing/coomputed-prices']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/pricing/coomputed-prices'" [routerLink]="['../pricing/coomputed-prices']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/pricing.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Computed Prices</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/pricing/mrp-performance']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/pricing/mrp-performance'" [routerLink]="['../pricing/mrp-performance']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/pricing.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>MRP Performance</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/pricing/offered-basic-price']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/pricing/offered-basic-price'" [routerLink]="['../pricing/offered-basic-price']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/pricing.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Offered Basic Prices</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/pricing/ofs-approval']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/pricing/ofs-approval'" [routerLink]="['../pricing/ofs-approval']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/pricing.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>OFS Approval</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+    </thead>
+    <thead>
+        <th *ngxPermissionsOnly="['home/pricing/recompute']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/pricing/recompute'" [routerLink]="['../pricing/recompute']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/pricing.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Re compute</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/pricing/recompute-brandwise']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/pricing/recompute-brandwise'" [routerLink]="['../pricing/recompute-brandwise']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/pricing.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Recompute Brandwise</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/pricing/state-levy']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/pricing/state-levy'" [routerLink]="['../pricing/state-levy']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/pricing.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>State Levy</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <!-- <th><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [routerLink]="item.navigationURL">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/pricing.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>prices</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [routerLink]="item.navigationURL">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/pricing.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>prices</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th> -->
+    </thead>
+    
+</table>
+</div>
+<div *ngIf="!hasPricingPerm">
+    <app-no-privileges></app-no-privileges>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fliud">
+    <div class="row background">
+      <div class="col">
+         
+      </div>
+      <div class="col-12 text-right col-lg-4">
+             
+      </div>
+  </div>
+  <div class="row" id="wrapper">
+    
+    <div class="col-10" style="padding-top: 1%;">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../pricing/basic-price-rules']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/19.png"  style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Basic Price Rules</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+           
+                    <div class="col-3">
+                        <div class="card">
+                            <a  [routerLink]="['../pricing/coomputed-prices']">
+                                <div class="row">
+                                    <div class="col-3 pr-0">
+                                        <img src="../../assets/Icons/19.png"  style="height: 40px;" class="img-fluid"/>
+                                    </div>
+                                    <div class="col-9">
+                                        <h3>Computed Prices</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+   
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../pricing/mrp-performance']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/19.png"  style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Mrp Performance</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+  
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../pricing/offered-basic-price']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/19.png"  style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Offered Basic Price</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+          </div>
+          
+   
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../pricing/ofs-approval']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/19.png"  style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>OFS Approval</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+  
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../pricing/recompute']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/19.png"  style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Recompute</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+   
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../pricing/recompute-brandwise']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/19.png"  style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Recompute Brandwise</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+    
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../pricing/state-levy']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/19.png"  style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>State Levy</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+
+            

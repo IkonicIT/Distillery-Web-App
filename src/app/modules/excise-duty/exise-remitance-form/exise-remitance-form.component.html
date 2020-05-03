@@ -1,0 +1,48 @@
+<div>
+    <h1 mat-dialog-header>Excise Duty Remitance Information</h1>
+</div>
+
+<p class="noRecords" *ngIf="saveSuccess">Saved Successfully</p>
+<p class="noInputs" *ngIf="noInputs">Please provide inputs</p>
+<div mat-dialog-content class="type" style="margin-left: 12rem;">
+    <label for="">Challan Transaction Number*
+            <input type="text" style="height: 24px;" [(ngModel)]="transactionNumber" >
+        </label>
+</div>
+
+<div class="date">
+    <label for="">Deposit Amount*
+            <input type="number" style="height: 24px;" [(ngModel)]="depositAmount">
+        </label>
+</div>
+<div style="margin-left: 20.2rem;">
+    <label for="">Bank Number*
+            <input type="text" style="height: 24px;" [(ngModel)]="bankNumber">
+    </label>
+</div>
+<div style="margin-left: 20.6rem;">
+    <label for="">Type Challan*
+            <select name="ENA" id="" style="width: 10.5rem;" (change)="selectDropdown($event)">
+                <option value="CSD" >CSD</option>
+                <option value="LOCAL">LOCAL</option>
+            </select>
+    </label>
+</div>
+<div style="margin-left: 15rem;">
+    <label for="">Challan/Transaction Date*
+            <input type="date" style="height: 24px;" [(ngModel)]="transactionDate" >
+    </label>
+</div>
+<div style="margin-left: 21.2rem;">
+    <label for="">Description*
+            <input type="text" style="height: 24px;" [(ngModel)]="description">
+    </label>
+</div>
+
+
+
+
+
+
+<button style="background-color: #2e5d74;width: 100px;border-radius: 7px;margin-left: 23.5rem;" (click)="save()">Save</button>
+<button mat-dialog-close style="background-color: #2e5d74;width: 100px;border-radius: 7px;margin-left: 0.5rem;">Cancel</button>

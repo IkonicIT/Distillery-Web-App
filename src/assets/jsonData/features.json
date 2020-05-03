@@ -1,0 +1,195 @@
+{
+    "mainNavData": [
+        {
+            "title": "Dashboard",
+            "imgUrl": "../../assets/img/image/03.png",
+            "routerLink": "/features"
+        }
+    ],
+    "featuresData": [
+        {
+            "title": "Dashboard",
+            "routerLink": "/home/dashboard",
+            "imageURL": "../../assets/Icons/Dash board-2.png",
+            "key": "home/dashboard"
+        },
+        {
+            "title": "Indent",
+            "routerLink": "/home/indent-management",
+            "imageURL": "../../assets/img/indent.png",
+            "key": "home/module/indent"
+        },
+
+        {
+            "title": "Users",
+            "routerLink": "/home/user",
+            "imageURL": "../../assets/Icons/14.png",
+            "key": "home/user"
+        },
+        {
+            "title": "Distellery",
+            "routerLink": "/home/distillery",
+            "imageURL": "../../assets/img/18.png",
+            "key": "home/distillery"
+        },
+        {
+            "title": "Depot",
+            "routerLink": "/home/depots",
+            "imageURL": "../../assets/Icons/Depot .png",
+            "key": "home/depots"
+        },
+        {
+            "title": "License Proof",
+            "routerLink": "/home/licensee-profiles",
+            "imageURL": "../../assets/Icons/Licensee profiles.png",
+            "key": "home/licensee-profiles"
+        },
+        {
+            "title": "BCL Outlet",
+            "routerLink": "/home/bcl-outlets",
+            "imageURL": "../../assets/Icons/11.png",
+            "key": "home/bcl-outlets"
+        },
+        {
+            "title": "License",
+            "routerLink": "/home/licensee-sales",
+            "imageURL": "../../assets/Icons/LIC sales -1.png",
+            "key": "home/licensee-sales"
+        },
+        {
+            "title": "Hologram",
+            "routerLink": "/home/hologram",
+            "imageURL": "../../assets/Icons/Holograms.png",
+            "key": "home/hologram"
+        },
+        {
+            "title": "Indent",
+            "routerLink": "/home",
+            "imageURL": "../../assets/Icons/01.png"
+        },
+        {
+            "title": "Lab",
+            "routerLink": "/home/lab",
+            "imageURL": "../../assets/img/10.png",
+            "key": "home/lab"
+        },
+        {
+            "title": "Shipment",
+            "routerLink": "/home/shipment",
+            "imageURL": "../../assets/Icons/17.png",
+            "key": "home/shipment"
+        },
+        {
+            "title": "Import",
+            "routerLink": "/home/imports",
+            "imageURL": "../../assets/Icons/Import.png",
+            "key": "home/import"
+        },
+        {
+            "title": "Production",
+            "routerLink": "/home/production",
+            "imageURL": "../../assets/img/12.png",
+            "key": "home/production"
+        },
+        {
+            "title": "Inter Depot",
+            "routerLink": "/home/inter-depot",
+            "imageURL": "../../assets/Icons/08.png",
+            "key": "home/inter-depot"
+        },
+        {
+            "title": "Breakage",
+            "routerLink": "/home/breakages",
+            "imageURL": "../../assets/img/breakage.png",
+			"key": "home/breakages"
+        },
+        {
+            "title": "Products",
+            "routerLink": "/home/products",
+            "imageURL": "../../assets/Icons/Products .png",
+            "key": "home/products"
+        },
+        {
+            "title": "Beer",
+            "routerLink": "/home/beer",
+            "imageURL": "../../assets/Icons/Beer.png",
+            "key": "home/beer"
+        },
+        {
+            "title": "Price",
+            "routerLink": "/home/pricing",
+            "imageURL": "../../assets/img/pricing.png",
+            "key": "home/pricing"
+        },
+        {
+            "title": "Supplier",
+            "routerLink": "/home/module/transactions",
+            "imageURL": "../../assets/Icons/04.png",
+            "key": "home/module/transactions"
+        },
+        {
+            "title": "Stock",
+            "routerLink": "/home/module/stock",
+            "imageURL": "../../assets/img/19.png",
+            "key": "home/module/stock"
+        },
+        {
+            "title": "Spirit",
+            "routerLink": "/home/spirit",
+            "imageURL": "../../assets/img/10.png",
+            "key": "home/spirit"
+        },
+        {
+            "title": "Excise Duty",
+            "routerLink": "/home/excise",
+            "imageURL": "../../assets/img/09.png",
+            "key": "home/excise"
+        },
+        {
+            "title": "Reports",
+            "routerLink": "/home/reports-home",
+            "imageURL": "../../assets/img/image/18.png",
+            "key": "home/reports-home"
+        },
+        {
+            "title": "Wallet",
+            "routerLink": "/home/Wallet",
+            "imageURL": "../../assets/img/wallet.png",
+            "key": "home/Wallet"
+        },
+        {
+            "title": "Cart",
+            "routerLink": "/home/cart",
+            "imageURL": "../../assets/img/cart.png",
+            "key": "home/cart"
+        },
+        {
+            "title": "Alerts",
+            "routerLink": "/home/module/alerts",
+            "imageURL": "../../assets/Icons/Alert -2.png",
+            "key": "home/module/alerts"
+        },
+        {
+            "title": "Feedback",
+            "routerLink": "/home/module/feedback",
+            "imageURL": "../../assets/Icons/18.png",
+            "key": "home/module/feedback"
+        },
+        {
+            "title": "Vehicle Tracking",
+            "routerLink": "/home/vehicle-tracking",
+            "imageURL": "../../assets/Icons/18.png",
+            "key": "home/vehicle-tracking"
+        },
+        {
+            "title": "Profile",
+            "imgUrl": "../../assets/img/image/01.png",
+            "routerLink": "/home/module/profile"
+        },
+        {
+            "title": "Settings",
+            "imgUrl": "../../assets/img/image/16.png",
+            "routerLink": "/homeone"
+        }
+    ]
+}

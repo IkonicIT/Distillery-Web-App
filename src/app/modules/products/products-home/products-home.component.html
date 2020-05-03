@@ -1,0 +1,63 @@
+<div *ngIf="hasProductPerm">
+<table>
+    <thead>
+        <th *ngxPermissionsOnly="['home/products/products-brand']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/products/products-brand'" [routerLink]="['../products/products-brand']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/24.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Products Brand</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/products/products-products']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/products/products-products'" [routerLink]="['../products/products-products']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/24.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Products Products</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/depots/depots-stock']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/depots/depots-stock'" [routerLink]="['../products/products-iteamcode']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/24.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Item Code Mapping</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        
+
+
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasProductPerm">
+    <app-no-privileges></app-no-privileges>
+</div>

@@ -1,0 +1,43 @@
+<div *ngIf="hasImportPerm">
+<table>
+    <thead>
+        <th *ngxPermissionsOnly="['home/import']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/import'" [routerLink]="['../import']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/Import.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Import</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/import-shipment']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/import-shipment'" [routerLink]="['../import-shipment']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/Import.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Imports Shipments</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasImportPerm">
+    <app-no-privileges></app-no-privileges>
+</div>

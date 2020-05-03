@@ -1,0 +1,57 @@
+<div>
+    <h1 mat-dialog-header >HEAL Purchase Indent</h1>
+    </div>
+    <div class="whole" >
+    <div mat-dialog-content class="type" >
+        <label for="">Quantity 
+            
+                <input type="text" required style="margin-left: 1rem;">
+            
+        </label>
+    </div>
+    <div class="challanNo">
+        <label for="" >
+            Challan No 
+            <input type="text" style="height: 24px;" required >
+        </label>
+    </div>
+    <div class="date">
+        <label for="" style="margin-left: 12rem;padding-right: 13px;margin-left: 204px;">Challan Amount
+            <input type="text" style="height: 24px;" >
+        </label>
+    </div>
+    <div>
+        <label for="">
+            Challan Date 
+            <input type="date" required >
+        </label>
+    </div>
+    <div>
+        <label for="">
+            Carrier Name 
+            <input type="text" required>
+        </label>
+    </div>
+    <div>
+        <label for="">
+            STO Bank 
+            <input type="text" required style="padding-right: 1rem;">
+        </label>
+    </div>
+    <div>
+        <label for="">
+            Purpose
+            <select name="Select" id="">
+                <option value="">Local(Light Green)</option>
+                <option value="">Export(Light Yellow)</option>
+                <option value="">CSD Local(Light Brown)</option>
+                <option value="">CSD Export(Light Green)</option>
+            </select>
+        </label>
+    </div>
+    
+            <button style="background-color: #2e5d74;width: 100px;border-radius: 7px;margin-left: 33.5rem;"  (click)="save()" >Save</button>
+            <button mat-dialog-close style="background-color: #2e5d74;width: 100px;border-radius: 7px;margin-left: 0.5rem;"   >Cancel</button>
+        
+        </div>
+        

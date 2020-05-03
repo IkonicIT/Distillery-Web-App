@@ -1,0 +1,28 @@
+h1{
+    background: seagreen;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
+
+div{
+    font-size: smaller;
+}
+label{
+    font-weight: 400;
+}
+button{
+    background-color: #2e5d74;
+    color: white;
+}
+table{
+    border: 1px solid ;
+    border-color: black;
+}
+th{
+    width: 600px;
+    background: #2e5d74;
+    color: white;
+    border: 1px solid;
+    border-color: white;
+}

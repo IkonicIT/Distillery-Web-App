@@ -1,0 +1,18 @@
+h1{
+    background: #2e5d74;
+    padding-left: 346px;
+    font-size: 31px;
+    color: white;
+}
+label{
+    margin-left:17rem;
+    font-weight: 500;
+}
+p{
+    margin-left:288px;
+}
+button{
+    background: #2e5d74;
+    border-radius: 8px;
+    color: white;
+}

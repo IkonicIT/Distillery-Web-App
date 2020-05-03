@@ -1,0 +1,7 @@
+<div *ngIf="control.invalid && (control.dirty || control.touched)" class="error-message">
+    <span *ngFor="let err of errorList">
+      <span *ngIf="control.hasError(err)">
+        <p style="color: red;">{{ getErrorMessage(err) }}</p>
+      </span>
+    </span>
+  </div>

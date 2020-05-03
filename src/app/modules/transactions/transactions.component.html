@@ -1,0 +1,205 @@
+<div *ngIf="hasSupplierPerm">
+<table>
+    <thead>
+        <th *ngxPermissionsOnly="['home/module/supplier-payment']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/supplier-payment'" [routerLink]="['../supplier-payment']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/04.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Supplier Payment</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/module/transaction']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/transaction'" [routerLink]="['../transaction']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/04.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Transaction</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/module/transaction-rollback']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/transaction-rollback'" [routerLink]="['../transaction-rollback']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/04.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Transaction RollBack</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/module/grn-processingfee']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/grn-processingfee'" [routerLink]="['../grn-processingfee']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/04.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>GRN Processing Fee</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/module/penality-report']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/penality-report'" [routerLink]="['../penality-report']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/04.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Penalty Report</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/module/missupplier-payment']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/missupplier-payment'" [routerLink]="['../missupplier-payment']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/04.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>MIS Supplier Payments</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+
+
+
+    </thead>
+
+    <thead>
+        <th *ngxPermissionsOnly="['home/module/gnrsupplier-payment']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/gnrsupplier-payment'" [routerLink]="['../gnrsupplier-payment']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/04.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>GNR Supplier Payments</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/module/consolidate-payment']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/consolidate-payment'" [routerLink]="['../consolidate-payment']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/04.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Consolidate Payments</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/module/penality-details']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/penality-details'" [routerLink]="['../penality-details']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/04.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Penality Detail Report</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/module/supplierwise']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/supplierwise'" [routerLink]="['../supplierwise']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/04.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Supplierwise Acc Statement</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/module/processfee']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/processfee'" [routerLink]="['../processfee']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/04.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Process Fee</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+
+
+
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasSupplierPerm">
+    <app-no-privileges></app-no-privileges>
+</div>

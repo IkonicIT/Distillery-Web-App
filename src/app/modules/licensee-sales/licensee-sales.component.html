@@ -1,0 +1,212 @@
+<div *ngIf="hasLicensePerm">
+<table>
+    <thead>
+        <th *ngxPermissionsOnly="['home/licensee-sales/bar-sales']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/licensee-sales/bar-sales'" [routerLink]="['../licensee-sales/bar-sales']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/LIC sales -1.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Bar Sales</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/licensee-sales/bar-sales']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/licensee-sales/club-sales'" [routerLink]="['../licensee-sales/club-sales']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/LIC sales -1.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Club Sales</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/licensee-sales/bar-sales']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/licensee-sales/shop-sales'" [routerLink]="['../licensee-sales/shop-sales']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/LIC sales -1.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Shop Sales</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/licensee-sales/bar-sales']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/licensee-sales/td1-sales'" [routerLink]="['../licensee-sales/td1-sales']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/LIC sales -1.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>TD1 Sales</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/licensee-sales/bar-sales']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/licensee-sales/td2-sales'" [routerLink]="['../licensee-sales/td2-sales']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/LIC sales -1.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>TD2 Sales</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+
+
+
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasLicensePerm">
+    <app-no-privileges></app-no-privileges>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fliud">
+    <div class="row background">
+      <div class="col">
+         
+      </div>
+      <div class="col-12 text-right col-lg-4">
+             
+      </div>
+  </div>
+  <div class="row" id="wrapper">
+    
+    <div class="col-10" style="padding-top: 1%;">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../licensee-sales/bar-sales']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/LIC sales -1.png" style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Bar Sales</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../licensee-sales/club-sales']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/LIC sales -1.png" style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Club Sales</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../licensee-sales/shop-sales']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/LIC sales -1.png" style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Shop Sales</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../licensee-sales/td1-sales']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/LIC sales -1.png" style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>TD1 Sales</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../licensee-sales/td2-sales']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/LIC sales -1.png" style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>TD2 Sales</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> -->

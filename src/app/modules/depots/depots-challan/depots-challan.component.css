@@ -1,0 +1,20 @@
+nav{
+    background: rgb(45,79,107);
+    color: white;
+    padding: 3px;
+}
+.date{
+    height: 21px;
+    width: 152px;
+}
+select{
+    width: 93px;
+    margin-left: 14px;
+}
+button{
+    background: rgb(45,79,107) ;
+    color: white;
+    padding: 6px;
+    border-radius: 12px;
+    border-style: hidden;
+}

@@ -1,0 +1,74 @@
+<div class="modal-header modal-header-primary">
+  <h3 mat-dialog-header>Receipt</h3>
+  <button mat-dialog-close type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+</div>
+<div class="modal-body-cont">
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="spiritGenarateReceiptForm">
+        <fieldset>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label w-100" for="supplierName">Supplier Name</label>
+            <input type="text"  class="form-control" formControlName="supplierName" id="supplierName">
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="cpeTpNo">CPE TP NO*</label>
+            <input type="text" class="form-control" formControlName="cpeTpNo" id="cpeTpNo">
+            <app-filed-error [errorList]="['required']" [control]="spiritGenarateReceiptForm.get('cpeTpNo')"></app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="dtpNo">DTP NO*</label>
+            <input type="text"  class="form-control" formControlName="dtpNo" id="dtpNo">
+            <app-filed-error [errorList]="['required']" [control]="spiritGenarateReceiptForm.get('dtpNo')"></app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="receiptDate">Date of Receipt*</label>
+            <input type="date"  class="form-control" id="receiptDate" formControlName="receiptDate">
+            <app-filed-error [errorList]="['required']" [control]="spiritGenarateReceiptForm.get('receiptDate')"></app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="vehicleNum">Vechicle No*</label>
+            <input class="form-control" type="text" id="vehicleNum" formControlName="vehicleNum">
+            <app-filed-error [errorList]="['required']" [control]="spiritGenarateReceiptForm.get('vehicleNum')"></app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="allotedQuota">Qty As Per TP(BLS)*</label>
+            <input type="text" class="form-control" id="" >
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="strength">Strength(As Per TP)*</label>
+            <input type="text" class="form-control"  id="strength" formControlName="strength">
+            <app-filed-error [errorList]="['required']" [control]="spiritGenarateReceiptForm.get('strength')"></app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="dip">Dip (In Cms)*</label>
+            <input type="text" class="form-control"  id="dip" formControlName="dip">
+            <app-filed-error [errorList]="['required']" [control]="spiritGenarateReceiptForm.get('dip')"></app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="remainingQty">Qty Actual(BLS)*</label>
+            <input type="text" class="form-control"  id="remainingQty" formControlName="remainingQty">
+            <app-filed-error [errorList]="['required']" [control]="spiritGenarateReceiptForm.get('remainingQty')"></app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="wastage">Transit Wtge(BLS)*</label>
+            <input type="text" class="form-control"  id="wastage">
+            <app-filed-error [errorList]="['required']" [control]="spiritGenarateReceiptForm.get('wastage')"></app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="remarks">Remarks*</label>
+            <input type="text" class="form-control"  id="remarks" formControlName="remarks">
+            <app-filed-error [errorList]="['required']" [control]="spiritGenarateReceiptForm.get('remarks')"></app-filed-error>
+          </div>
+          <div class="col-md-12 form-group user-form-group float-left">
+            <div class="pull-right">
+              <button type="submit" class="btn btn-add btn-sm" (click)="save()">Save</button>
+              <button mat-dialog-close type="button" class="btn btn-danger btn-sm">Cancel</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,43 @@
+
+<!-- 
+    <nav style="margin-left: 78rem;margin-right: 12rem;">
+    <div style="background: grey;">
+    <img src="https://img.icons8.com/pastel-glyph/30/000000/mine-cart.png">
+    <br>
+    <button>Create</button>
+</div>
+</nav> -->
+<div *ngIf="hasCartPerm">
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened><img src="../../assets/img/cart.png" style="height: 40px;">
+        <strong style="    font-size: 26px;"> Cart </strong>
+         <p><strong>SubTotal : 123$ </strong></p>
+         <button style="background: rgb(45,79,107);color: white; border-style: hidden;">Create Indent</button>
+              <hr style="width: 100%; color: white;">
+              <ul>
+                <li><a href=""><img  src="../../assets/img/beer1.jpg" style="margin-bottom: 10px;
+                    width: 100%;" ></a>100$</li> 
+                <li><a href=""><img  src="../../assets/img/wine.jpg" style="margin-bottom: 10px;
+                    width: 100%;" ></a>100$</li> 
+                <li><a href=""><img  src="../../assets/img/wisky.jpg" style="margin-bottom: 10px;
+                    width: 100%;" ></a>100$</li> 
+               <li> <a href="" ><img  src="../../assets/img/beer1.jpg" style="margin-bottom: 10px;
+                width: 100%;" ></a>100$</li> 
+            
+            <li><a href=""><img  src="../../assets/img/beer1.jpg" style="margin-bottom: 10px;
+                width: 100%;" ></a>100$</li> 
+            <li><a href=""><img  src="../../assets/img/wine.jpg" style="margin-bottom: 10px;
+                width: 100%;" ></a>100$</li> 
+            <li><a href=""><img  src="../../assets/img/wisky.jpg" style="margin-bottom: 10px;
+                width: 100%;" ></a>100$</li> 
+           <li> <a href="" ><img  src="../../assets/img/beer1.jpg" style="margin-bottom: 10px;
+            width: 100%;" ></a>100$</li> 
+              </ul>
+              
+    </mat-sidenav>
+    <mat-sidenav-content><app-carousel></app-carousel></mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+<div *ngIf="!hasCartPerm">
+    <app-no-privileges></app-no-privileges>
+</div>

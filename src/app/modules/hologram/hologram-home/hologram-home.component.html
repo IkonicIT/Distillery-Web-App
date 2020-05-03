@@ -1,0 +1,150 @@
+
+<div *ngIf="hasHologramPer">
+<table>
+    <thead>
+        <th *ngxPermissionsOnly="['home/hologram/indent-daily']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/hologram/indent-daily'" [routerLink]="['../hologram/indent-daily']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/25.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Indent-Daily</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <!-- <th><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [routerLink]="['../hologram/damaged']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/25.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Damaged</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [routerLink]="['../hologram/inventory']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/25.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Inventory</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th> -->
+        <th *ngxPermissionsOnly="['home/hologram/indent-purchase']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/hologram/indent-purchase'" [routerLink]="['../hologram/indent-purchase']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/25.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Indent Purchase</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+
+
+        <th *ngxPermissionsOnly="['home/hologram/distillery']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/hologram/distillery'" [routerLink]="['../hologram/distillery']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/25.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Distillery</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/hologram/depot']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/hologram/depot'" [routerLink]="['../hologram/depot']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/25.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Depot</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <!-- <th><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [routerLink]="['../hologram/usage']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/25.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Usage</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th> -->
+        <!-- <th><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [routerLink]="['../hologram/vefification']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/25.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Verification</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th> -->
+ 
+
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasHologramPer">
+    <app-no-privileges></app-no-privileges>
+</div>

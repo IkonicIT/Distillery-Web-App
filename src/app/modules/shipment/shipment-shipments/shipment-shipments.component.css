@@ -1,0 +1,50 @@
+ 
+select{
+    height: 1.5rem;
+    width: 3rem;
+    margin-top:6rem;
+}
+.navbar-dark{
+    background-color: #2e5d74!important;
+    height: 48px;
+}
+#search{
+    margin-left: 38rem;
+    
+}
+label{
+    color: white;
+    margin-left:-1rem
+}
+
+.table-striped{
+    background: white;
+    
+}
+thead{
+    background: #2bc0c7;
+    color: white;
+}
+tbody{
+    font-weight: 450;
+}
+button{
+    background-color:#2e5d74;
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px;
+
+}
+#button{
+       margin-top: -48px;
+    
+} 
+table{
+    font-size: x-small;
+}

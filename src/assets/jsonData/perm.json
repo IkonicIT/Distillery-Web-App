@@ -1,0 +1,731 @@
+		
+[	
+	{
+		"title":"Indent Management",
+		"routerLink": "home/module/indent"
+	},	
+		{
+		"title":"Active Indents",
+		"routerLink": "home/module/indent/active",
+		"parent": "home/module/indent"
+	},
+		{
+		"title":"Old Indents",
+		"routerLink": "home/module/indent/old",
+		"parent": "home/module/indent"
+	},
+		{
+		"title":"Create Indent",
+		"routerLink": "home/module/indent/create",
+		"parent": "home/module/indent"
+	},
+		{
+		"title":"Aged Challans",
+		"routerLink": "home/indent-management/aged-challans",
+		"parent": "home/module/indent"
+	},
+		{
+		"title":"Cancelled IDC",
+		"routerLink": "home/indent-management/cancelled-idc",
+		"parent": "home/module/indent"
+	},
+		{
+		"title":"Challans Status",
+		"routerLink": "home/indent-management/challan-status",
+		"parent": "home/module/indent"
+	},
+		{
+		"title":"Distillery Indent",
+		"routerLink": "home/indent-management/distillery-indent",
+		"parent": "home/module/indent"
+	},
+		{
+		"title":"Reconciled Challans",
+		"routerLink": "home/indent-management/reconciled-challanas",
+		"parent": "home/module/indent"
+	},
+		{
+		"title":"Retailer Cards",
+		"routerLink": "home/indent-management/retailer-cards",
+		"parent": "home/module/indent"
+	},
+		{
+		"title":"Special Indent",
+		"routerLink": "home/indent-management/special-indent",
+		"parent": "home/module/indent"
+	},
+		{
+		"title":"Upload Cards",
+		"routerLink": "home/indent-management/upload-cards",
+		"parent": "home/module/indent"
+	},
+	{
+		"title":"Special IFS",
+		"routerLink": "home/indent-management/special-ifs",
+		"parent": "home/module/indent"
+	},
+	{
+		"title": "User",
+		"routerLink": "home/user"
+	},
+	{
+		"title": "APBCL",
+		"routerLink": "home/user/apbcl",
+		"parent": "home/user"
+	},
+	{
+		"title": "Depot",
+		"routerLink": "home/user/depot",
+		"parent": "home/user"
+	},
+	{
+		"title": "Retailers",
+		"routerLink": "home/user/retailers",
+		"parent": "home/user"
+	},
+	{
+		"title": "Distillery",
+		"routerLink": "home/distillery"
+		
+	},
+	{
+		"title": "Products",
+		"routerLink": "home/distillery/products",
+		"parent": "home/distillery"
+	},
+	{
+		"title": "Stock",
+		"routerLink": "home/distillery/stock",
+		"parent": "home/distillery"
+	},
+	{
+		"title": "Beer-Stock",
+		"routerLink": "home/distillery/beer-stock",
+		"parent": "home/distillery"
+	},
+	{
+		"title": "OFS",
+		"routerLink": "home/distillery/ofs",
+		"parent": "home/distillery"
+	},
+	{
+		"title": "Route",
+		"routerLink": "home/distillery/route",
+		"parent": "home/distillery"
+	},
+	{
+		"title": "Depots",
+		"routerLink": "home/depots"
+	},
+	{
+		"title": "Depots Stock",
+		"routerLink": "home/depots/depots-stock",
+		"parent": "home/depots"
+	},
+	{
+		"title": "Breakage Verification",
+		"routerLink": "home/depots/depots-breakage-verification",
+		"parent": "home/depots"
+	},
+	{
+		"title": "Depots Challan",
+		"routerLink": "home/depots/depots-challan",
+		"parent": "home/depots"
+	},
+	{
+		"title": "Retailer Returns",
+		"routerLink": "home/depots/depots-retailer-returns",
+		"parent": "home/depots"
+	},
+	{
+		"title": "License Profiles",
+		"routerLink": "home/licensee-profiles"
+	},
+	{
+		"title": "Bars",
+		"routerLink": "home/licensee-profiles/bars",
+		"parent": "home/licensee-profiles"
+	},
+	{
+		"title": "Clubs",
+		"routerLink": "home/licensee-profiles/clubs",
+		"parent": "home/licensee-profiles"
+	},
+	{
+		"title": "Elite",
+		"routerLink": "home/licensee-profiles/elite",
+		"parent": "home/licensee-profiles"
+	},
+	{
+		"title": "EP1",
+		"routerLink": "home/licensee-profiles/ep1",
+		"parent": "home/licensee-profiles"
+	},
+	{
+		"title": "Expiry License",
+		"routerLink": "home/licensee-profiles/expired-licensee",
+		"parent": "home/licensee-profiles"
+	},
+	{
+		"title": "F2",
+		"routerLink": "home/licensee-profiles/f2",
+		"parent": "home/licensee-profiles"
+	},
+	{
+		"title": "Status",
+		"routerLink": "home/licensee-profiles/licensee-status",
+		"parent": "home/licensee-profiles"
+	},
+	{
+		"title": "Suspended Retailers",
+		"routerLink": "home/licensee-profiles/suspended-retailers",
+		"parent": "home/licensee-profiles"
+	},
+	{
+		"title": "T2",
+		"routerLink": "home/licensee-profiles/t2",
+		"parent": "home/licensee-profiles"
+	},
+	{
+		"title": "Shops",
+		"routerLink": "home/licensee-profiles/shops",
+		"parent": "home/licensee-profiles"
+	},
+	{
+		"title": "TP Revalidation",
+		"routerLink": "home/licensee-profiles/td1-td2",
+		"parent": "home/licensee-profiles"
+	},
+	{
+		"title": "BCL Outlets",
+		"routerLink": "home/bcl-outlets"
+	},
+	{
+		"title": "Outlet Profiles",
+		"routerLink": "home/bcl-outlets/outlet-profiles",
+		"parent": "home/bcl-outlets"
+	},
+	{
+		"title": "Outlet Returns",
+		"routerLink": "home/bcl-outlets/outlet-returns",
+		"parent": "home/bcl-outlets"
+	},
+	{
+		"title": "Outlet Sales",
+		"routerLink": "home/bcl-outlets/outlet-sales",
+		"parent": "home/bcl-outlets"
+	},
+	{
+		"title": "Outlet Status",
+		"routerLink": "home/bcl-outlets/outlet-status",
+		"parent": "home/bcl-outlets"
+	},
+	{
+		"title": "Licensee Sales",
+		"routerLink": "home/licensee-sales"
+	},
+	{
+		"title": "Bar Sales",
+		"routerLink": "home/licensee-sales/bar-sales",
+		"parent": "home/licensee-sales"
+	},
+	{
+		"title": "Club Sales",
+		"routerLink": "home/licensee-sales/club-sales",
+		"parent": "home/licensee-sales"
+	},
+	{
+		"title": "Shop Sales",
+		"routerLink": "home/licensee-sales/shop-sales",
+		"parent": "home/licensee-sales"
+	},
+	{
+		"title": "TD1 Sales",
+		"routerLink": "home/licensee-sales/td1-sales",
+		"parent": "home/licensee-sales"
+	},
+	{
+		"title": "TD2 Sales",
+		"routerLink": "home/licensee-sales/td2-sales",
+		"parent": "home/licensee-sales"
+	},
+	{
+		"title": "Lab",
+		"routerLink": "home/lab"
+	},
+	{
+		"title": "Samples",
+		"routerLink": "home/lab/samples",
+		"parent": "home/lab"
+	},
+	{
+		"title": "Finished",
+		"routerLink": "home/lab/finished",
+		"parent": "home/lab"
+	},
+	{
+		"title": "Reports",
+		"routerLink": "home/lab/reports",
+		"parent": "home/lab"
+	},
+	{
+		"title": "batch-deactivation",
+		"routerLink": "home/lab/batch-deactivation",
+		"parent": "home/lab"
+	},
+	{
+		"title": "Shipment",
+		"routerLink": "home/shipment"
+	},
+	{
+		"title": "OFS",
+		"routerLink": "home/shipment/shipment-ofs",
+		"parent": "home/shipment"
+	},
+	{
+		"title": "Shipments",
+		"routerLink": "home/shipment/shipment-shipments",
+		"parent": "home/shipment"
+	},
+	{
+		"title": "Route",
+		"routerLink": "home/shipment/shipment-router",
+		"parent": "home/shipment"
+	},
+	{
+		"title": "Distillery",
+		"routerLink": "home/shipment/shipment-distillery",
+		"parent": "home/shipment"
+	},
+	{
+		"title": "TP-Revalidation",
+		"routerLink": "home/shipment/shipment-revalidation",
+		"parent": "home/shipment"
+	},
+	{
+		"title": "Depot",
+		"routerLink": "home/shipment/shipment-depot",
+		"parent": "home/shipment"
+	},
+	{
+		"title": "Import",
+		"routerLink": "home/imports"
+	},
+	{
+		"title": "Import",
+		"routerLink": "home/import",
+		"parent": "home/import"
+	},
+	{
+		"title": "Import-Shipment",
+		"routerLink": "home/import-shipment",
+		"parent": "home/import"
+	},
+	{
+		"title": "Production",
+		"routerLink": "home/production"
+	},
+	{
+		"title": "Products",
+		"routerLink": "home/production/products",
+		"parent": "home/production"
+	},
+	{
+		"title": "Production line",
+		"routerLink": "home/production/production-line",
+		"parent": "home/production"
+	},
+	{
+		"title": "Production start",
+		"routerLink": "home/production/production-start",
+		"parent": "home/production"
+	},
+	{
+		"title": "Production report",
+		"routerLink": "home/production/production-report",
+		"parent": "home/production"
+	},
+	{
+		"title": "Manual production",
+		"routerLink": "home/production/manual-production",
+		"parent": "home/production"
+	},
+		{
+		"title": "Inter Depot",
+		"routerLink": "home/inter-depot"
+	},
+			{
+		"title": "Depot Transfer",
+		"routerLink": "home/depot-home/depot-transfer",
+		"parent": "home/inter-depot"
+	},
+	{
+		"title": "Inter-Depot-Transfer-Local",
+		"routerLink": "home/depot-home/depot-local",
+		"parent": "home/inter-depot"
+	},
+		{
+		"title": "Inter-Depot-Transfer-Supplier",
+		"routerLink": "home/depot-home/depot-transfer-supplier",
+		"parent": "home/inter-depot"
+	},
+	{
+		"title": "Inter-Depot-Local-Supplier",
+		"routerLink": "home/depot-home/depot-local-supplier",
+		"parent": "home/inter-depot"
+	},
+		{
+		"title": "Breakage",
+		"routerLink": "home/breakages"
+	},
+			{
+		"title": "Breakage Depot",
+		"routerLink": "home/breakages/breakages-depot",
+		"parent": "home/breakages"
+	},
+				{
+		"title": "Shortages",
+		"routerLink": "home/breakages/shortage",
+		"parent": "home/breakages"
+	},
+		{
+		"title": "Products",
+		"routerLink": "home/products"
+	},
+	{
+		"title": "Products-Brand",
+		"routerLink": "home/products/products-brand",
+		"parent": "home/products"
+	},
+	{
+		"title": "Products-Products",
+		"routerLink": "home/products/products-products",
+		"parent": "home/products"
+	},
+	{
+		"title": "Products-Iteamcode-Mapping",
+		"routerLink": "home/products/products-iteamcode",
+		"parent": "home/products"
+	},
+		{
+		"title": "Beer",
+		"routerLink": "home/beer"
+	},
+		{
+		"title": "Beer OFS Entitlement",
+		"routerLink": "home/beer/beer-ofs-entitlement",
+		"parent": "home/beer"
+	},
+			{
+		"title": "Beer Shipment",
+		"routerLink": "home/beer/beer-shipment",
+		"parent": "home/beer"
+	},
+				{
+		"title": "Beer Indent",
+		"routerLink": "home/beer/beer-indent",
+		"parent": "home/beer"
+	},
+					{
+		"title": "Special Indent",
+		"routerLink": "home/beer/beer-indent-special",
+		"parent": "home/beer"
+	},
+	{
+		"title": "Pricing",
+		"routerLink": "home/pricing"
+	},
+		{
+		"title": "Basic Price Rules",
+		"routerLink": "home/pricing/basic-price-rules",
+		"parent": "home/pricing"
+	},
+			{
+		"title": "Computed Prices",
+		"routerLink": "home/pricing/coomputed-prices",
+		"parent": "home/pricing"
+	},
+				{
+		"title": "MRP Performance",
+		"routerLink": "home/pricing/mrp-performance",
+		"parent": "home/pricing"
+	},
+					{
+		"title": "Offered Basic Prices",
+		"routerLink": "home/pricing/offered-basic-price",
+		"parent": "home/pricing"
+	}, {
+			"title": "OFS Approval",
+		"routerLink": "home/pricing/ofs-approval",
+		"parent": "home/pricing"
+	},
+	{
+			"title": "Re compute",
+		"routerLink": "home/pricing/recompute",
+		"parent": "home/pricing"
+	},
+		{
+			"title": "Recompute Brandwise",
+		"routerLink": "home/pricing/recompute-brandwise",
+		"parent": "home/pricing"
+	},
+			{
+			"title": "State Levy",
+		"routerLink": "home/pricing/state-levy",
+		"parent": "home/pricing"
+	},
+				{
+			"title": "Supplier",
+		"routerLink": "home/module/transactions"
+	},
+		{
+		"title": "Supplier-Payment",
+		"routerLink": "home/module/supplier-payment",
+		"parent": "home/module/transactions"
+	},
+		{
+		"title": "Transaction",
+		"routerLink": "home/module/transaction",
+		"parent": "home/module/transactions"
+	},
+	{
+		"title": "Transaction-RollBack",
+		"routerLink": "home/module/transaction-rollback",
+		"parent": "home/module/transactions"
+	},
+	{
+		"title": "GRN-Processing-fee",
+		"routerLink": "home/module/grn-processingfee",
+		"parent": "home/module/transactions"
+	},
+	{
+		"title": "Penality-Report",
+		"routerLink": "home/module/penality-report",
+		"parent": "home/module/transactions"
+	},
+	{
+		"title": "MIS-Supplier-Payments",
+		"routerLink": "home/module/missupplier-payment",
+		"parent": "home/module/transactions"
+	},
+	{
+		"title": "GNR-Supplier-Payments",
+		"routerLink": "home/module/gnrsupplier-payment",
+		"parent": "home/module/transactions"
+	},
+	{
+		"title": "Consolidate-Payments-Prints",
+		"routerLink": "home/module/consolidate-payment",
+		"parent": "home/module/transactions"
+	},
+	{
+		"title": "Penality-Detail-Report",
+		"routerLink": "home/module/penality-details",
+		"parent": "home/module/transactions"
+	},
+	{
+		"title": "Supplierwise-Acc-Statement",
+		"routerLink": "home/module/supplierwise",
+		"parent": "home/module/transactions"
+	},
+	{
+		"title": "Process Fee",
+		"routerLink": "home/module/processfee",
+		"parent": "home/module/transactions"
+	},
+		{
+		"title": "Stock",
+		"routerLink": "home/module/stock"
+	},
+		{
+		"title": "Spirit",
+		"routerLink": "home/spirit"
+	},
+	{
+		"title": "Spirit procurement",
+		"routerLink": "home/spirit/procurement",
+		"parent": "home/spirit"
+	},
+	{
+		"title": "Spirit Apporved",
+		"routerLink": "home/spirit/print-approved",
+		"parent": "home/spirit"
+	},
+	{
+		"title": "Spirit Receipt",
+		"routerLink": "home/spirit/receipit",
+		"parent": "home/spirit"
+	},
+		{
+		"title": "Excise-Duty",
+		"routerLink": "home/excise"
+	},
+	{
+		"title": "Excise-Duties",
+		"routerLink": "home/excise-duty/duties",
+		"parent": "home/excise"
+	},
+	{
+		"title": "Excise-Remitance",
+		"routerLink": "home/excise-duty/remitance",
+		"parent": "home/excise"
+	},
+	{
+		"title": "Excise-Department",
+		"routerLink": "home/excise-duty/department",
+		"parent": "home/excise"
+	},
+	{
+		"title": "Alerts",
+		"routerLink": "home/module/alerts"
+	},
+	{
+		"title": "Alerts-Subscription",
+		"routerLink": "home/module/alerts/subscription",
+		"parent": "home/module/alerts"
+	},
+	{
+		"title": "Alerts-Circulars",
+		"routerLink": "home/module/alerts/circulars",
+		"parent": "home/module/alerts"
+	},
+	{
+		"title": "Alerts-Alert",
+		"routerLink": "home/module/alerts/alert",
+		"parent": "home/module/alerts"
+	},
+	{
+		"title": "Feedback",
+		"routerLink": "home/module/feedback"
+	},
+	{
+		"title": "Feedback-Feedback",
+		"routerLink": "home/module/feedback/feedback-feedback",
+		"parent": "home/module/feedback"
+	},
+	{
+		"title": "Feedback-issue-Log",
+		"routerLink": "home/module/feedback/feedback-issue",
+		"parent": "home/module/feedback"
+	},
+	{
+		"title": "Vehicle Tracking",
+		"routerLink": "home/vehicle-tracking"
+	},
+	{
+		"title": "Update-Stock",
+		"routerLink": "home/update-stock",
+		"parent": "home/vehicle-tracking"
+	},
+	{
+		"title": "Add-Vehicle-Tracking",
+		"routerLink": "home/add-vehicle-tracking",
+		"parent": "home/vehicle-tracking"
+	},
+	{
+		"title": "Vehicle-Tracking-Route",
+		"routerLink": "home/vehicle-tracking-route",
+		"parent": "home/vehicle-tracking"
+	},
+	{
+		"title": "Add-Route",
+		"routerLink": "home/add-route",
+		"parent": "home/vehicle-tracking"
+	},
+	{
+		"title": "Cart",
+		"routerLink": "home/cart"
+	},
+	{
+		"title": "Wallet",
+		"routerLink": "home/Wallet"
+	},
+	{
+		"title": "Reports",
+		"routerLink": "home/reports"
+	},
+	{
+		"title": "Legacy-Paymentverify",
+		"routerLink": "home/paymentverify"
+	},
+	{
+		"title": "Legacy-Eligibility",
+		"routerLink": "home/eligbility"
+	},
+	{
+		"title": "Dashboard",
+		"routerLink": "home/dashboard"
+	},
+	{
+		"title": "Export",
+		"routerLink": "home/export"
+	},
+	{
+		"title": "Exports",
+		"routerLink": "home/export/export-export"
+	},
+	{
+		"title": "Add challan",
+		"routerLink": "home/export/add-challan"
+	},
+	{
+		"title": "Inter-Depot-Transfer",
+		"routerLink": "home/depot-home"
+	},
+	{
+		"title": "Inter-Depot-Transfer",
+		"routerLink": "home/depot-home/depot-transfer"
+	},
+	{
+		"title": "CSD",
+		"routerLink": "home/csd"
+	},
+	{
+		"title": "Hologram",
+		"routerLink": "home/hologram"
+	},
+	{
+		"title": "Indent-daily",
+		"routerLink": "home/hologram/indent-daily",
+		"parent": "home/hologram"
+	},
+	{
+		"title": "Indent-purchase",
+		"routerLink": "home/hologram/indent-purchase",
+		"parent": "home/hologram"
+	},
+	{
+		"title": "Distillery",
+		"routerLink": "home/hologram/distillery",
+		"parent": "home/hologram"
+	},
+	{
+		"title": "Depot",
+		"routerLink": "home/hologram/depot",
+		"parent": "home/hologram"
+	},
+	{
+		"title": "Damaged",
+		"routerLink": "home/hologram/damaged"
+	},
+	{
+		"title": "Inventory",
+		"routerLink": "home/hologram/inventory"
+	},
+	{
+		"title": "Usage",
+		"routerLink": "home/hologram/usage"
+	},
+	{
+		"title": "Verification",
+		"routerLink": "home/hologram/vefification"
+	},
+	{
+		"title": "Price list",
+		"routerLink": "home/module/price"
+	},
+	{
+		"title": "License Profiles",
+		"routerLink": "home/module/license"
+	}
+]

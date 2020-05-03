@@ -1,0 +1,10 @@
+
+.sup{height: auto;background-color: rgb(45, 79, 107);text-align: center;color: white;font-weight: bold;font-size: 22px;}
+.form-control{width: 20rem;}
+button{background-color: rgb(45, 79, 107);color: white;}
+#route{
+    margin-left: left 275px;
+}
+#route-button{
+    margin-bottom: 7px;margin-left: 16px;
+}

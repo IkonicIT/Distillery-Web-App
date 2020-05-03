@@ -1,0 +1,54 @@
+
+h1{
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #2e5d74;
+    color: white;
+    height: 2.2rem;
+}
+.type{
+    margin-left: 16rem;
+}
+.type1{
+    margin-left: 17.1rem;
+}
+.type2{
+    margin-left: 18.4rem;
+}
+.type3{
+    margin-left: 20.6rem;
+}
+.csd-report{
+    margin-left: 14rem;
+}
+.csd-report1{
+    margin-left: 20rem;
+}
+.csd-report2{
+    margin-left: 20rem;
+}
+.csd-report3{
+    margin-left: 18rem;
+}
+select{
+    padding-right: 5rem;
+}
+.refNo{
+    margin-left: 6rem;
+}
+.refNo1{
+    margin-left: 0.5rem;
+}
+label{
+    font-weight: 600;
+}
+.date{
+    margin-left: 23rem;
+}
+input{
+    border-radius: 2.5px;
+}
+.table{
+    width: 90%; 
+    margin-left: 2rem;
+}

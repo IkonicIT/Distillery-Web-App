@@ -1,0 +1,77 @@
+<h1>Indent for Export</h1>
+<div>
+    <label for="">
+        Name of the exporter :
+        <input type="text">
+    </label>
+    <label for="" style="margin-left: 7rem;">
+        Name of the Importer :
+        <input type="text">
+    </label>
+
+</div>
+<div>
+    <label for="" style="margin-left: 83px;">
+        Address :
+        <textarea name="" id="" cols="20" rows="3"></textarea>
+    </label>
+    <label for="" style="margin-left: 130px;">
+        Importer Indent No. :
+        <input type="text">
+    </label>
+</div>
+<div>
+    <label for="" >
+        Import Permit To Date :
+        <input type="date">
+    </label>
+    <label for="" style="margin-left: 95px;">
+        Import Permit From Date :
+        <input type="date">
+    </label>
+</div>
+<div>
+    <label for="" style="margin-left: 63px;">
+        Destination :
+        <textarea name="" id="" cols="20" rows="3"></textarea>
+    </label>
+    <label for="" style="margin-left: 200px;">
+        Purpose :
+        <input type="text">
+    </label>
+    <label for="" style="margin-left: 31rem;">
+        Route : 
+        <textarea name="" id="" cols="20" rows="3"></textarea>
+    </label>
+</div>
+<div>
+    <table>
+        <tr>
+            <th><input type="checkbox"></th>
+            <th>Brand Code</th>
+            <th>Brand Name</th>
+            <th>Size</th>
+            <th>Pack Type</th>
+            <th>AP Basic</th>
+            <th>Concerned InVoice Basic</th>
+            <th>Quantity in cases</th>
+
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+    </table>
+</div>
+<div>
+    <button>New Row</button>
+    <button>Remove Row</button>
+    <button mat-dialog-close style="margin-left: 30rem;"  (click)="save()">Save</button>
+    <button mat-dialog-close>Cancel</button>
+</div>

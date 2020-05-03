@@ -1,0 +1,44 @@
+p{
+    margin-bottom: 0rem;
+}
+.bg-dark{
+    background-color: #2e5d74!important;
+}
+nav{
+    height: 3rem;
+}
+label{
+    margin-top: 0.5rem;
+    margin-bottom: 1.3rem;
+    color: white;
+}
+input{
+    border-radius: 1.5px;
+    margin-top: 0rem;
+    height: 22px;
+    width: 172px;
+}
+#endDate{
+    margin-left: 1rem;
+}
+.date{
+    margin-top: 1rem;
+}
+select{
+    height: 1.5rem;
+    width: 3rem;
+    margin-top:6rem;
+}
+#search{
+    margin-left: 38rem;
+}
+.table td, .table th{
+    padding: 0rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.btn-success{
+    background-color: #2e5d74;
+}
+#next{
+    margin-left: 44rem;
+}

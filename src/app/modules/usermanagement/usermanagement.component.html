@@ -1,0 +1,71 @@
+<div class="btn-group">
+    <button type="button" class="btn btn-primary" (click)="isAdd=true" [ngClass]="{'active':isAdd}">Add</button>
+    <button type="button" class="btn btn-primary" (click)="isAdd=false" [ngClass]="{'active':!isAdd}">Edit</button>
+</div>
+<div class="row">
+    <div class="col-md-4"  *ngIf="isAdd">
+        <label>User Name:</label>
+        <input type="text" class="form-control" [(ngModel)]="user.userName" placeholder="User Name">
+        <div *ngFor="let errors of getErros('userName')">
+            <span style="color:red">{{errors}}</span>
+        </div>
+    </div>
+    <div class="col-md-4" *ngIf="!isAdd">
+        <label>Select User:</label>
+        <ng-select [(ngModel)]="user.userName" (change)="onChangeUser($event)" bindValue="userName" bindLabel="userName" [items]="usersList">
+        </ng-select>
+        <div *ngFor="let errors of getErros('userName')">
+            <span style="color:red">{{errors}}</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Password:</label>
+        <input type="password" class="form-control" [(ngModel)]="user.password" placeholder="Password">
+        <div *ngFor="let errors of getErros('password')">
+            <span style="color:red">{{errors}}</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>First Name:</label>
+        <input type="text" class="form-control" [(ngModel)]="user.firtsName" placeholder="First Name">
+        <div *ngFor="let errors of getErros('firtsName')">
+            <span style="color:red">{{errors}}</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Last Name:</label>
+        <input type="text" class="form-control" [(ngModel)]="user.lastName" placeholder="Last Name">
+        <div *ngFor="let errors of getErros('lastName')">
+            <span style="color:red">{{errors}}</span>
+        </div>     
+    </div>
+    <div class="col-md-4">
+        <label>Email Id:</label>
+        <input type="text" class="form-control" [(ngModel)]="user.emailId"  placeholder="Email Id">
+        <div *ngFor="let errors of getErros('emailId')">
+            <span style="color:red">{{errors}}</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Contact Number:</label>
+        <input type="text" class="form-control" [(ngModel)]="user.mobileNumber" placeholder="Contact Number">
+        <div *ngFor="let errors of getErros('mobileNumber')">
+            <span style="color:red">{{errors}}</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label>Roles Map:</label>
+        <!-- <select class="form-control" [(ngModel)]="user.rolesList">
+            <option>admin</option>
+            <option>sub admin</option>
+        </select> -->
+        <ng-select [multiple]="true" [(ngModel)]="user.roleIds" bindValue="roleId" bindLabel="roleName" [items]="activeRoles">
+        </ng-select>
+        <div *ngFor="let errors of getErros('roleIds')">
+            <span style="color:red">{{errors}}</span>
+        </div>
+    </div>
+</div>
+<br/>
+<button style="margin-left: 360px;" class="btn btn-primary" (click)="save()">Save</button>&nbsp;
+<button class="btn btn-primary" (click)="clear()">Clear/Cancel</button>&nbsp;

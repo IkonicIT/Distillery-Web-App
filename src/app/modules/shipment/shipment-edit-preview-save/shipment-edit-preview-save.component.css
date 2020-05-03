@@ -1,0 +1,23 @@
+h1{
+    font-size: 1.5rem;
+    background: #2e5d74;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+th{
+    background: #2e5d74;
+    border: 1px solid;
+    border-color: white;
+    color: white;
+    padding-right: 10px;
+    
+}
+td{
+    text-align: center;
+}
+button{
+    margin-left: 19rem;
+    background: #2e5d74;
+    color: white;
+}

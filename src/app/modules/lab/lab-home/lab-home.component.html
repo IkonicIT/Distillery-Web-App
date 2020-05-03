@@ -1,0 +1,167 @@
+<div *ngIf="hasLabPerm">
+<table>
+
+    <thead>
+        <th *ngxPermissionsOnly="['home/lab/samples']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/lab/samples'" [routerLink]="['../lab/samples']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/08.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Lab Samples</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/lab/finished']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/lab/finished'" [routerLink]="['../lab/finished']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/08.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Lab Finished Goods</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/lab/reports']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/lab/reports'" [routerLink]="['../lab/reports']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/08.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Lab Reports</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/lab/batch-deactivation']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/lab/batch-deactivation'" [routerLink]="['../lab/batch-deactivation']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/08.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Batch Deactivation</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        
+
+
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasLabPerm">
+    <app-no-privileges></app-no-privileges>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fliud">
+    <div class="row background">
+      <div class="col">
+         
+      </div>
+      <div class="col-12 text-right col-lg-4">
+             
+      </div>
+  </div>
+  <div class="row" id="wrapper">
+    
+    <div class="col-10" style="padding-top: 1%;">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../home']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/img/10.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Lab-Samples</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../home']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/img/10.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Lab-Finished-Goods</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../home']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/img/10.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Lab-Reports </h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            
+
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../home']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/img/10.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Lab-Batch-Deactivation </h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+=========================================================================================================== -->
+          

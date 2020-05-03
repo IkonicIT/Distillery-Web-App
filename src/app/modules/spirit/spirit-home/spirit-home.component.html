@@ -1,0 +1,66 @@
+<div *ngIf="hasSpiritPerm">
+  <section class="content-header">
+    <div class="header-icon">
+      <i class="fa fa-tachometer"></i>
+    </div>
+    <div class="header-title">
+      <h1>Spirit</h1>
+      <small>Detailed all Spirit Modules</small>
+    </div>
+  </section>
+  <section class="content">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngxPermissionsOnly="['home/spirit/procurement']">
+        <div id="cardbox1">
+          <div class="statistic-box">
+            <div class="row">
+              <div class="col-12">
+                <a [appSubMenu]="'home/spirit/procurement'" [routerLink]="['../spirit/procurement']"><img src="../../assets/img/image/10.png"
+                    style="height: 40px;" class="img-fluid" />
+                  <h3>Spirit Procurement</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngxPermissionsOnly="['home/spirit/print-approved']">
+        <div id="cardbox1">
+          <div class="statistic-box">
+            <div class="row">
+              <div class="col-12">
+                <a [appSubMenu]="'home/spirit/print-approved'" [routerLink]="['../spirit/print-approved']"><img src="../../assets/img/image/10.png"
+                    style="height: 40px;" class="img-fluid" />
+                <div class="counter-number pull-right">
+                  <i title="Add to Favorite" class="fa fa-heart fa-1x float-right"></i>
+                </div>
+                  <h3>Spirit Approved</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngxPermissionsOnly="['home/spirit/receipit']">
+        <div id="cardbox1">
+          <div class="statistic-box">
+            <div class="row">
+              <div class="col-12">
+                <a [appSubMenu]="'home/spirit/receipit'" [routerLink]="['../spirit/receipit']"><img src="../../assets/img/image/10.png" style="height: 40px;"
+                    class="img-fluid" />
+                <div class="counter-number pull-right">
+                  <i title="Add to Favorite" class="fa fa-heart fa-1x float-right"></i>
+                </div>
+                  <h3>Spirit Receipt</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div *ngIf="!hasSpiritPerm">
+  <app-no-privileges></app-no-privileges>
+</div>

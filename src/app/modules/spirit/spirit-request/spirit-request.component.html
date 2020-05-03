@@ -1,0 +1,86 @@
+<div class="modal-header modal-header-primary">
+  <h3 mat-dialog-header><i class="fa fa-user m-r-5"></i> Excise Lab Information</h3>
+  <button mat-dialog-close type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+</div>
+<div class="modal-body-cont">
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="spiritRequestForm">
+        <fieldset>
+          <!-- <div mat-dialog-content class="type">
+            <label for="sampleType">Sample Type*
+              <select name="type" id="sampleType" formControlName="type">
+                <option value="">Select</option>
+                <option *ngFor="let sType of spiritList" [value]="sType.typeName">{{ sType.description }}</option>
+              </select>
+            </label>
+            <app-filed-error [errorList]="['required']" [control]="spiritRequestForm.get('type')"></app-filed-error>
+          </div> -->
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label w-100" for="sampleType">Sample Type:*</label>
+            <select class="w-100 pr-0 form-control" name="type" id="sampleType" formControlName="type">
+              <option value="">Select</option>
+              <option *ngFor="let sType of spiritList" [value]="sType.typeName">{{ sType.description }}</option>
+            </select>
+            <app-filed-error [errorList]="['required']" [control]="spiritRequestForm.get('type')"></app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label">Date</label>
+            <input type="date" id="date" formControlName="requestedDate" class="form-control">
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="subject">Subject:*</label>
+            <textarea class="form-control" name="" id="subject" cols="30" rows="2" formControlName="subject"></textarea>
+            <app-filed-error [errorList]="['required']" [control]="spiritRequestForm.get('subject')"></app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="refNum">Ref No*</label>
+            <textarea class="form-control" name="" id="refNum" cols="30" rows="2" formControlName="refNum"></textarea>
+            <app-filed-error [errorList]="['required']" [control]="spiritRequestForm.get('refNum')"></app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="refDate">Ref.Date</label>
+            <input class="form-control" type="date" id="refDate" formControlName="refDate">
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="allotedQuota">Allotted Quota(BLS)*</label>
+            <input type="text" class="form-control" id="allotedQuota" formControlName="allotedQuota">
+            <app-filed-error [errorList]="['required']" [control]="spiritRequestForm.get('allotedQuota')">
+            </app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="requestedQty">Requested Qunatity (BLS)*</label>
+            <input type="text" class="form-control" formControlName="requestedQty" id="requestedQty">
+
+            <app-filed-error [errorList]="['required']" [control]="spiritRequestForm.get('requestedQty')">
+            </app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="receivedQty">Received Qunatity (BLS)*</label>
+            <input type="text" class="form-control" formControlName="receivedQty" id="receivedQty">
+            <app-filed-error [errorList]="['required']" [control]="spiritRequestForm.get('receivedQty')">
+            </app-filed-error>
+          </div>
+          <div class="col-md-6 form-group float-left">
+            <label class="control-label" for="supplierName">Supplier Name (BLS)*</label>
+            <select class="form-control" name="type" id="sampleType" formControlName="supplierName" id="supplierName">
+              <option value="">Select</option>
+              <option *ngFor="let sType of supplierList" [value]="sType.supplierId">{{ sType.supplierName }}</option>
+            </select>
+            <app-filed-error [errorList]="['required']" [control]="spiritRequestForm.get('supplierName')">
+            </app-filed-error>
+          </div>
+          <div class="col-md-12 form-group user-form-group float-left">
+            <div class="pull-right">
+              <button type="submit" class="btn btn-add btn-sm" (click)="save()">Save</button>
+              <button mat-dialog-close type="button" class="btn btn-danger btn-sm">Cancel</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button mat-dialog-close type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
+</div>

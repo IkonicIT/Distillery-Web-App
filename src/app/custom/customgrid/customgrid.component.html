@@ -1,0 +1,14 @@
+<div class="container-fluid" style="padding-top:30px">
+    <div class="row">
+        <div class="search-container">
+            <div style="margin-right: 10px;padding-bottom: 10px;">
+                <div style="float:left"><label class="searchlabel">Search:</label></div>
+                <div style="float:left"><input class="form-control" [(ngModel)]="quickSearchValue" type="text" id="filter-text-box" placeholder="Type to filter..." /></div>
+            </div>
+            <button class="gotohome-btn" (click)="navTohome()">Go to Home</button>
+        </div>
+        <ag-grid-angular style=" height:400px;width:100%" class="ag-theme-balham custom-grid" [rowData]="rowData" [columnDefs]="columnDefs" [pagination]="true" [animateRows]="true" [defaultColDef]="defaultColDef" [paginationPageSize]="13" [quickFilterText]=quickSearchValue>
+        </ag-grid-angular>
+
+    </div>
+</div>

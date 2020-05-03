@@ -1,0 +1,88 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-12 bac">
+            <p></p>
+            <form class="form-inline" action="/action_page.php">
+                <label for="date">Start Date :</label>
+                <input type="date" class="form-control" placeholder="" id="email" (change)="selectStartDate($event)">&nbsp;
+                <!-- <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="Start Date" (change)="selectStartDate($event)">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="End Date" (change)="selectEndDate($event)">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field> -->
+                <label for="pwd">End Date:</label>
+                <input type="date" class="form-control" placeholder="" id="pwd" (change)="selectEndDate($event)">&nbsp;
+                <select class="form-control">
+                    <option>Bottle Breakage</option>
+                    <!-- <option>CSD</option> -->
+                 
+                </select>&nbsp;
+                <i class="fa fa-search" (click)="searchBreakage($event)" aria-hidden="true"></i> &nbsp;
+                <i class="fa fa-print" (click)="print()"></i> &nbsp;
+                <button type="button" class="btn btn-success" (click)="exportexcel()">Export to Excel</button>
+                <!-- <img src="https://img.icons8.com/officel/30/000000/label-printer.png" class="img-print"> -->
+            </form>
+            <div class="example-header">
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                </mat-form-field>
+
+            </div>
+        </div>
+
+
+        <div class="col-md-12 breakage-table">
+
+
+            <div class="example-container mat-elevation-z8">
+
+                <mat-table [dataSource]="dataSource" matSort>
+
+                    <ng-container matColumnDef="scannedDate">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.scannedDate | date: 'yyyy-MM-dd'}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="breakageId">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Breakage ID </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.breakageId}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="caseBarNo">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Case BarNo </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.caseBarNo}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="productCode">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Product Code </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.productCode}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="brandName">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Brand Name </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.brandName }} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="productType">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Product Type </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.productType }} </mat-cell>
+                    </ng-container>
+
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;">
+                    </mat-row>
+                </mat-table>
+                <p class="noRecords" *ngIf="response.length<=0">No Records found</p>
+                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+                <button class="breakages-back-btn" (click)="navToBreakages()"> Back</button>
+            </div>
+
+
+
+        </div>
+
+    </div>

@@ -1,0 +1,105 @@
+<div *ngIf="hasBreakagePerm">
+<table>
+    <thead>
+        <th *ngxPermissionsOnly="['home/breakages/breakages-depot']">
+            <div class="col-10" style="padding-top: 1%;">
+                <div class="row">
+                    <div class="col-xl-2 col-md-3 col-6">
+                        <div class="card card1">
+                            <a [appSubMenu]="'home/breakages/breakages-depot'" [routerLink]="['../breakages/breakages-depot']">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="../../assets/img/breakage.png" style="height: 40px;" class="img-fluid" />
+                                        <h6>Breakage Depot</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </th>
+        <th *ngxPermissionsOnly="['home/breakages/shortage']">
+            <div class="col-10" style="padding-top: 1%;">
+                <div class="row">
+                    <div class="col-xl-2 col-md-3 col-6">
+                        <div class="card card1">
+                            <a [appSubMenu]="'home/breakages/shortage'" [routerLink]="['../breakages/shortage']">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="../../assets/img/breakage.png" style="height: 40px;" class="img-fluid" />
+                                        <h6>Shortages</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </th>
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasBreakagePerm"></div>
+<button class="gotohome-btn" (click)="navTohome()">Go to Home</button>
+
+
+<!-- <div class="col-10" style="padding-top: 1%;">
+    <div class="row">
+        <div class="col-xl-2 col-md-3 col-6" >
+            <div class="card card1">
+                <a [routerLink]="['../breakages/breakages-depot']">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="../../assets/img/breakage.png" style="height: 60px;" class="img-fluid" />
+                            <h6>Breakages Depot</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fliud">
+    <div class="row background">
+      <div class="col">
+         
+      </div>
+      <div class="col-12 text-right col-lg-4">
+             
+      </div>
+  </div>
+  <div class="row" id="wrapper">
+    
+    <div class="col-10" style="padding-top: 1%;">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../breakages/breakages-depot']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/Breakage.png"  style="height: 60px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Breakages Depot</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> -->

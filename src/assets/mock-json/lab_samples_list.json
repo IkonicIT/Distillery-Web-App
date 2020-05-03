@@ -1,0 +1,20 @@
+[
+    {
+        "referrenceNumber": 1254,
+        "exciseLab": "Excise Lab 04, Guntur",
+        "date": "02-22-2019",
+        "sampleType": "Blend"
+    },
+    {
+        "referrenceNumber": 1234,
+        "exciseLab": "Excise Lab 05, Guntur",
+        "date": "3-21-2019",
+        "sampleType": "Blend"
+    },
+    {
+        "referrenceNumber": 3234,
+        "exciseLab": "Excise Lab 06, Guntur",
+        "date": "4-20-2019",
+        "sampleType": "Blend"
+    }
+]

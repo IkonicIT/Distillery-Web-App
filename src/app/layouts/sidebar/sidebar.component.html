@@ -1,0 +1,44 @@
+<aside class="main-sidebar">
+  <!-- sidebar -->
+  <div class="sidebar">
+    <!-- sidebar menu -->
+    <ul class="sidebar-menu">
+      <li class="treeview" *ngIf="!hideDashBoard">
+        <a [routerLinkActive]="['active']" (click)="navigateByUrl('/features', $event)">
+          <i class="fa fa-tachometer"></i>
+          <span class="cursor-pointer">Dashboard</span>
+          <!-- <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span> -->
+        </a>
+
+      </li>
+      <li class="treeview" *ngFor="let item of menuItems" [ngClass]="{'active' : item.isMenuClicked}">
+        <a class="treeview-main-menu cursor-pointer" (click)="navigateByUrl(item, $event)">
+          <i class="fa fa-tachometer"></i>
+          <span>{{item.title}}</span>
+          <!-- <span class="pull-right-container"
+            (click)="item.isMenuClicked = !item.isMenuClicked;">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span> -->
+
+          <div class="main-db-menus">
+            <span class="cursor-pointer" (click)="navigateByUrl('/features', $event)" routerLink="/features"><a>Dashboard</a></span>
+            <span (click)="navigate(childitem, $event)" class="cursor-pointer" *ngFor="let childitem of getPopUpMenus(item)">
+              {{childitem.title}}</span>
+          </div>
+        </a>
+        <!-- <ul class="treeview-menu mn-db-mu">
+          <li *ngFor="let childitem of getChildMenus(item.key)">
+            <a class="treeview-su-su-mu" [routerLink]="childitem.routerLink">{{childitem.title}}
+              <ul class="tree-sub-sub-menu">
+                <li *ngFor="let smenu of subPopupMenus" (click)="navigateByUrl(smenu.routerLink)">{{smenu.title}}</li>
+              </ul>
+            </a>
+          </li>
+        </ul> -->
+      </li>
+    </ul>
+  </div>
+  <!-- /.sidebar -->
+</aside>

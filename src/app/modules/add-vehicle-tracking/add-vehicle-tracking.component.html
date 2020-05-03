@@ -1,0 +1,177 @@
+<p class="sup">Add-vehicle-Tracking</p><br>
+<div class="row">
+    <div class="col-12 ">
+        <div class="well">
+
+            <form class="form-inline" [formGroup]="vehicleTrackForm">
+                <div class="col-md-3"></div>
+                <div class="col-md-2 ">
+                    <label for="date" class="mb-2 mr-sm-4">TP Vehicle Number</label>
+                </div>
+                <div class="col-md-7">
+                    <input class="form-control mb-2 mr-sm-8" type="text" formControlName="tpVehicleNumber">
+                </div>
+
+                <div class="col-md-3"></div>
+                <div class="col-md-2 ">
+                    <label for="date" class="mb-2 mr-sm-4">Vehicle Number</label>
+                </div>
+                <div class="col-md-7">
+                    <input class="form-control mb-2 mr-sm-8" type="text" formControlName="vehicleNum">
+                </div>
+
+
+
+                <div class="col-md-3"></div>
+                <div class="col-md-2 ">
+                    <label for="date" class="mb-2 mr-sm-4">Distiliery Name</label>
+                </div>
+                <div class="col-md-7">
+                    <input class="form-control mb-2 mr-sm-8" type="text" formControlName="distilleryName">
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-2 ">
+                    <label for="date" class="mb-2 mr-sm-4">Select Destination</label>
+                </div>
+                <div class="col-md-7">
+                    <select class="form-control mb-2 mr-sm-8" formControlName="destination">
+                        <option value="">Select</option>
+                        <option *ngFor="let dest of destinationList" [value]="dest.destinationDepot"> {{ dest.destinationDepot }}</option>
+                    </select>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-2 ">
+                    <label for="date" class="mb-2 mr-sm-4">Number of Cases</label>
+                </div>
+                <div class="col-md-7">
+                    <input class="form-control mb-2 mr-sm-8" type="text" formControlName="cases">
+                </div>
+                <div formArrayName="routeName" style="padding-left: 100px;" *ngIf="routeName['controls'].length">
+                    <div *ngFor="let r of routeName['controls']; let i = index">
+                        <ng-container [formGroupName]="i">
+                            <div class="col-md-2 " style="margin-left: 14rem;">
+
+                                <label for="date" class="mb-2 mr-sm-4">Route</label>
+                            </div>
+                            <div class="col-md-7" style="margin-left: 22.3rem;margin-top: -25px;">
+                                <input type="text" class="form-control" name="route" formControlName="route" />
+                                <div style="padding-left: 20.5rem;margin-top: -38px;">
+                                    <button type="button" class="btn btn-success" (click)="addNewRow()"><i
+                                            class="fa fa-plus" aria-hidden="true"></i></button>
+
+                                    <button style="margin-left: 10px;" type="button" class="btn btn-danger"
+                                        *ngIf="vehicleTrackForm.controls.routeName.length > 1" (click)="removeRow(i)"><i
+                                            class="fa fa-trash-o" aria-hidden="true"></i></button>
+
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+
+
+
+                <!-- <div >
+                    <table >
+                        <thead>
+                            <tr>
+                                <!-- <th>Path</th>
+                                <th>view</th>
+                                <th>Delete</th>
+                                <th>Add</th>
+                                <th>Edit</th>
+                                <th>
+                                </th> -->
+                <!-- </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of rolesWithPrms.permissionsList;let j=index">
+                                <td>
+                                    <label for="" style="margin-left: 21rem;">Route
+                                    <input type="text" class="form-control" style="margin-left: 5.8rem;margin-top: 5px;"/></label> </td>
+                                <!-- <td><input type="checkbox" [checked]="item.isView==1" (change)="item.isView=(item.isView==1?0:1)"/></td>
+                                <td><input type="checkbox" [checked]="item.isDelete==1" (change)="item.isDelete=(item.isDelete==1?0:1)"/></td>
+                                <td><input type="checkbox" [checked]="item.isAdd==1" (change)="item.isAdd=(item.isAdd==1?0:1)"/></td>
+                                <td><input type="checkbox" [checked]="item.isEdit==1" (change)="item.isEdit=(item.isEdit==1?0:1)"/></td> -->
+                <!-- <td style="padding-left: 10px;">  <button type="button" class="btn btn-success" (click)="addRoute(j)"><i class="fa fa-plus"
+                                    aria-hidden="true"></i></button>
+                                </td>
+                                <td style="padding-left: 10px;">
+                            <button type="button" class="btn btn-danger" (click)="deleteRoute(j)"
+                                *ngIf="rolesWithPrms.permissionsList.length>1"><i class="fa fa-trash-o"
+                                    aria-hidden="true"></i></button></td>
+                            </tr>
+                        </tbody> -->
+                <!-- </table> -->
+                <!-- </div> -->
+                <div class="col-md-5" style="margin-left: 32rem;margin-top: 10px;">
+                    <button type="button" (click)="submitForm()">Submit</button>&nbsp;
+                    <button [routerLink]="['../vehicle-tracking']">Cancel</button>&nbsp;
+                    <button>Clear</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="col-md-3"></div>
+            <div class="col-md-2 ">
+                <label for="date" class="mb-2 mr-sm-4">Vehicle Number</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" />
+                    <button type="button" class="btn btn-success" (click)="addMap(i)"><i class="fa fa-plus"
+                        aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-danger" (click)="deleteMap(i)"
+                                    *ngIf="rolesWithPrms.permissionsList.length>1"><i class="fa fa-trash-o"
+                                        aria-hidden="true"></i></button>
+                </div> -->
+<!-- <div class="col-md-3"></div>
+            <div class="col-md-2 ">
+                <label for="date" class="mb-2 mr-sm-4">Distiliery Unit</label>
+                </div>
+                <div class="col-md-7">
+                <select class="form-control mb-2 mr-sm-8">
+                    <option></option>
+                </select>
+                </div>
+                <div class="col-md-3"></div>
+            <div class="col-md-2 ">
+                    <label for="date" class="mb-2 mr-sm-4">Select Destination</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control mb-2 mr-sm-8"  placeholder=""  name="text" >
+                    </div>
+                   
+            <div class="col-md-3"></div>
+            <div class="col-md-2 ">
+                <label for="date" class="mb-2 mr-sm-4">Vehicle No</label>
+                </div>
+                <div class="col-md-7">
+                <select class="form-control mb-2 mr-sm-8">
+                    <option></option>
+                </select>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-2 ">
+        <label for="text" class="mb-2 mr-sm-4">No Of Casses Loaded into Vehicle</label>
+        </div>
+        <div class="col-md-7">
+        <input type="text" class="form-control mb-2 mr-sm-8"  placeholder=""  name="text" >
+        </div>
+                <div class="col-md-12" style="height: 30px;"></div> 
+                <div class="col-md-5"></div> 
+                <div class="col-md-5">
+                    <button>Submit</button>&nbsp;
+                    <button>Cancel</button>&nbsp;
+                   
+                    </div>
+                    <div class="col-md-2"></div> 
+            </form>
+        
+      </div>
+      
+      
+  </div>
+</div> -->

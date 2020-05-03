@@ -1,0 +1,219 @@
+<div *ngIf="hasAlertPerm">
+<table>
+    <thead>
+        <th *ngxPermissionsOnly="['home/module/alerts/subscription']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/alerts/subscription'" [routerLink]="['../alerts/subscription']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/Alert -2.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Alerts Subscription</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/module/alerts/circulars']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/alerts/circulars'" [routerLink]="['../alerts/circulars']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/Alert -2.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Alert <br> Circulars</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/module/alerts/alert']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/module/alerts/alert'" [routerLink]="['../alerts/alert']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/Alert -2.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Alert- <br> Alerts</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        
+
+
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasAlertPerm">
+    <app-no-privileges></app-no-privileges>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fliud">
+    <div class="row background">
+      <div class="col">
+         
+      </div>
+      <div class="col-12 text-right col-lg-4">
+             
+      </div>
+  </div>
+  <div class="row" id="wrapper">
+    
+    <div class="col-10" style="padding-top: 1%;">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../alerts/subscription']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/img/24.png" class="img-fluid side-width"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Alerts-Subscription</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../alerts/circulars']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/img/24.png" class="img-fluid side-width"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Alerts-Cricular</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../alerts/alert']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/img/24.png" class="img-fluid side-width"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Alerts-Alert</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+            <!-- <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../shipment/shipt-tp-vehicle-accident']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="https://img.icons8.com/ultraviolet/40/000000/robot.png">
+                            </div>
+                            <div class="col-9">
+                                <h3>TP Vehicle Accident </h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            
+
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../shipment/shipment-router']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="https://img.icons8.com/ultraviolet/40/000000/robot.png">
+                            </div>
+                            <div class="col-9">
+                                <h3>Route </h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+            
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../shipment/shipment-tp-revalidation']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="https://img.icons8.com/ultraviolet/40/000000/robot.png">
+                            </div>
+                            <div class="col-9">
+                                <h3>TP Revalidation</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>  -->
+            <!-- <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../home']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/img/12.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Alerts</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+            <!-- <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../home']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/img/18.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Feedback</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+        <!-- </div>
+    </div>
+  </div>
+  
+  
+  </div> -->
+
+
+
+
+
+
+
+
+

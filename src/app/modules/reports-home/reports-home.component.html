@@ -1,0 +1,45 @@
+<div *ngIf="hasReportPerm">
+<table>
+    <thead>
+        <th *ngxPermissionsOnly="['home/reports']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [routerLink]="['../reports']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/image/18.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Reports</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/reports-brand-wine']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [routerLink]="['../reports-brand-wine']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/image/18.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Brand Wine</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+       
+       
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasReportPerm">
+    <app-no-privileges></app-no-privileges>
+</div>

@@ -1,0 +1,81 @@
+<div *ngIf="hasDepotPer">
+<table>
+
+    <thead>
+        <th *ngxPermissionsOnly="['home/depot-home/depot-transfer']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/depot-home/depot-transfer'" [routerLink]="['../depot-home/depot-transfer']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/08.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Depot Transfer</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/depot-home/depot-local']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/depot-home/depot-local'" [routerLink]="['../depot-home/depot-local']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/08.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Inter Depot Transfer-Local</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/depot-home/depot-transfer-supplier']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/depot-home/depot-transfer-supplier'" [routerLink]="['../depot-home/depot-transfer-supplier']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/08.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Inter Depot Transfer-Supplier</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/depot-home/depot-local-supplier']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/depot-home/depot-local-supplier'" [routerLink]="['../depot-home/depot-local-supplier']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/08.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Inter Depot Local</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        
+
+
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasDepotPer">
+    <app-no-privileges></app-no-privileges>
+</div>

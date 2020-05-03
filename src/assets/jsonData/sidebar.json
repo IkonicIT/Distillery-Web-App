@@ -1,0 +1,284 @@
+{
+    
+    
+    "parentData" : [
+        {
+            "title": "Indent Management",
+            "imgUrl": "../../assets/img/pricing.png",
+            "routerLink": "indent-management",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+
+        {
+            "title": "Pricing",
+            "imgUrl": "../../assets/img/pricing.png",
+            "routerLink": "pricing",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+                {
+            "title": "Cart",
+            "imgUrl": "../../assets/img/cart.png",
+            "routerLink": "cart",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        
+        {
+            "title": "Wallet",
+            "imgUrl": "../../assets/img/wallet.png",
+            "routerLink": "Wallet",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Wallet-amount",
+            "imgUrl": "../../assets/img/wallet.png",
+            "routerLink": "Wallet-amount",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        
+        {
+            "title": "Vehicle Tracking",
+            "imgUrl": "../../assets/img/08.png",
+            "routerLink": "vehicle-tracking",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Depots",
+            "imgUrl": "../../assets/Icons/Depot .png",
+            "routerLink": "depots",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Reports",
+            "imgUrl": "../../assets/img/image/18.png",
+            "routerLink": "reports-home",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Beer",
+            "imgUrl": "../../assets/Icons/Beer.png",
+            "routerLink": "beer",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Breakage",
+            "imgUrl": "../../assets/img/breakage.png",
+            "routerLink": "breakages",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Feedback",
+            "imgUrl": "../../assets/img/image/18.png",
+            "routerLink": "module/feedback",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        
+        {
+            "title": "BCL Outlets",
+            "imgUrl": "../../assets/img/BCL.png",
+            "routerLink": "bcl-outlets",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "License Profiles",
+            "imgUrl": "../../assets/Icons/Licensee profiles.png",
+            "routerLink": "licensee-profiles",
+            "isRetailCustomer": true,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Licensee Sales",
+            "imgUrl": "../../assets/Icons/LIC sales -1.png",
+            "routerLink": "licensee-sales",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Legacy-Paymentverify",
+            "imgUrl": "../../assets/img/15.png",
+            "routerLink": "paymentverify",
+            "isRetailCustomer": true,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Legacy-Eligibility",
+            "imgUrl": "../../assets/img/15.png",
+            "routerLink": "eligbility",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        
+        {
+            "title": "Supply",
+            "imgUrl": "../../assets/img/04.png",
+            "routerLink": "module/transactions",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Alerts",
+            "imgUrl": "../../assets/Icons/Alert -2.png",
+            "routerLink": "module/alerts",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Products",
+            "imgUrl": "../../assets/img/24.png",
+            "routerLink": "products",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Imports",
+            "imgUrl": "../../assets/Icons/Import.png",
+            "routerLink": "imports",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Distillery",
+            "imgUrl": "../../assets/img/18.png",
+            "routerLink": "distillery",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "User",
+            "imgUrl": "../../assets/img/image/14.png",
+            "routerLink": "user",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Dashboard",
+            "imgUrl": "../../assets/img/26.png",
+            "routerLink": "dashboard",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Export",
+            "imgUrl": "../../assets/img/23.png",
+            "routerLink": "export",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Shipment",
+            "imgUrl": "../../assets/img/17.png",
+            "routerLink": "shipment",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Inter-Depot-Transfer",
+            "imgUrl": "../../assets/Icons/08.png",
+            "routerLink": "depot-home",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "CSD",
+            "imgUrl": "../../assets/img/05.png",
+            "routerLink": "csd",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Production",
+            "imgUrl": "../../assets/img/24.png",
+            "routerLink": "production",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Excise",
+            "imgUrl": "../../assets/img/image/09.png",
+            "routerLink": "excise",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Spirit",
+            "imgUrl": "../../assets/img/image/10.png",
+            "routerLink": "spirit",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Lab",
+            "imgUrl": "../../assets/img/image/10.png",
+            "routerLink": "lab",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Hologram",
+            "imgUrl": "../../assets/img/25.png",
+            "routerLink": "hologram",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        {
+            "title": "Stock",
+            "imgUrl": "../../assets/img/image/19.png",
+            "routerLink": "module/stock",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        },
+        
+        {
+            "title": "License Profiles",
+            "imgUrl": "../../assets/img/image/02.png",
+            "routerLink": "licensee-profiles",
+            "isRetailCustomer": false,
+            "isView": false,
+            "isEdit": false
+        }
+    ]
+}

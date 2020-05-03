@@ -1,0 +1,223 @@
+<div *ngIf="hasDepotPerm">
+<table>
+    <thead>
+        <th *ngxPermissionsOnly="['home/depots/depots-stock']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/depots/depots-stock'" [routerLink]="['../depots/depots-stock']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/Depot .png" style="height: 40px;" class="img-fluid" />
+                                    <h6> Depots <br> Stock</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/depots/depots-breakage-verification']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/depots/depots-breakage-verification'" [routerLink]="['../depots/depots-breakage-verification']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/Depot .png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Breakage Verification</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/depots/depots-challan']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div [appSubMenu]="'home/depots/depots-challan'" class="card card1">
+                        <a [routerLink]="['../depots/depots-challan']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/Depot .png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Depots Challan</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/depots/depots-retailer-returns']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/depots/depots-retailer-returns'" [routerLink]="['../depots/depots-retailer-returns']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/Depot .png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Retailer Returns</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+
+
+
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasDepotPerm">
+    <app-no-privileges></app-no-privileges>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fliud">
+    <div class="row background">
+      <div class="col">
+         
+      </div>
+      <div class="col-12 text-right col-lg-4">
+             
+      </div>
+  </div>
+  <div class="row" id="wrapper">
+    
+    <div class="col-10" style="padding-top: 1%;">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../depots/depots-stock']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/Depot .png" style="height: 60px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Stock</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../depots/depots-breakage-verification']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/Depot .png" style="height: 60px;" class="img-fluid"/>
+                                
+                            </div>
+                            <div class="col-9">
+                                <h3>Breakage Verification</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../depots/depots-challan']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/Depot .png" style="height: 60px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Depots Challan</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            
+
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../depots/depots-retailer-returns']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/Depot .png" style="height: 60px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Retailer Returns</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+           
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../shipment/shipment-tp-revalidation']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="https://img.icons8.com/ultraviolet/40/000000/robot.png">
+                            </div>
+                            <div class="col-9">
+                                <h3>TP Revalidation</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>  -->
+            <!-- <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../home']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/img/12.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Alerts</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+            <!-- <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../home']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/img/18.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Feedback</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+    
+  <!-- <div class="row background">
+    <div class="col-12">
+        <h6>Excise Department,Andhra Pradesh,India</h6>
+    </div>
+  </div> -->
+  
+
+
+
+
+
+
+
+
+ 

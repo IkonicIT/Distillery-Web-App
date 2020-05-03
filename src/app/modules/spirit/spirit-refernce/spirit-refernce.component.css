@@ -1,0 +1,29 @@
+
+h1{
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #2e5d74!important;
+    color: white;
+    height: 2.2rem;
+}
+.type{
+    margin-left: 18rem;
+}
+select{
+    padding-right: 5rem;
+}
+.refNo{
+    margin-left: 22rem;
+}
+label{
+    font-weight: 600;
+}
+.date{
+    margin-left: 23.5rem;
+}
+input{
+    border-radius: 2.5px;
+}
+.table{
+    width: min-content;
+}

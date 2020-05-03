@@ -1,0 +1,148 @@
+<section class="content-header">
+  <div class="header-icon">
+    <i class="fa fa-indent"></i>
+  </div>
+  <div class="header-title">
+    <h1>Active Indent</h1>
+    <small>Details of Active Indent</small>
+  </div>
+</section>
+<section class="content">
+  <div class="row">
+    <div class="col-12" *ngIf="!showCreateIndentTab">
+      <custom-grid [rowData]="rowData" [columnDefs]="columnDefs">
+      </custom-grid>
+    </div>
+    <div class="col-12" *ngIf="showCreateIndentTab">
+      <div class="row">
+        <!-- <div class="col-md-4">
+                <label>Shop Name:</label>
+                <input type="text" class="form-control" placeholder="Enter Shop Name"
+                    [(ngModel)]="indentModel.shopName">
+                    <div *ngFor="let errors of getErros('shopName')">
+                        <span style="color:red">{{errors}}</span>
+                    </div>
+            </div> -->
+        <div class="form-group col-md-4">
+          <label>Select Shop Name:</label>
+          <select class="form-control" [(ngModel)]="indentModel.shopName" (change)="onShopNameChange()">
+            <option value="0">Shop Name</option>
+            <option *ngFor="let item of shopNames" [value]="item">{{item}}</option>
+          </select>
+          <div *ngFor="let errors of getErros('shopName')">
+            <span style="color:red">{{errors}}</span>
+          </div>
+        </div>
+        <div class="form-group col-md-4">
+          <label>AuthorisedPerson:</label>
+          <input type="text" class="form-control" placeholder="Enter authorisedPerson"
+            [(ngModel)]="indentModel.authorisedPerson">
+        </div>
+        <div class="form-group col-md-4">
+          <label>Select Depot Name:</label>
+          <select class="form-control" [(ngModel)]="indentModel.depot" (change)="onDepotChange()">
+            <option value="0"> Depot Name</option>
+            <option *ngFor="let item of deportDts" [value]="item.depotId">{{item.depotName}}</option>
+          </select>
+          <div *ngFor="let errors of getErros('depotName')">
+            <span style="color:red">{{errors}}</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label>Retailer Code:</label>
+          <input type="text" class="form-control" placeholder="Enter Retailer Code"
+            [(ngModel)]="indentModel.retailerCode">
+          <div *ngFor="let errors of getErros('retailerCode')">
+            <span style="color:red">{{errors}}</span>
+          </div>
+        </div>
+        <div class="form-group col-md-4">
+          <label>CreationDate:</label>
+          <div class="date-container">
+            <input [owlDateTime]="dt1" class="shadow-input" [min]="minDate"
+              [(ngModel)]="indentModel.indentCreationDate">
+            <input [owlDateTimeTrigger]="dt1" class="form-control"
+              [value]="indentModel.indentCreationDate | dateFilter:'yyyy-MM-dd'" placeholder="Enter indentCreationDate">
+            <owl-date-time pickerType="calendar" #dt1></owl-date-time>
+          </div>
+        </div>
+        <div class="form-group col-md-4">
+          <label>ContactNumber:</label>
+          <input type="text" class="form-control" placeholder="Enter contactNumber"
+            [(ngModel)]="indentModel.contactNumber">
+          <div *ngFor="let errors of getErros('contactNumber')">
+            <span style="color:red">{{errors}}</span>
+          </div>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label> Select VehicleNumber</label>
+          <select class="form-control" [(ngModel)]="indentModel.vehicleNumber" (change)="onVehicleChange()">
+            <option value="0">Vehicle Number</option>
+            <option *ngFor="let item of Vehicles" [value]="item.vehicleNum">{{item.vehicleNum}}</option>
+          </select>
+          <div *ngFor="let errors of getErros('vehicleNumber')">
+            <span style="color:red">{{errors}}</span>
+          </div>
+        </div>
+        <!-- <div class="form-group col-md-4">
+                <label>VehicleNumber:</label>
+                <input type="text" class="form-control" placeholder="Enter vehicleNumber"
+                    [(ngModel)]="indentModel.vehicleNumber">
+                    <div *ngFor="let errors of getErros('vehicleNumber')">
+                        <span style="color:red">{{errors}}</span>
+                    </div>
+            </div> -->
+
+      </div>
+
+      <div class="d-flex justify-content-end mb-3"><button type="button" class="btn btn-success"
+          (click)="addProduct(i)"><i class="fa fa-plus" aria-hidden="true"></i> Add New</button></div>
+      <div style="overflow: auto;">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Product Code</th>
+              <th>Product Desc</th>
+              <th>Bar Code</th>
+              <th>No. of Units</th>
+              <th>Unit Price</th>
+              <th>Total Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of indentModel.productList;let i=index">
+
+
+              <td> <select class="form-control" [(ngModel)]="item.description" (change)="onProductChange()">
+                  <option value="0"> Product Name</option>
+                  <option *ngFor="let item of products">{{item.productName}}</option>
+                </select></td>
+
+              <!-- <td><input type="text" [(ngModel)]="item.description" class="form-control" /></td> -->
+              <td><input type="text" [(ngModel)]="item.productCode" class="form-control" /></td>
+              <td><input type="text" [(ngModel)]="item.productDescription" class="form-control" /></td>
+              <td><input type="text" [(ngModel)]="item.barCode" class="form-control" /></td>
+              <td><input type="number" [(ngModel)]="item.noOfUnits"
+                  (change)="item.totalPrice=(item.noOfUnits*item.unitPrice)" class="form-control" /></td>
+              <td><input type="number" [(ngModel)]="item.unitPrice"
+                  (change)="item.totalPrice=(item.noOfUnits*item.unitPrice)" class="form-control" /></td>
+              <td><input type="number" [(ngModel)]="item.totalPrice" class="form-control" /></td>
+              <td><button type="button" class="btn btn-success" (click)="addProduct(i)"><i class="fa fa-plus"
+                    aria-hidden="true"></i></button>
+                <button type="button" class="btn btn-danger" (click)="deleteProduct(i)"
+                  *ngIf="indentModel.productList.length>1"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button style="margin-left: 360px;" class="btn btn-primary" (click)="submitIndent()">Save</button>&nbsp;
+      <button class="btn btn-primary">Cancel</button>&nbsp;
+      <button class="btn btn-primary">Clear</button>
+      <button class="gotohome-btn" (click)="navTohome()">Go to Home</button>
+    </div>
+  </div>
+</section>

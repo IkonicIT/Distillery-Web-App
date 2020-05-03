@@ -1,0 +1,57 @@
+<!-- <div *ngIf="roleName==Retailer">
+    <h1>MY WALLET</h1>
+</div> -->
+<div *ngIf="hasWalletPerm">
+<div>
+    <h1>RETAILER WALLET DETAILS</h1>
+</div>
+
+
+<div style="margin-left: 20rem;">
+    <!-- <p style="
+ margin-top: 4rem"><img src="https://img.icons8.com/ios/30/000000/manager.png"> <input type="text" placeholder="Depo Manager"> </p> -->
+    <select name="" id="" style="width: 16rem;height: 40px; margin-top: 3rem;">
+        <option value="">Select Retailer</option>
+        <option value="">Retailer 1</option>
+        <option value="">Retailer 2</option>
+    </select>
+    <div style="margin-top: 1rem;">
+        <input style="width:16rem;height: 40px;" type="search" placeholder="Retailer Code">
+    </div>
+    <div style="margin-top: 1rem;">
+        <input style="width:16rem;height: 40px;" type="search" placeholder="Retailer Name">
+    </div>
+    <div style="margin-top: 1rem;">
+        <input style="width:16rem;height: 40px;" type="search" placeholder="Retaier Type">
+    </div>
+    <div style="margin-top: 1rem;">
+        <input style="width:16rem;height: 40px;" type="search" placeholder="Status">
+    </div>
+    <div style="margin-top: 1rem;">
+        <input style="width:16rem;height: 40px;" type="search" placeholder="Challan Number">
+    </div>
+    <div style="margin-top: 1rem;">
+        <input style="width:16rem;height: 40px;" type="search" placeholder="Challan Date">
+    </div>
+    <div style="margin-top: 1rem;">
+        <input style="width:16rem;height: 40px;" type="search" placeholder="Bank Name">
+    </div>
+    <div style="margin-top: 1rem;">
+        <input style="width:16rem;height: 40px;" type="search" placeholder="Challan Place">
+    </div>
+    <div style="margin-top: 1rem;">
+        <input style="width:16rem;height: 40px;" type="search" placeholder="Deposit Amount">
+    </div>
+    <div style="margin-top: 1rem;">
+        <input style="width:16rem;height: 40px;" type="file">
+    </div>
+    <div style="margin-top: 1rem;">
+        <button (click)="sampleFormWindow()">Add Amount</button>&nbsp;&nbsp;
+        <button style="height: 30px;width: 5rem;">Reset</button>
+    </div>
+
+</div>
+</div>
+<div *ngIf="!hasWalletPerm">
+
+</div>

@@ -1,0 +1,67 @@
+<div *ngIf="hasExcisePerm">
+<table>
+
+    <thead>
+        <th *ngxPermissionsOnly="['home/excise-duty/duties']">
+            <div class="col-10" style="padding-top: 1%;">
+                <div class="row">
+                    <div class="col-xl-2 col-md-3 col-6">
+                        <div class="card card1">
+                            <a [appSubMenu]="'home/excise-duty/duties'" [routerLink]="['../excise-duty/duties']">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="../../assets/img/image/09.png" style="height: 40px;" class="img-fluid" />
+                                        <h6>Excise Duties</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </th>
+        <th *ngxPermissionsOnly="['home/excise-duty/remitance']">
+            <div class="col-10" style="padding-top: 1%;">
+                <div class="row">
+                    <div class="col-xl-2 col-md-3 col-6">
+                        <div class="card card1">
+                            <a [appSubMenu]="'home/excise-duty/remitance'" [routerLink]="['../excise-duty/remitance']">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="../../assets/img/image/09.png" style="height: 40px;" class="img-fluid" />
+                                        <h6>Excise Remittance</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </th>
+        <th *ngxPermissionsOnly="['home/excise-duty/department']">
+            <div class="col-10" style="padding-top: 1%;">
+                <div class="row">
+                    <div class="col-xl-2 col-md-3 col-6">
+                        <div class="card card1">
+                            <a [appSubMenu]="'home/excise-duty/department'" [routerLink]="['../excise-duty/department']">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="../../assets/img/image/09.png" style="height: 40px;" class="img-fluid" />
+                                        <h6>Excise Department</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </th>
+
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasExcisePerm"></div>
+<button class="gotohome-btn" (click)="navTohome()">Go to Home</button>

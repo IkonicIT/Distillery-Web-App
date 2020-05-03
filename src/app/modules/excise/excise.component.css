@@ -1,0 +1,118 @@
+.navbar {
+    border-radius: 0px;
+    background-color: #2BC0C7 !important;
+    padding-bottom: 25px;
+}
+
+a.navbar-brand {
+    color: white;
+    padding-top: 30px;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.card1 {
+    border-radius: 44px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    width: 100px;
+}
+
+h6 {
+    color: #2e5d74;
+    font-size: x-small;
+}
+
+.left-features-menu img {
+    margin-right: 10px;
+}
+
+ul.navbar-nav.ml-auto {
+    display: grid;
+    padding-top: 13px;
+    float: right;
+}
+
+ul.navbar-nav.ml-auto h4,
+ul.navbar-nav.ml-auto h6 {
+    color: white;
+}
+
+ul.navbar-nav.ml-auto {
+    display: grid;
+    padding-top: 13px;
+    float: right;
+}
+
+.footer {
+    background: #2bc0c7;
+    padding: 12px;
+}
+
+.footer a {
+    color: white;
+    font-size: 20px;
+}
+
+section.suply-login {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -20px;
+    background-size: contain;
+    padding: 56px;
+}
+
+.service-img img {
+    width: 80px;
+    background: white;
+    border-radius: 50%;
+}
+
+.footer p {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+
+.service-box {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gotohome-btn {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    background: rgb(45, 79, 107);
+    border-radius: 10px;
+    height: 30px;
+    float: right;
+    margin: 15px 0;
+    width: 150px;
+    padding: 0 15px;
+}
+
+@media only screen and (min-width:300px) and (max-width:700px) {
+    section.suply-login {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: -20px;
+        background-size: cover;
+        padding: 30px;
+    }
+    a.navbar-brand {
+        color: white;
+        padding-top: 5px;
+    }
+}
+
+div {
+    size: 50%;
+}

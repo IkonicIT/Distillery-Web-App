@@ -1,0 +1,98 @@
+<div *ngIf="hasProdPerm">
+<table>
+
+    <thead>
+        <th *ngxPermissionsOnly="['home/production/products']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/production/products'" [routerLink]="['../production/products']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/24.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Products</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/production/production-line']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/production/production-line'" [routerLink]="['../production/production-line']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/24.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Production Line</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/production/production-start']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/production/production-start'" [routerLink]="['../production/production-start']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/24.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Production Start</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/production/production-report']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/production/production-report'" [routerLink]="['../production/production-report']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/24.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Production Report</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/production/manual-production']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/production/manual-production'" [routerLink]="['../production/manual-production']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/img/24.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Manual Production</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        
+
+
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasProdPerm">
+    <app-no-privileges></app-no-privileges>
+</div>

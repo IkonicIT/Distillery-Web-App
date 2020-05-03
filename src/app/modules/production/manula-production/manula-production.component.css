@@ -1,0 +1,41 @@
+select{
+    height: 1.5rem;
+    width: 3rem;
+    margin-top:6rem;
+}
+.navbar-dark{
+    background-color: #2e5d74!important;
+    height: 48px;
+}
+#search{
+    margin-left: 47rem;
+    
+}
+label{
+    color: white;
+}
+button{
+    background-color:#2e5d74;
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px;
+
+}
+td{
+    font-size: 12px;
+}
+#button{
+    margin-left: 44rem;
+    margin-top: -58px;
+    
+}
+thead{
+    background: #2e5d74;
+    color: white;
+}

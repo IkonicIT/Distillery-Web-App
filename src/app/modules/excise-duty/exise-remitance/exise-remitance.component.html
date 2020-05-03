@@ -1,0 +1,89 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12" *ngIf="isAddperm">
+
+            <i class="fa fa-plus-circle fa-x" aria-hidden="true" (click)="exiseFormWindow()" style="cursor: pointer;"><span > Duties</span ></i> &nbsp;
+
+
+        </div>
+        <div class="col-12 bac">
+            <p></p>
+            <form class="form-inline" action="/action_page.php">
+                <label for="date">Start Date :</label>
+                <input type="date" class="form-control" placeholder="" id="email">&nbsp;
+                <label for="pwd">End Date:</label>
+                <input type="date" class="form-control" placeholder="" id="pwd">&nbsp;
+                <select class="form-control">
+                    <option>Local</option>
+                    <option>CSD</option>
+                 
+                </select>&nbsp;
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <button type="button" class="btn btn-success" (click)="exportexcel()">Export to Excel</button>
+            </form>
+            <div class="example-header">
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="col-md-12 excise-remittance-table">
+
+
+            <div class="example-container mat-elevation-z8">
+
+                <mat-table [dataSource]="dataSource" matSort>
+
+                    <ng-container matColumnDef="challanNo">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Challan No </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.challanNo}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="description">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.description}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="transactionType">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Transaction Type </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.transactionType}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="openinigBalance">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Openinig Balance </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.openinigBalance}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="credit">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Credit </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.credit }} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="debit">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Debit </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.debit.toExponential() }} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="closingBalance">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Closing Balance </mat-header-cell>
+                        <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.closingBalance}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="creationDate">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Creation Date </mat-header-cell>
+                        <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.creationDate}} </mat-cell>
+                    </ng-container>
+
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;">
+                    </mat-row>
+                </mat-table>
+                <p class="noRecords" *ngIf="response.length<=0">No Records found</p>
+                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+                <button class="exciseremittance-back-btn" (click)="navToExcise()"> Back</button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>

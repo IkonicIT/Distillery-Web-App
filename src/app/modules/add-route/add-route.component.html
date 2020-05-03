@@ -1,0 +1,100 @@
+
+<p class="sup">Add-Route</p><br>
+<div class="row">
+  <div class="col-12 ">
+      <div class="well">
+        
+        <form class="form-inline" >
+            <div class="col-md-3"></div>
+            <div class="col-md-2 ">
+                <label for="date" class="mb-2 mr-sm-4">Source(Distillery unit)</label>
+                </div>
+                <div class="col-md-7">
+                <select class="form-control mb-2 mr-sm-8">
+                    <option></option>
+                </select>
+                </div>
+                                   <div class="col-md-3"></div>
+                    <div class="col-md-2 ">
+            <label for="text" class="mb-2 mr-sm-4">Vehicle No</label>
+            </div>
+            <div class="col-md-7">
+            <input type="text" class="form-control mb-2 mr-sm-8" [(ngModel)]="vehicleNum" placeholder=""  name="text" >
+            </div>
+
+            <div class="col-md-3"></div>
+                    <div class="col-md-2 ">
+            <label for="text" class="mb-2 mr-sm-4">TP Pin</label>
+            </div>
+            <div class="col-md-7">
+            <input type="text" class="form-control mb-2 mr-sm-8" [(ngModel)]="tpPin" placeholder=""  name="text" >
+            </div>
+
+            <div *ngFor="let item of rolesWithPrms.permissionsList;let j=index" style="padding-left: 100px;margin-top: -17px;margin-bottom: 10px;">
+                <div class="col-md-2 " style="margin-left: 12rem;">
+                    
+                    <label for="date" class="mb-2 mr-sm-4">Intermediate Route</label>
+                    </div>
+                    <div class="col-md-7" style="margin-left: 22.3rem;margin-top: -25px;">
+                        <input type="text" [(ngModel)]="intermediateRoute" class="form-control" />
+                        <div style="padding-left: 20.5rem;margin-top: -38px;">
+                        <button  type="button" class="btn btn-success" (click)="addRoute(j)"><i class="fa fa-plus"
+                            aria-hidden="true"></i></button>
+                        
+                    <button style="margin-left: 10px;" type="button" class="btn btn-danger" (click)="deleteRoute(j)"
+                        *ngIf="rolesWithPrms.permissionsList.length>1"><i class="fa fa-trash-o"
+                            aria-hidden="true"></i></button>
+
+                    </div>
+                </div>
+                </div>
+
+                    <div class="col-md-3"></div>
+                    <div class="col-md-2 ">
+            <label for="text" class="mb-2 mr-sm-4">Route Creation Date</label>
+            </div>
+            <div class="col-md-7">
+            <input type="date" [(ngModel)]="routeCreationDate" class="form-control mb-2 mr-sm-8"  placeholder=""  >
+            </div>
+
+
+                <div class="col-md-3"></div>
+                <div class="col-md-2 ">
+            <label for="text" class="mb-2 mr-sm-4">Estimated Start Date</label>
+            </div>
+            <div class="col-md-7">
+            <input type="date" [(ngModel)]="estimatedDate" class="form-control mb-2 mr-sm-8"  placeholder=""  >
+            </div>
+
+            <div class="col-md-3"></div>
+            <div class="col-md-2 ">
+                <label for="date" class="mb-2 mr-sm-4">Destination</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" [(ngModel)]="destination" class="form-control mb-2 mr-sm-8"  placeholder=""  name="text" >
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-2 ">
+        <label for="text" class="mb-2 mr-sm-4">Comments</label>
+        </div>
+        <div class="col-md-7">
+        <input type="text" class="form-control mb-2 mr-sm-8"  placeholder=""  name="text" >
+        </div>
+                <div class="col-md-12" style="height: 30px;"></div> 
+                <div class="col-md-5"></div> 
+                <div class="col-md-5">
+                    <button (click)="save()">Submit</button>&nbsp;
+                    <button [routerLink]="['../vehicle-tracking']">Cancel</button>&nbsp;
+                    <button (click)="clear()">Clear</button>
+                    </div>
+                    <div class="col-md-2"></div> 
+
+
+
+            </form>
+        
+      </div>
+      
+      
+  </div>
+</div>

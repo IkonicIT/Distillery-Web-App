@@ -1,0 +1,102 @@
+<div>
+    <h1 mat-dialog-header >Indent For CSD  </h1>
+    </div>
+    <div mat-dialog-content class="type" >
+        <label for="">Consignment Type*
+            <select name="ENA" id="" style="width: 13rem;">
+                <option value="">CSD</option>
+                <option value="">CSD Report</option>
+                <option value="">CSD Export</option>
+            </select>
+        </label>&nbsp;
+        <span class="csd-report">
+        <label for="">Name Of the Applicant*
+            <input type="text" style="height: 24px;">
+        </label>
+        </span>
+    </div>
+    <div class="refNo">
+        <label for="">
+            Address*
+            <textarea name="" id="" cols="26" rows="2"  ></textarea>
+        </label>
+        <span class="csd-report1">
+        <label for="">License No*
+            <input type="type" style="height: 24px;width: 12rem;" >
+        </label>
+        </span>
+    </div>
+    <div class="refNo">
+        <label for="">
+            Purpose*
+            <input type="type" style="height: 24px;width: 13.5rem;" >
+           
+        </label>
+        <span class="csd-report2">
+        <label for="">Destination*
+            <textarea name="" id="" cols="24" rows="2"  ></textarea>
+        </label>
+        </span>
+    </div>
+    <div class="refNo">
+        <label for="">
+            Route*
+            <textarea name="" id="" cols="26" rows="2"  ></textarea>
+        </label>
+        <span class="csd-report3">
+        <label for="">Duty Challan No*
+            <input type="type" style="height: 26px;width: 13rem;" >
+        </label>
+        </span>
+    </div>
+    <div class="refNo1">
+        <label for="">
+            Duty Challan Date*
+            <input type="date" style="height: 26px;width: 14rem;" >
+        </label>
+        <span class="csd-report2">
+        <label for="">Duty Challan Amount*
+            <input type="type" style="height: 24px;width: 13rem;" >
+        </label>
+        </span>
+    </div>
+    
+   
+    <div class="table" style="font-size: small;" >
+    <table class="table table-bordered"  >
+        
+        <tr>
+            <th><img src="https://img.icons8.com/material-sharp/24/000000/overview-pages-3.png"></th>
+            <th>Product Code</th>
+            <th>Brand  Name</th>
+            <th>size</th>
+            <th>Quantity(in cases)</th>
+            
+        </tr> 
+        <tr>
+            <td><img src="https://img.icons8.com/material-sharp/24/000000/overview-pages-3.png"></td>
+            <td>
+                <input type="text">
+            </td>
+            <td>
+                <input type="text" placeholder="start typing product code or name">
+            </td>
+            
+            <td>
+                <input type="text">
+            </td>
+            <td>
+             <input type="file" style="font-size: small;">   
+            </td>
+        </tr>
+         </table>
+        
+        
+                
+            <button style="background-color: #2e5d74;width: 100px;border-radius: 7px;color: white;" >New Row</button>
+            <button style="background-color: #2e5d74;width: 100px;border-radius: 7px;color: white;margin-left: 0.5rem;"  >Remove Row</button>
+            <button style="background-color: #2e5d74;width: 100px;color:white;border-radius: 7px;margin-left: 33.5rem;"  (click)="save()" >Save</button>
+            <button mat-dialog-close style="color: white;background-color: #2e5d74;width: 100px;border-radius: 7px;margin-left: 0.5rem;"   >Cancel</button>
+        
+        
+        

@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar navbar-dark ">
+    <div style="margin-top: -5rem;" >
+        <select name="" id="">
+            <option value="">1</option>
+            <option value="">2</option>
+        </select>
+        <label for="" id="search" style="margin-left: 38rem;">
+            Search :
+            <input type="search">
+        </label>
+    </div>
+</nav>
+
+<div class="bs-example">
+    <table class="table table-striped">
+        <thead>
+
+            <tr>
+                <th>Line</th>
+                <th>Production Type</th>
+                <th>Product Code</th>
+                <th>Product Name</th>
+                <th>Batch No</th>
+                <th>Batch Qty</th>
+                <th>Pack Type</th>
+                <th>HEAL Start Code</th>
+                <th>Bottles</th>
+                <th>Cases</th>
+                <th>Action</th>
+                <th>Status</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>line -07</td>
+                <td>Local</td>
+                <td>12344456</td>
+                <td>SEAGREAM'S FUEL Vodka</td>
+                <td>BT63<img src="https://img.icons8.com/android/15/000000/note.png" (click)="editBatch()" style="cursor: pointer;"> </td>
+                <td>10<img src="https://img.icons8.com/android/15/000000/note.png" (click)="editQuantity()" style="cursor: pointer;"></td>
+                <td>Glass</td>
+                <td>12345667</td>
+                <td>19992</td>
+                <td>1232</td>
+                <td><img src="https://img.icons8.com/flat_round/15/000000/play--v1.png" style="cursor: pointer;" (click)="lineInfo()"><br>
+                    <img src="https://img.icons8.com/cute-clipart/15/000000/circled-pause.png"><br>
+                    <img src="https://img.icons8.com/cute-clipart/15/000000/upload.png" style="cursor: pointer" (click)="upload()"></td>
+                <td>Stopped</td>
+            </tr>
+                        
+        </tbody>
+    </table>
+</div>
+<div>
+    <button (click)="caseAssociation()">Case Association</button>
+    <button style="margin-left: 285px;" >Reset</button>
+</div>
+
+<div id="button">
+    
+    <button>previous</button>
+    <button>Next</button>
+</div>

@@ -1,0 +1,158 @@
+<div *ngIf="hasBeerPerm">
+<table>
+    <thead>
+        <th *ngxPermissionsOnly="['home/beer/beer-ofs-entitlement']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/beer/beer-ofs-entitlement'" [routerLink]="['../beer/beer-ofs-entitlement']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/Beer.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Beer OFS Entitlement</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/beer/beer-shipment']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/beer/beer-shipment'" [routerLink]="['../beer/beer-shipment']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/Beer.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Beer Shipment</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/beer/beer-indent']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/beer/beer-indent'" [routerLink]="['../beer/beer-indent']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/Beer.png" style="height: 40px;" class="img-fluid" />
+                                    <h6> Beer <br> Indent</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        <th *ngxPermissionsOnly="['home/beer/beer-indent-special']"><div class="col-10" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-6" >
+                    <div class="card card1">
+                        <a [appSubMenu]="'home/beer/beer-indent-special'" [routerLink]="['../beer/beer-indent-special']">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../../assets/Icons/Beer.png" style="height: 40px;" class="img-fluid" />
+                                    <h6>Special <br> Indent</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+        
+
+
+    </thead>
+</table>
+</div>
+<div *ngIf="!hasBeerPerm">
+    <app-no-privileges></app-no-privileges>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="container-fliud">
+    <div class="row background">
+      <div class="col">
+         
+      </div>
+      <div class="col-12 text-right col-lg-4">
+             
+      </div>
+  </div>
+  <div class="row" id="wrapper">
+    
+    <div class="col-10" style="padding-top: 1%;">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../beer/beer-ofs-entitlement']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/Beer.png" style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Beer OFS Entitlement</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../beer/beer-shipment']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/Beer.png" style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Beer Shipment</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../beer/beer-indent']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/Beer.png" style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Indent</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <a  [routerLink]="['../beer/beer-indent-special']">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <img src="../../assets/Icons/Beer.png" style="height: 40px;" class="img-fluid"/>
+                            </div>
+                            <div class="col-9">
+                                <h3>Indent Special</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+             -->
