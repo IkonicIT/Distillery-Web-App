@@ -34,6 +34,16 @@ export class LoginService {
 
     return response;
   }
+  lastLogin(postBody) {
+    const url = 'user/spLastLogin';
+    const requestBody = {
+      requestData: postBody
+    };
+   const response = this._http.post<any>(url, requestBody);
+   console.log('last login response is' + response);
+   return response;
+  }
+
   changePassword(postBody) {
     const url = 'user/changePwd';
     const requestBody = {

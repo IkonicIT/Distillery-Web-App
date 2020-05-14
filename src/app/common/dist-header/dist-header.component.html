@@ -1,5 +1,6 @@
 <div class="background">
   <header class="main-header">
+    
     <a href="javascript:void(0)" class="logo">
       <!-- Logo -->
       <span class="logo-mini">
@@ -16,13 +17,23 @@
         <span class="sr-only">Toggle navigation</span>
         <span class="fa fa-arrow-circle-o-left"></span>
       </a>
+      
+      <label class="txt-white ft-50">Welcome to A.P Excise Department Distillery Portal</label> 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- user -->
           <li class="dropdown dropdown-user">
             <div *ngIf="userName">
               <div class="d-inline-flex txt-white ft-14">Welcome&nbsp;<b>{{userName}}</b> | Logged On:
-                {{dateNow | date: 'dd/MM/yyyy'}}</div>
+                {{dateNow | date: 'dd/MM/yyyy'}}
+               
+              </div>
+              
+             
+              
+            
+             
+
               <div class="logOutLabel pull-right ml-20">
                 <!-- <i class="fa fa-sign-out"></i>
                       <a>Logout</a> *ngIf="userName"-->
@@ -36,10 +47,16 @@
                 </mat-menu>
               </div>
             </div>
-            <label class="d-inline txt-white ft-10">Welcome to A.P Excise Department Distillery Portal</label>
+            <div class="d-inline-flex txt-white ft-14">LastLogin:{{lastLogin}}</div>
+            <!-- <label class="txt-white ft-10">Welcome to A.P Excise Department Distillery Portal</label> -->
+            
           </li>
         </ul>
+
       </div>
     </nav>
   </header>
 </div>
+
+
+

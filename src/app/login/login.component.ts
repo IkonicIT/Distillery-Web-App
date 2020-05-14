@@ -15,6 +15,8 @@ import { State } from '../store';
 })
 export class LoginComponent implements OnInit {
 
+  lastLogin:any;
+  lastLoginRequestBody:any= {};
   // tslint:disable-next-line:variable-name
   constructor(private router: Router, private toastr: ToastrService, private _formBuilder: FormBuilder,
               private loginService: LoginService, private localServ: LocalStoreService,
@@ -70,6 +72,7 @@ export class LoginComponent implements OnInit {
                 });
             });
 
+          this.lastLoginForm();  
           this.router.navigate(['../features'], { replaceUrl: true });
         } else {
           this.toastr.error('unauthorized', 'please enter valid credentials');
@@ -79,4 +82,19 @@ export class LoginComponent implements OnInit {
       });
     }
   }
+
+  lastLoginForm() {
+    this.lastLoginRequestBody.userId =  parseInt(localStorage.getItem('userId'));
+    this.loginService.lastLogin(this.lastLoginRequestBody).subscribe(data => {
+        if (data.responseData != null) {
+          this.lastLogin = data.responseData;
+          this.toastr.success('login', 'successfully login');
+          console.log('lastLogin time is'+ this.lastLogin);
+
+          } 
+      }, error => {
+        this.toastr.error('login', 'un handled error');
+      });
+    
+}
 }
