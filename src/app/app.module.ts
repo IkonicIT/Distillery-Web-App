@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { NgxSpinnerModule } from "ngx-spinner"; 
+
 import { AgGridModule } from 'ag-grid-angular';
 import { MatDatepickerModule, MatInputModule, MatNativeDateModule, MatDialogModule, MatSidenavModule} from '@angular/material';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
@@ -229,6 +230,7 @@ import { RetailerChallanTransferComponent } from './modules/indent-management/re
 import { RetailerIndentComponent } from './modules/indent-management/retailer-indent/retailer-indent.component';
 import { SpecialIndentComponent } from './modules/indent-management/special-indent/special-indent.component';
 import { AddSpecialIndentComponent } from './modules/indent-management/add-special-indent/add-special-indent.component';
+
 import { UploadCardsComponent } from './modules/indent-management/upload-cards/upload-cards.component';
 import { BreakagesComponent } from './modules/breakages/breakages.component';
 import { BreakagesDepotComponent } from './modules/breakages/breakages-depot/breakages-depot.component';
@@ -448,6 +450,7 @@ const appRoutes: Routes = [
       { path: 'indent-management/retailer-indent', component:RetailerIndentComponent },
       { path: 'indent-management/special-indent', component:SpecialIndentComponent },
       { path: 'indent-management/add-special-indent', component:AddSpecialIndentComponent },
+
       { path: 'indent-management/upload-cards', component:UploadCardsComponent },
       { path: 'indent-management/special-ifs', component:SpecialIfsComponent },
       { path: 'breakages', component: BreakagesComponent },
@@ -713,6 +716,7 @@ const appRoutes: Routes = [
     RetailerIndentComponent,
     SpecialIndentComponent,
     AddSpecialIndentComponent,
+
     UploadCardsComponent,
     BreakagesComponent,
     BreakagesDepotComponent,
@@ -769,6 +773,7 @@ const appRoutes: Routes = [
     MatDialogModule,
     MatSidenavModule,
     NgbModule,
+    BsDatepickerModule.forRoot(),
     AccumulationChartModule,
     BrowserAnimationsModule,
     NgxPaginationModule,
@@ -791,6 +796,7 @@ const appRoutes: Routes = [
     DatepickerModule.forRoot(),
     NgxPermissionsModule.forRoot(),
     NgxSpinnerModule  
+
   ],
   entryComponents: [IfsComponent,ExiseRemitanceFormComponent,
     ChangePasswordComponent, SpiritBottlingComponent,
@@ -859,3 +865,7 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
+

@@ -32,8 +32,8 @@ export class ShipmentShipmentsComponent implements OnInit {
   }
   transport() {
     const config: MatDialogConfig = {
-      height: '400px',
-      width: '500px'
+      height: '650px',
+      width: '1060px'
     };
     this.transportDialog.open(ShipmentTransportPermitRequestComponent, config);
   }

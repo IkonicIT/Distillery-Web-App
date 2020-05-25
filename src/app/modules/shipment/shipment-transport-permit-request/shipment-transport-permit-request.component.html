@@ -1,36 +1,186 @@
-<label for="" style="margin-left: 24px;">
-    Consignment Type : 
-        <select name="" id="">
-            <option value="">Select Consignment Type</option>
-        </select>
-</label>
-<div>
-    <label for="" style="margin-left: 114px;">Route :
-        <input type="text">
-    </label>
-</div>
-<div>
-    <label for="" style="margin-left:84px">Vehicle No.
-        <input type="text">
-    </label>
-</div>
-<div>
-    <label for="" style="margin-left: 75px ;">
-        Transporter :
-        <input type="text">
-    </label>
+<div class="content-header"> 
+    <div class="header-icon">
+      <i class="fa fa-indent"></i>
+    </div>
+    <div class="header-title">
+      <h1>Transport PermitRequest</h1>
+      <small>Details of Transport PermitRequest</small>
+     
+    </div>
+    <button class="navback-btn" (click)="navback()">Back</button>
+    
 
-</div>
-<div>
-    <label for="" style="margin-left:116px">
-        LR No.
-        <input type="text">
-    </label>
-</div>
-<div>
-    <label for="" style="margin-left: 99px;">
-        LR Date :
-        <input type="text">
-    </label>
-</div>
-<button mat-dialog-close style="background-color: #2e5d74;margin-left: 177px;" (click)="adding()">Start Adding OFS</button>
+</div> 
+   <div class="content"> 
+    <div class="row">
+       <div class="col-12" *ngIf="showCreateIndentTab">
+        <custom-grid [rowData]="rowData" [columnDefs]="columnDefs">
+        </custom-grid>
+      </div>
+    
+      <div class="col-12" *ngIf="!showCreateIndentTab">
+        <div class="row">
+          <!-- <div class="col-md-4">
+                  <label>Shop Name:</label>
+                  <input type="text" class="form-control" placeholder="Enter Shop Name"
+                      [(ngModel)]="indentModel.shopName">
+                      <div *ngFor="let errors of getErros('shopName')">
+                          <span style="color:red">{{errors}}</span>
+                      </div>
+              </div> -->
+          <div class="form-group col-md-4">
+            <label>Consignment Type:</label>
+            <select class="form-control" [(ngModel)]="indentModel. consignmentType" (change)="onconsignmenttypeChange()">
+              <option value="0">consignment type</option>
+              <option *ngFor="let item of shopNames" [value]="item">{{item}}</option>
+            </select>
+            <div *ngFor="let errors of getErros('shopName')">
+              <span style="color:red">{{errors}}</span>
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <label>Route:</label>
+            <input type="text" class="form-control" placeholder="Enter Route"
+              [(ngModel)]="indentModel.route">
+              <div *ngFor="let errors of getErros('route')">
+                <span style="color:red">{{errors}}</span>
+              </div>
+          </div>
+          <div class="form-group col-md-4">
+            <label>OFS Number:</label>
+            <input type="text" class="form-control" placeholder="Enter OFSnumber"
+              [(ngModel)]="indentModel.ofsNo">
+              <div *ngFor="let errors of getErros('ofsNo')">
+                <span style="color:red">{{errors}}</span>
+              </div>
+          </div>
+
+          <div class="col-md-4">
+            <label>Transporter:</label>
+            <input type="text" class="form-control" placeholder="Transporter"
+              [(ngModel)]="indentModel.transporter">
+            <div *ngFor="let errors of getErros('retailerCode')">
+              <span style="color:red">{{errors}}</span>
+            </div>
+          </div>
+            <div class="form-group col-md-4">
+            <label>LrDate:</label>
+             <input id="LrDate" name="lrdate" [(ngModel)]="indentModel.lrDate"
+            type="text" class="form-control" >
+          </div>  
+            <!-- bsDatepicker class="form-control" -->
+
+                          <!-- <div class="date-container">
+              <input [owlDateTime]="dt1" class="shadow-input" [min]="minDate"
+                [(ngModel)]="indentModel.lrDate">
+              <input [owlDateTimeTrigger]="dt1" class="form-control"
+                [value]="indentModel.lrDate | dateFilter:'yyyy-MM-dd' " placeholder="Enter LrDate">
+              <owl-date-time pickerType="calendar" #dt1></owl-date-time>
+            </div> -->
+         
+          <div class="form-group col-md-4">
+            <label>LrNumber:</label>
+            <input type="number" class="form-control" placeholder="Enter LrNumber"
+              [(ngModel)]="indentModel.lrNum">
+            <div *ngFor="let errors of getErros('lrNum')">
+              <span style="color:red">{{errors}}</span>
+            </div>
+          </div>
+  
+          <div class="form-group col-md-4">
+            <label> Select VehicleNumber</label>
+            <select class="form-control" [(ngModel)]="indentModel.vehicleNum" (change)="onVehicleChange()">
+              <option value="0">Vehicle Number</option>
+              <option *ngFor="let item of Vehicles" [value]="item.vehicleNum">{{item.vehicleNum}}</option>
+            </select>
+            <div *ngFor="let errors of getErros('vehicleNumber')">
+              <span style="color:red">{{errors}}</span>
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <label>Depot Id:</label>
+            <input type="number" class="form-control" placeholder="Enter Depot Id"
+              [(ngModel)]="indentModel. depotId">
+          </div>
+          <div class="form-group col-md-4">
+            <label>To Depot:</label>
+            <input type="text" class="form-control" placeholder="Enter ToDepot"
+              [(ngModel)]="indentModel.todepot">
+          </div>
+          <div class="form-group col-md-4">
+            <label>Valid Period:</label>
+            <input type="number" class="form-control" placeholder="Enter ValidPeriod"
+              [(ngModel)]="indentModel.validperiod">
+          </div>
+          <div class="form-group col-md-4">
+            <label>Route Name:</label>
+            <input type="text" class="form-control" placeholder="Enter RouteName"
+              [(ngModel)]="indentModel.routename">
+          </div> 
+             <!-- <div class="form-group col-md-4">
+                  <label>VehicleNumber:</label>
+                  <input type="text" class="form-control" placeholder="Enter vehicleNumber"
+                      [(ngModel)]="indentModel.vehicleNumber">
+                      <div *ngFor="let errors of getErros('vehicleNumber')">
+                          <span style="color:red">{{errors}}</span>
+                      </div>
+              </div>  -->
+  
+         
+   
+        <div class="d-flex justify-content-end mb-3"><button type="button" class="btn btn-success"
+            (click)="addProduct(i)"><i class="fa fa-plus" aria-hidden="true"></i> Add New</button></div>
+        <div style="overflow: auto;">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>ChallanNumber</th>
+                <th>BrandName</th>
+                <th>Product Code</th>
+                <th>EnterSize</th>
+                <th>OFS Quantity</th>
+                <th>ExciseDuty</th>
+                <th>Allocated Quantity</th>
+                <th>Shipment Quantity</th>
+                <th>Balance Quantity</th>
+                <th>Add</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of indentModel.shipmentLineDto;let i=index">
+  
+                <td><input type="text" [(ngModel)]="item.challanNum" class="form-control" /></td>
+                   <!-- <td> <select class="form-control" [(ngModel)]="item.description" (change)="onProductChange()">
+                    <option value="0"> Product Name</option>
+                    <option *ngFor="let item of products">{{item.productName}}</option>
+                  </select></td>    -->
+   
+                 <!-- <td><input type="text" [(ngModel)]="item.description" class="form-control" /></td>  -->
+                <td><input type="text" [(ngModel)]="item.brandName" class="form-control" /></td>
+                <td><input type="text" [(ngModel)]="item.productCode" class="form-control" /></td>
+                <td><input type="number" [(ngModel)]="item.size" class="form-control" /></td>
+                <td><input type="number" [(ngModel)]="item.ofsQnty"
+                     class="form-control" /></td>
+                    <td><input type="number" [(ngModel)]="item.exciseDuty" class="form-control" /></td>
+                <td><input type="number" [(ngModel)]="item.allocatedQnty"
+                    class="form-control" /></td>
+                <td><input type="number" [(ngModel)]="item.shipmentQty" class="form-control" /></td>
+                <td><input type="number" [(ngModel)]="item.balanceQty"
+                   class="form-control" /></td>
+                <td><button type="button" class="btn btn-success" (click)="addProduct(i)"><i class="fa fa-plus"
+                      aria-hidden="true"></i></button>
+                  <button type="button" class="btn btn-danger" (click)="deleteProduct(i)"
+                    *ngIf="indentModel.shipmentLineDto.length>1"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button style="margin-left: 360px;" class="btn btn-primary" (click)="submitshipmenttransportpermitrequest()">Save</button>&nbsp;
+        <button  class="btn btn-danger">Cancel</button>&nbsp;
+        <button class="btn btn-danger">Clear</button>
+        <button class="gotohome-btn" (click)="navTohome()">Go to Home</button>
+      </div> 
+    </div>
+   </div>
