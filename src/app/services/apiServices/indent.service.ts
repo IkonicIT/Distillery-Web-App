@@ -32,6 +32,14 @@ export class IndentService {
     return this._http.post<any>(url, requestBody)
       .pipe(catchError(this._http.handleHttpError));
   }
+  createshipmenttransportIndent(postBody) {
+    const url = 'shipment/saveTransportPermitRequest';
+    const requestBody = {
+      requestData: postBody
+    };
+    return this._http.post<any>(url, requestBody)
+      .pipe(catchError(this._http.handleHttpError));
+  }
   saveSpecialIndent(postBody) {
     const url = 'ifs/saveIFS';
    /*  const requestBody = {
@@ -48,6 +56,10 @@ export class IndentService {
   getDepotDts(): Observable<any> {
     return this._http.get<any>('imgt/fetchDepotDts').pipe(catchError(this._http.handleHttpError));
   }
+  getDepoNames(): Observable<any> {
+    return this._http.get<any>('imgt/fetchDepoNames').pipe(catchError(this._http.handleHttpError));
+  }
+  
   getRetailersMDts() {
     return this._http.get<any>('imgt/fetchRetailersMDts').pipe(catchError(this._http.handleHttpError));
   }

@@ -17,19 +17,13 @@
                   <form name="form" (ngSubmit)="f.form.valid && saveSpecialIndent()" #f="ngForm" nphonephonneovalidate>
                     <div class="card-body">
                       <div class="row">
-                        <div class="form-group col-sm-6">
-                          <label for="depotName">DepotName </label><strong class="text-danger">*</strong>
-                           <input type="text" class="form-control" [(ngModel)]="indentModel.depotId"  name="depot" #depotId="ngModel" id="depot" required placeholder="Enter Depot Name">
+                        <div class="form-group col-md-4">
+                          <label>Select DepotName:</label>
+                          <select class="form-control" [(ngModel)]="indentModel.depotName" name="depotName">
+                            <option value="0">Select</option>
+                            <option *ngFor="let item of depotNames" [value]="item">{{item}}</option>
+                          </select>
                         </div>
-                        <div *ngIf="depotId.invalid && (depotId.dirty || depotId.touched)" class="alert alert-danger">
-
-                            <div *ngIf="depotId.errors.required">
-                                DepotName is required.
-                            </div>
-                           <div *ngIf="depotId.errors.minlength">
-                                DepotName must be at least 4 characters long.
-                           </div>
-                         </div>
                         <div class="form-group col-sm-6">
                           <label for="productCode">ProductCode</label>
                           <input type="text" class="form-control" [(ngModel)]="indentModel.productCode" name="productCode" #productCode="ngModel" id="productCode" required minlength="4" placeholder="Enter ProductCode">
@@ -69,17 +63,17 @@
                       <div class="row">
                         <div class="form-group col-sm-6">
                           <label for="QtyInCases">QtyInCases</label>
-                          <input type="text" class="form-control" [(ngModel)]="indentModel.qtyInCases" name="qtyInCases" #qtyInCases="ngModel"
+                          <input type="number" class="form-control" [(ngModel)]="indentModel.qtyInCases" name="qtyInCases" #qtyInCases="ngModel"
                                  id="QtyInCases" required placeholder="Enter QtyInCases">
                         </div>
                         <div class="form-group col-sm-6">
                           <label for="ratePerCases">RatePerCases</label>
-                          <input type="text" class="form-control" [(ngModel)]="indentModel.ratePerCases" name="ratePerCases" #ratePerCases="ngModel"
+                          <input type="number" class="form-control" [(ngModel)]="indentModel.ratePerCases" name="ratePerCases" #ratePerCases="ngModel"
                                  id="ratePerCases" required placeholder="Enter RatePerCases">
                         </div>
                         <div class="form-group col-sm-6">
                             <label for="totalAmount">TotalAmount</label>
-                            <input type="text" class="form-control" [(ngModel)]="indentModel.totalAmount" name="totalAmount" #totalAmount="ngModel" id="totalAmount" required placeholder="Enter TotalAmount">
+                            <input type="number" class="form-control" [(ngModel)]="indentModel.totalAmount" name="totalAmount" #totalAmount="ngModel" id="totalAmount" required placeholder="Enter TotalAmount">
                           </div>
                       </div>
   

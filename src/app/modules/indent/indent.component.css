@@ -3,6 +3,10 @@
     width: 20px;
 }
 
+.content-header{
+   background-color: rgb(145, 197, 199);
+   
+}
 .bar-img a {
     margin-left: 5px;
     margin-top: 10px;
@@ -53,9 +57,11 @@ span.remove-date {
 }
 
 .btn-primary {
-    background-color: turquoise;
+    background-color: #403866;
 }
-
+.btn-danger{
+    background-color:gold;
+}
 .btn-success {
     color: #fff;
     background-color: turquoise;

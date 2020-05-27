@@ -14,16 +14,32 @@ export class AddSpecialIndentComponent implements OnInit {
   indentModel: any = {};
   index: number;
   ifsNo: any;
-
+  depotNames :any [] = [];
+  deposList:any;
+  depotId: any;
   constructor(private transport:MatDialog,private indentService: IndentService,private spinnerService: NgxSpinnerService) { }
 
   ngOnInit() {
+    this.getDepoNames();
   }
- /*  adding(){
-    this.transport.open(ShipmentTransportOfsComponent);
-  } */
 
+  getDepoNames(){
+  this.indentService.getDepoNames().subscribe(response => {
+    this.deposList =response;
+    this.deposList.forEach(depo => {
+    this.depotNames.push(depo.depotName.toUpperCase());    
+    });
+    console.log('depotNames'+ this.depotNames);
+  });
+}
   saveSpecialIndent(){
+    this.deposList.forEach(depo => {
+      if(depo.depotName.toUpperCase() == this.indentModel.depotName){
+        this.indentModel.depotId = depo.depotId;
+      }      
+    });
+    this.indentModel.userId =  parseInt(localStorage.getItem('userId'));
+    console.log('selected depotId is'+ this.indentModel.depotId);
     this.spinnerService.show();
     if (this.indentModel.productCode == undefined || this.indentModel.productCode =="") {
       this.index = -1;
@@ -31,9 +47,9 @@ export class AddSpecialIndentComponent implements OnInit {
     } 
     const req = {
       requestData: {
-        "userId": 2,
+        "userId": this.indentModel.userId,
         "distilleryId": 2,
-        "depotId": 2,
+        "depotId": this.indentModel.depotId,
         "productCode":this.indentModel.productCode,
         "brandName":this.indentModel.brandName,
         "size":this.indentModel.size,

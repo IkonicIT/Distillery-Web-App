@@ -1,0 +1,95 @@
+.bar-img img {
+    height: 20px;
+    width: 20px;
+}
+
+
+.bar-img a {
+    margin-left: 5px;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.bar-img {
+    margin-left: 50px;
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 10px;
+}
+.navback-btn{
+   
+    margin: 15px 0;
+}
+.bar-img div {
+    padding-right: 40px;
+    width: 200px;
+}
+
+.datefield {
+    margin-top: -7px;
+    margin-left: 10px;
+    width: 105px;
+}
+
+.action-row {
+    background-color: red;
+}
+
+.date-container {
+    position: relative;
+}
+
+.shadow-input {
+    position: absolute;
+    top: 22px;
+    width: 0px;
+    height: 0px;
+    border: none;
+}
+
+span.remove-date {
+    position: absolute;
+    right: 16px;
+    top: 0px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.content-header{
+    background-color: turquoise;
+}
+.btn-primary {
+    background-color: #403866;
+}
+.Cancel{
+    background-color: yellow;
+}
+.Clear{
+    background-color: yellow;
+}
+.content{
+    height: 6500px;
+  
+}
+.table table-bordered{
+    width: 650px;
+}
+.btn-success {
+    color: #fff;
+    background-color: turquoise;
+    border-color: turquoise;
+}
+
+.gotohome-btn {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    background: rgb(45, 79, 107);
+    border-radius: 10px;
+    height: 30px;
+    float: right;
+    margin: 15px 0;
+    width: 150px;
+    padding: 0 15px;
+}
