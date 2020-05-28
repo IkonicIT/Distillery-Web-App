@@ -57,16 +57,16 @@ span.remove-date {
 }
 
 .content-header{
-    background-color: turquoise;
+    background-color: rgb(204, 227, 240);
 }
 .btn-primary {
-    background-color: #403866;
+    background-color: rgb(48,99,146);
 }
-.Cancel{
-    background-color: yellow;
+.btn-cancel{
+    background-color: rgb(241,181,27);
 }
-.Clear{
-    background-color: yellow;
+.btn-danger{
+    background-color: red;
 }
 .content{
     height: 6500px;
@@ -77,8 +77,8 @@ span.remove-date {
 }
 .btn-success {
     color: #fff;
-    background-color: turquoise;
-    border-color: turquoise;
+    background-color: rgb(204, 227, 240);
+    border-color: rgb(204, 227, 240);
 }
 
 .gotohome-btn {

@@ -1,39 +1,46 @@
-<nav style="    background: rgb(45,79,107);
+<nav style="    background: rgb(204, 227, 240);
 padding: 6px;">
-<label for="">
+<label for="" style="color: black;">
     Start Date :
     <input type="date">
-</label>
-<label for="">
+</label>&nbsp;&nbsp;&nbsp;
+<label for="" style="color: black;">
     End Date:
     <input type="date">
-</label>&nbsp;
+</label>&nbsp;&nbsp;&nbsp;
     <select name="" id="">
         <option value="">Select Distillery</option>
     </select>
-    &nbsp;
+    &nbsp;&nbsp;
     <i class="fa fa-search" aria-hidden="true" ></i>
 </nav>
 <div>
-    <button style="margin-left: 12px;" (click)="addSpecialIndent()">Add Special Indent</button>
+    <label for="" style="color: black;
+    margin-left: 1rem;">
+        ManageSpecialIndent
+    </label>
+    <!-- <button style="margin-left: 12px;" (click)="addSpecialIndent()">Add Special Indent</button> -->
 </div>
-<nav style="    background: rgb(45,79,107);
+<nav style="    background: rgb(204, 227, 240);
 padding: 6px;">
     <select name="" id="">
         <option value="">10</option>
     </select>
-    <label for="" style="color: white;
+    <!-- <label for="" style="color: white;
     margin-left: 38rem;">
         Search :
         <input type="search">
-    </label>
+    </label> -->
+    <button style="margin-left: 63rem;" (click)="addSpecialIndent()">Add Special Indent</button>
 </nav>
-<nav style="    background: rgb(45,79,107);
+<nav style="    background: rgb(204, 227, 240);
 padding: 6px;">
-   <label for="" style="color: white;
-    margin-left: 38rem;">
-        Special Indent
-    </label>
+  
+  <label for="" style="color: black;
+  margin-left: 62rem;">
+      Search :
+      <input type="search">
+  </label>
 </nav>
 <div>
     <table class="table table-striped">
@@ -57,20 +64,23 @@ padding: 6px;">
             <td>{{sindent.indentDate}}</td>
             <td>{{sindent.status}}</td>
             <td>
-                <button type="button" style="margin-left: 12px;" tooltip="view Special Indent" >View</button>
-                <button type="button" style="margin-left: 12px;" tooltip="Edit Special Indent" >Edit</button>
-                <button type="button" style="margin-left: 12px;" tooltip="Delete Special Indent">Delete</button>
+                <button type="button" style="margin-left: 12px; background-color: rgb(48,99,146);"  tooltip="view Special Indent" >View</button>
+                <button type="button" style="margin-left: 12px; background-color: rgb(241,181,27);" tooltip="Edit Special Indent" >Edit</button>
+                <button type="button" style="margin-left: 12px;  background-color: red;" tooltip="Delete Special Indent">Delete</button>
             </td>
         </tr>
     </tbody>  
     </table>
 </div>
-
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
 
 <div>
-    <button>Approve</button>
+    <button>Approve</button>&nbsp;&nbsp;
     <button style="margin-left: 12px;">Cancel</button>
-    <button style="margin-left: 34rem;">Previous</button>
+    <button style="margin-left: 34rem;background-color: rgb(241,181,27); ">Previous</button>
     <button style="margin-left: 5px;
-    width: 83px;">Next</button>
+    width: 83px;  background-color: red;">Next</button>
 </div>
