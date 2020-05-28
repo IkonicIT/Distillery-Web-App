@@ -17,10 +17,14 @@ export class AddSpecialIndentComponent implements OnInit {
   depotNames :any [] = [];
   deposList:any;
   depotId: any;
+  distilleryNames :any [] = [];
+  distilleryList:any;
+  distilleryId: any;
   constructor(private transport:MatDialog,private indentService: IndentService,private spinnerService: NgxSpinnerService) { }
 
   ngOnInit() {
     this.getDepoNames();
+    this.getDistilleryNames();
   }
 
   getDepoNames(){
@@ -30,6 +34,16 @@ export class AddSpecialIndentComponent implements OnInit {
     this.depotNames.push(depo.depotName.toUpperCase());    
     });
     console.log('depotNames'+ this.depotNames);
+  });
+}
+
+getDistilleryNames(){
+  this.indentService.getDistilleryNames().subscribe(response => {
+    this.distilleryList =response;
+    this.distilleryList.forEach(dis => {
+    this.distilleryNames.push(dis.name.toUpperCase());    
+    });
+    console.log('distilleryNames'+ this.distilleryNames);
   });
 }
   saveSpecialIndent(){

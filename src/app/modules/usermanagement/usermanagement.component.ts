@@ -3,6 +3,7 @@ import { UserService } from 'src/app/services/apiServices/user.service';
 import { ToastrService } from 'ngx-toastr';
 import { Validatons } from 'src/app/services/validations';
 import * as cloneDeep from 'lodash/cloneDeep';
+import { IndentService } from '../../services/apiServices/indent.service';
 
 @Component({
   selector: 'app-usermanagement',
@@ -13,21 +14,52 @@ export class UsermanagementComponent implements OnInit {
   user = {
     userId: null,
     userName: '',
-    firtsName: '',
+    firstName: '',
     lastName: '',
     emailId: '',
     mobileNumber: '',
     password: '',
-    roleIds: []
+    roleIds: [],
+    department:'',
+    deptId:0
   };
   isAdd = true;
   errorsList: any = {};
   activeRoles = [];
+  departments = ['Distillery','Depot']; 
   usersList=[];
-  constructor(private _userService: UserService, private toastr: ToastrService) { }
+  depotNames :any [] = [];
+  deposList:any;
+  depotId: any;
+  distilleryNames :any [] = [];
+  distilleryList:any;
+  distilleryId: any;
+  depotName:any;
+  distilleryName:any;
+  constructor(private _userService: UserService, private toastr: ToastrService,private _indentService: IndentService) { }
 
   ngOnInit() {
     this.getUsers();
+    this.getDepoNames();
+    this.getDistilleryNames();
+  }
+  getDepoNames(){
+    this._indentService.getDepoNames().subscribe(response => {
+      this.deposList =response;
+      this.deposList.forEach(depo => {
+      this.depotNames.push(depo.depotName.toUpperCase());    
+      });
+      console.log('depotNames'+ this.depotNames);
+    });
+  }
+  getDistilleryNames(){
+    this._indentService.getDistilleryNames().subscribe(response => {
+      this.distilleryList =response;
+      this.distilleryList.forEach(dis => {
+      this.distilleryNames.push(dis.name.toUpperCase());    
+      });
+      console.log('distilleryNames'+ this.distilleryNames);
+    });
   }
   getUsers(){
     this._userService.getActiveRoles().subscribe(data => {
@@ -37,11 +69,24 @@ export class UsermanagementComponent implements OnInit {
     this._userService.fetchActiveUsers().subscribe(data=>{
       this.usersList = data.responseData;
     })
-  }
+   }
   onChangeUser($event){
     this.user=cloneDeep($event);
   }
   save() {
+    if(this.user.department == 'Depot'){
+    this.deposList.forEach(depo => {
+      if(depo.depotName.toUpperCase() == this.depotName){
+        this.user.deptId = depo.depotId;
+      }      
+    });
+  } else{
+    this.distilleryList.forEach(dis => {
+      if(dis.name.toUpperCase() == this.distilleryName){
+        this.user.deptId = dis.id;
+      }      
+    });
+  }
     if (this.validate()) {
       this._userService.saveUserWithRolesMap(this.user).subscribe(res => {
         this.toastr.success(res.responseData, '');
@@ -64,12 +109,14 @@ export class UsermanagementComponent implements OnInit {
     this.user = {
       userId: 0,
       userName: '',
-      firtsName: '',
+      firstName: '',
       lastName: '',
       emailId: '',
       mobileNumber: '',
       password: '',
-      roleIds: []
+      roleIds: [],
+      department:'',
+      deptId:0
     };
     this.errorsList=[];
     this.isAdd=true;
@@ -78,12 +125,13 @@ export class UsermanagementComponent implements OnInit {
     let isValid = true;
     const list = [
       { property: 'userName', validationTypes: ['required'] },
-      { property: 'firtsName', validationTypes: ['required'] },
+      { property: 'firstName', validationTypes: ['required'] },
       { property: 'lastName', validationTypes: ['required'] },
       { property: 'emailId', validationTypes: ['required'] },
       { property: 'mobileNumber', validationTypes: ['required'] },
       { property: 'password', validationTypes: ['required'] },
-      { property: 'roleIds', validationTypes: ['required'] }
+      { property: 'roleIds', validationTypes: ['required'] },
+      { property: 'department', validationTypes: ['required'] }
     ];
     this.errorsList = Validatons.validate(this.user, list);
     Object.keys(this.errorsList).forEach(e => {

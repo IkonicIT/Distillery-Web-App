@@ -27,8 +27,8 @@
     </div>
     <div class="col-md-4">
         <label>First Name:</label>
-        <input type="text" class="form-control" [(ngModel)]="user.firtsName" placeholder="First Name">
-        <div *ngFor="let errors of getErros('firtsName')">
+        <input type="text" class="form-control" [(ngModel)]="user.firstName" placeholder="First Name">
+        <div *ngFor="let errors of getErros('firstName')">
             <span style="color:red">{{errors}}</span>
         </div>
     </div>
@@ -54,16 +54,33 @@
         </div>
     </div>
     <div class="col-md-4">
-        <label>Roles Map:</label>
-        <!-- <select class="form-control" [(ngModel)]="user.rolesList">
-            <option>admin</option>
-            <option>sub admin</option>
-        </select> -->
+        <label>Assign Role:</label>
         <ng-select [multiple]="true" [(ngModel)]="user.roleIds" bindValue="roleId" bindLabel="roleName" [items]="activeRoles">
         </ng-select>
         <div *ngFor="let errors of getErros('roleIds')">
             <span style="color:red">{{errors}}</span>
         </div>
+    </div>
+    <div class="col-md-4">
+        <label>Department:</label>
+        <select class="form-control" [(ngModel)]="user.department" name="department">
+            <option value="0">Select</option>
+            <option *ngFor="let item of departments" [value]="item">{{item}}</option>
+        </select>
+    </div>
+    <div class="col-md-4" *ngIf="user.department=='Distillery'">  
+        <label>Select Distillery:</label>
+        <select class="form-control" [(ngModel)]="distilleryName" name="distillery">
+            <option value="0">Select</option>
+            <option *ngFor="let item of distilleryNames" [value]="item">{{item}}</option>
+        </select>
+    </div>
+    <div class="col-md-4"  *ngIf="user.department=='Depot'"> 
+        <label>Select Depot:</label>
+        <select class="form-control" [(ngModel)]="depotName" name="depot">
+            <option value="0">Select</option>
+            <option *ngFor="let item of depotNames" [value]="item">{{item}}</option>
+        </select>
     </div>
 </div>
 <br/>

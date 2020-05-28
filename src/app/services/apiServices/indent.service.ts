@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpService } from '../http.service';
 import { catchError } from 'rxjs/operators';
+import { HttpService } from '../http.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class IndentService {
 
-
-
+  public depotNames:any;
   // tslint:disable-next-line:variable-name
   constructor(private _http: HttpService) { }
 
@@ -58,6 +57,9 @@ export class IndentService {
   }
   getDepoNames(): Observable<any> {
     return this._http.get<any>('imgt/fetchDepoNames').pipe(catchError(this._http.handleHttpError));
+  }
+  getDistilleryNames(): Observable<any> {
+    return this._http.get<any>('imgt/distilleryNames').pipe(catchError(this._http.handleHttpError));
   }
   
   getRetailersMDts() {
