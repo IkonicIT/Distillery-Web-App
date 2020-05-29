@@ -13,6 +13,7 @@ import { config } from 'process';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { Timestamp } from 'rxjs/internal/operators/timestamp';
 import { HttpResponse, HttpResponseBase, HttpClient } from '@angular/common/http';
+import { DialogComponent } from 'src/app/dialog/dialog.component';
 
 
 
@@ -40,7 +41,7 @@ export class ShipmentTransportPermitRequestComponent implements OnInit, OnDestro
               // tslint:disable-next-line:variable-name
               private _activetedRoute: ActivatedRoute,private transportDialog: MatDialog,
               // tslint:disable-next-line:variable-name
-             
+             private dialog:MatDialog,
               private _indentService: IndentService, private datePipe: DatePipe,
               private permissionServ: NgxPermissionsService) {
 
@@ -241,6 +242,10 @@ export class ShipmentTransportPermitRequestComponent implements OnInit, OnDestro
       //  this.indentModel.createdate = this.datePipe.transform(this.indentModel.createdate, 'yyyy-MM-dd hh:mm:ss');
       this._indentService.createshipmenttransportIndent(this.indentModel).subscribe(data => {
         this.toastr.success('successfully added', '');
+      
+       
+          this.dialog.open(DialogComponent,{data:{tpr:data.responseData.shipmentHdrId}});
+      
         this.indentModel = {
           consignmentType:'',
       route: '',
@@ -268,7 +273,7 @@ export class ShipmentTransportPermitRequestComponent implements OnInit, OnDestro
         }]
            
         }
-        alert("tprno is:"+ data.shipmentHdrId);
+       
        
       }, error => {
         console.log(error);

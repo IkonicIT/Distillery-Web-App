@@ -288,6 +288,7 @@ import { PaginationService } from './pagination.service';
 import { NoPrivilegesComponent } from './services/common/no-privileges/no-privileges.component';
 import { FiledErrorComponent } from './common/filed-error/filed-error.component';
 import { SubMenuDirective } from './services/sub-menu.directive';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 const appRoutes: Routes = [
@@ -766,7 +767,8 @@ const appRoutes: Routes = [
     ReportsBrandWineComponent,
     NoPrivilegesComponent,
     FiledErrorComponent,
-    SubMenuDirective
+    SubMenuDirective,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -798,7 +800,7 @@ const appRoutes: Routes = [
     NgxSpinnerModule  
 
   ],
-  entryComponents: [IfsComponent,ExiseRemitanceFormComponent,
+  entryComponents: [IfsComponent,ExiseRemitanceFormComponent,DialogComponent,
     ChangePasswordComponent, SpiritBottlingComponent,
     SpiritBlendStockComponent, SpiritUnloadComponent,
     SpiritGenerateReceiptComponent, SpiritRefernceComponent,

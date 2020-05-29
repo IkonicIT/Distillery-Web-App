@@ -4,7 +4,7 @@
 }
 
 .content-header{
-   background-color: rgb(145, 197, 199);
+   background-color: rgb(217, 235, 245);
    
 }
 .bar-img a {
@@ -57,10 +57,13 @@ span.remove-date {
 }
 
 .btn-primary {
-    background-color: #403866;
+    background-color: rgb(48, 99, 146);
+}
+.btn-cancel{
+    background-color:rgb(241, 181, 27);
 }
 .btn-danger{
-    background-color:gold;
+    background-color: red;
 }
 .btn-success {
     color: #fff;
