@@ -17,3 +17,16 @@ label{
 table{
     font-size: smaller;
 }
+.btn-prrimary{
+    background-color: rgb(48,99,146);
+}
+.btn-second{
+    background-color: rgb(241,181,27);
+}
+th{
+    background: rgb(217,235,245);
+    color: black;
+}
+
+
+

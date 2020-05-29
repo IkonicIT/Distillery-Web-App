@@ -2,6 +2,9 @@
     height: 20px;
     width: 20px;
 }
+.content-header{    
+    background-color:rgb(217, 235, 245) ;
+}
 
 .bar-img a {
     margin-left: 5px;
@@ -53,9 +56,15 @@ span.remove-date {
 }
 
 .btn-primary {
-    background-color: turquoise;
+    background-color: rgb(48, 99, 146);
 }
-
+.btn-secondary{
+    background-color: rgb(241, 181, 27);
+}
+.btn-third{
+    background-color: red;
+    color: white;
+}
 .btn-success {
     color: #fff;
     background-color: turquoise;

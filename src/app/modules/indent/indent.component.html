@@ -96,8 +96,7 @@
 
       </div>
 
-      <div class="d-flex justify-content-end mb-3"><button type="button" class="btn btn-success"
-          (click)="addProduct(i)"><i class="fa fa-plus" aria-hidden="true"></i> Add New</button></div>
+      
       <div style="overflow: auto;">
         <table class="table table-bordered">
           <thead>
@@ -139,10 +138,11 @@
           </tbody>
         </table>
       </div>
-      <button style="margin-left: 360px;" class="btn btn-primary" (click)="submitIndent()">Save</button>&nbsp;
-      <button class="btn btn-primary">Cancel</button>&nbsp;
-      <button class="btn btn-primary">Clear</button>
-      <button class="gotohome-btn" (click)="navTohome()">Go to Home</button>
+      <button style="margin-left: 360px;" class="btn btn-primary" (click)="submitIndent()">Submit</button>&nbsp;
+      <button class="btn btn-secondary">Cancel</button>&nbsp;
+      <button class="btn btn-third">Clear</button><br><br/>
     </div>
+    
+    <button style="margin-left: 900px;"class="gotohome-btn" (click)="navTohome()">Go to Home</button>
   </div>
 </section>
