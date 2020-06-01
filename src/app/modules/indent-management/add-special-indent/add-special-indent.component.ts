@@ -25,7 +25,40 @@ export class AddSpecialIndentComponent implements OnInit {
   ngOnInit() {
     this.getDepoNames();
     this.getDistilleryNames();
+    this.SpecialIndentOnLoad();
   }
+SpecialIndentOnLoad(){
+  this.indentModel={
+    requestData:[
+      {
+        userId:'' ,
+        distilleryId: 2,
+        depotId: '',
+        productCode:'',
+        brandName:'',
+        size:'',
+        qtyInCases:'',
+        ratePerCases:'',
+        totalAmount:''
+      }
+    ]
+  }
+}addProduct(index: number) {
+  this.indentModel.requestData.splice(index + 1, 0, {
+    userId:'' ,
+        distilleryId: 2,
+        depotId: '',
+        productCode:'',
+        brandName:'',
+        size:'',
+        qtyInCases:'',
+        ratePerCases:'',
+        totalAmount:''
+  });
+}
+deleteProduct(index: number) {
+  this.indentModel.requestData.splice(index, 1);
+}
 
   getDepoNames(){
   this.indentService.getDepoNames().subscribe(response => {
@@ -59,22 +92,25 @@ getDistilleryNames(){
       this.index = -1;
        //window.scroll(0,0);
     } 
-    const req = {
-      requestData: {
-        "userId": this.indentModel.userId,
-        "distilleryId": 2,
-        "depotId": this.indentModel.depotId,
-        "productCode":this.indentModel.productCode,
-        "brandName":this.indentModel.brandName,
-        "size":this.indentModel.size,
-        "qtyInCases":this.indentModel.qtyInCases,
-        "ratePerCases":this.indentModel.ratePerCases,
-        "totalAmount":this.indentModel.totalAmount
+
+  this.indentModel={
+    requestData:[
+      {
+        userId:'' ,
+        distilleryId: 2,
+        depotId: '',
+        productCode:'',
+        brandName:'',
+        size:'',
+        qtyInCases:'',
+        ratePerCases:'',
+        totalAmount:''
       }
+    ]
       
     };
 
-    this.indentService.saveSpecialIndent(req).subscribe(response => {
+    this.indentService.saveSpecialIndent(this.indentModel).subscribe(response => {
       this.ifsNo=response.responseData.indentNo;
       console.log('ifs number is'+ this.ifsNo);
       this.spinnerService.hide();  

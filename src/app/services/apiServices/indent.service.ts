@@ -41,10 +41,13 @@ export class IndentService {
   }
   saveSpecialIndent(postBody) {
     const url = 'ifs/saveIFS';
-   /*  const requestBody = {
+     const requestBody = {
+      requestData: postBody
+    }; 
+    /*  const requestBody = {
       requestData: postBody
     }; */
-    return this._http.post<any>(url,postBody)
+    return this._http.post<any>(url,requestBody)
       .pipe(catchError(this._http.handleHttpError));
   }
   getALLIFS() {

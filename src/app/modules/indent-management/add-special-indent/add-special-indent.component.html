@@ -14,8 +14,74 @@
                   <div class="card-header" style="background-color: rgb(205, 227, 240);">
                     <strong>Adding Special Indent </strong>
                   </div>
-                  <form name="form" (ngSubmit)="f.form.valid && saveSpecialIndent()" #f="ngForm" nphonephonneovalidate>
-                    <div class="card-body">
+                   <!-- <form name="form" (ngSubmit)="f.form.valid && saveSpecialIndent()" #f="ngForm" nphonephonneovalidate>  -->
+                    <div style="overflow: auto;">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th>SelectDepotName</th>
+                           
+                            <th>Product Code</th>
+                            <th>BrandName</th>
+                            <th>Size</th>
+                            <th> QuantityInCases</th>
+                            <th>RatePerCase</th>
+                            <th>TotalAmount</th>
+                            
+                            <th>Add</th>
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of indentModel.requestData;let i=index" >
+              
+                            <td> <select class="form-control" [(ngModel)]="indentModel.depotName" name="depotName">
+                              <option value="0">Select</option>
+                              <option *ngFor="let item of depotNames" [value]="item">{{item}}</option>
+                            </select></td>
+                          
+                               <!-- <td> <select class="form-control" [(ngModel)]="item.description" (change)="onProductChange()">
+                                <option value="0"> Product Name</option>
+                                <option *ngFor="let item of products">{{item.productName}}</option>
+                              </select></td>    -->
+               
+                             <!-- <td><input type="text" [(ngModel)]="item.description" class="form-control" /></td>  -->
+                            <td><input type="text" class="form-control" [(ngModel)]="item.productCode" name="productCode" #productCode="ngModel" id="productCode" required minlength="4" placeholder="Enter ProductCode">
+                              <!-- <div *ngIf="productCode.errors.required">
+                                ProductCode is required.
+                            </div> <div *ngIf="productCode.errors.minlength">
+                              ProductCode must be at least 4 characters long.
+                         </div></td> -->
+                            <td><input type="text" class="form-control" [(ngModel)]="item.brandName" name="brandName" #brandName="ngModel" id="brandName" required placeholder="Enter BrandName"></td>
+                            <td><input type="number" class="form-control" [(ngModel)]="item.size" id="size" name="size" #fax="ngModel" required placeholder="Enter Size"></td>
+                            <td> <input type="number" class="form-control" [(ngModel)]="item.qtyInCases" name="qtyInCases" #qtyInCases="ngModel"
+                              id="QtyInCases" required placeholder="Enter QtyInCases"></td>
+                                <td> <input type="number" class="form-control" [(ngModel)]="item.ratePerCases" name="ratePerCases" #ratePerCases="ngModel"
+                                  id="ratePerCases" required placeholder="Enter RatePerCases"></td>
+                            <td><input type="number" class="form-control" [(ngModel)]="item.totalAmount" name="totalAmount" #totalAmount="ngModel" id="totalAmount" required placeholder="Enter TotalAmount"></td>
+                            <!-- <td><input type="number" [(ngModel)]="item.shipmentQty" class="form-control" /></td>
+                            <td><input type="number" [(ngModel)]="item.balanceQty"
+                               class="form-control" /></td>
+                                -->
+                            <td><button type="button" class="btn btn-success" (click)="addProduct(i)"><i class="fa fa-plus"
+                                  aria-hidden="true"></i></button>
+                              <button type="button" class="btn btn-danger" (click)="deleteProduct(i)"
+                                *ngIf="indentModel.requestData.length>1"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-sm-12 text-center">
+                        <button type="button" (click)="saveSpecialIndent()" tooltil="save button" class="btn btn-primary">Save</button>
+                       &nbsp;&nbsp;
+                        <button type="button" (click)="back()"  tooltip="Back button" class="btn btn-danger">Back</button>
+                      </div>
+                    </div>
+
+
+                    <!-- <div class="card-body">
                       <div class="row">
                         <div class="form-group col-md-4">
                           <label>Select DepotName:</label>
@@ -89,9 +155,9 @@
                         </div>
                       </div>
                     </div>
+   -->
   
-  
-                  </form>
+                  <!-- </form>  -->
                 </div>
               </div>
               <!--/.col-->
