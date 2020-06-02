@@ -9,7 +9,7 @@ label{
 
 
 .navbar-dark{
-    background-color: #2e5d74!important;
+   
     height: 28px;
 }
 
@@ -18,16 +18,16 @@ label{
     
 }
 thead{
-    background: #2e5d74;
+   
     color: white;
 }
 tbody{
     font-weight: 450;
 }
 button{
-    background-color:#2e5d74;
+   
 border: none;
-color: white;
+
 padding: 10px 20px;
 text-align: center;
 text-decoration: none;

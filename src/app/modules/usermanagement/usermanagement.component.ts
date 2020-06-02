@@ -131,7 +131,9 @@ export class UsermanagementComponent implements OnInit {
       { property: 'mobileNumber', validationTypes: ['required'] },
       { property: 'password', validationTypes: ['required'] },
       { property: 'roleIds', validationTypes: ['required'] },
-      { property: 'department', validationTypes: ['required'] }
+      { property: 'department', validationTypes: ['required'] },
+      { property: 'distilleryName', validationTypes: ['required'] },
+      { property: 'depotName', validationTypes: ['required'] }
     ];
     this.errorsList = Validatons.validate(this.user, list);
     Object.keys(this.errorsList).forEach(e => {

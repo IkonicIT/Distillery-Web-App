@@ -1,7 +1,13 @@
-<div class="btn-group">
-    <button type="button" class="btn btn-primary" (click)="isAdd=true" [ngClass]="{'active':isAdd}">Add</button>
+<!-- <div class="btn-group">
+    <button type="button" class="btn btn-primary" (click)="isAdd=true" [ngClass]="{'active':isAdd}">Add</button>&nbsp;&nbsp;
     <button type="button" class="btn btn-primary" (click)="isAdd=false" [ngClass]="{'active':!isAdd}">Edit</button>
-</div>
+</div> -->
+<section class="content-header" style="background-color: rgb(217, 235, 245);">
+    <div class="header-title" style="color: black;margin-left:0rem;">
+        <h1>UserManagement</h1>
+        
+      </div>
+</section>
 <div class="row">
     <div class="col-md-4"  *ngIf="isAdd">
         <label>User Name:</label>
@@ -67,6 +73,9 @@
             <option value="0">Select</option>
             <option *ngFor="let item of departments" [value]="item">{{item}}</option>
         </select>
+        <div *ngFor="let errors of getErros('department')">
+            <span style="color:red">{{errors}}</span>
+        </div>
     </div>
     <div class="col-md-4" *ngIf="user.department=='Distillery'">  
         <label>Select Distillery:</label>
@@ -74,6 +83,9 @@
             <option value="0">Select</option>
             <option *ngFor="let item of distilleryNames" [value]="item">{{item}}</option>
         </select>
+        <div *ngFor="let errors of getErros('distilleryName')">
+            <span style="color:red">{{errors}}</span>
+        </div>
     </div>
     <div class="col-md-4"  *ngIf="user.department=='Depot'"> 
         <label>Select Depot:</label>
@@ -81,8 +93,15 @@
             <option value="0">Select</option>
             <option *ngFor="let item of depotNames" [value]="item">{{item}}</option>
         </select>
+        <div *ngFor="let errors of getErros('depotName')">
+            <span style="color:red">{{errors}}</span>
+        </div>
     </div>
 </div>
 <br/>
-<button style="margin-left: 360px;" class="btn btn-primary" (click)="save()">Save</button>&nbsp;
-<button class="btn btn-primary" (click)="clear()">Clear/Cancel</button>&nbsp;
+<div class="btn-group">&nbsp;&nbsp;
+    <button type="button" style="background-color: rgb(48,99,146);" class="btn btn-primary" (click)="isAdd=true" [ngClass]="{'active':isAdd}">Add</button>&nbsp;&nbsp;
+    <button type="button" class="btn btn-primary" style="background-color: rgb(241,181,27);" (click)="isAdd=false" [ngClass]="{'active':!isAdd}">Edit</button>
+</div>
+<button style="margin-left: 360px;background-color: rgb(48,99,146);" class="btn btn-primary" (click)="save()">Save</button>&nbsp;
+<button class="btn btn-primary" style="background-color: red;" (click)="clear()">Clear/Cancel</button>&nbsp;

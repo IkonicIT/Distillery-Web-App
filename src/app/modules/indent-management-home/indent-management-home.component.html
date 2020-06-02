@@ -128,6 +128,17 @@
       </div>
       <!-- nine ends-->
       <!-- ten starts-->
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2"  *ngxPermissionsOnly="['home/indent-management/special-ifs']">
+        <div id="cardbox1">
+          <div class="statistic-box">
+            <a [appSubMenu]="'home/indent-management/special-ifs'" [routerLink]="['../indent-management/special-ifs']">
+              <i class="fa fa-indent fa-2x"></i>
+              
+              <h3>IFS</h3>
+            </a>
+          </div>
+        </div>
+      </div>
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngIf="hasUploadCardsPer">
         <div id="cardbox1">
           <div class="statistic-box">
@@ -155,17 +166,7 @@
       </div>
       <!-- eleven ends-->
       <!-- twelve starts-->
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngxPermissionsOnly="['home/indent-management/special-ifs']">
-        <div id="cardbox1">
-          <div class="statistic-box">
-            <a [appSubMenu]="'home/indent-management/special-ifs'" routerLink]="['../indent-management/special-ifs']">
-              <i class="fa fa-indent fa-2x"></i>
-              
-              <h3>IFS</h3>
-            </a>
-          </div>
-        </div>
-      </div>
+     
       <!-- twelve ends-->
     </div>
   </section>
