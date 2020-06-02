@@ -154,6 +154,7 @@ export class IndentComponent implements OnInit, OnDestroy {
   createIndent() {
     this._indentService.getDepotDts().subscribe(data => {
       this.deportDts = data['response Date List'];
+      this._indentService.depotNames= this.deportDts;
     });
     this._indentService.getRetailersMDts().subscribe(data => {
       this.RetailersMDts = data['response Date List'];

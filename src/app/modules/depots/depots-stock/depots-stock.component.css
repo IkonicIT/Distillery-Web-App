@@ -1,5 +1,5 @@
 nav{
-    background: rgb(45,79,107);
+    background: rgb(217,235,245);
     color: white;
     padding: 3px;
 }
@@ -11,10 +11,17 @@ select{
     width: 93px;
     margin-left: 14px;
 }
-button{
-    background: rgb(45,79,107) ;
+.btn-primary{
+    background: rgb(48,99,146) ;
     color: white;
     padding: 6px;
     border-radius: 12px;
-    border-style: hidden3
+    border-style: hidden;
+}
+.btn-secondary{
+    background: rgb(241,181,27);
+color: white;
+padding: 6px;
+border-radius: 12px;
+border-style:hidden ;
 }

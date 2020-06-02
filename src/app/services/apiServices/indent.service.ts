@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpService } from '../http.service';
 import { catchError } from 'rxjs/operators';
+import { HttpService } from '../http.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class IndentService {
 
-
-
+  public depotNames:any;
   // tslint:disable-next-line:variable-name
   constructor(private _http: HttpService) { }
 
@@ -32,9 +31,37 @@ export class IndentService {
     return this._http.post<any>(url, requestBody)
       .pipe(catchError(this._http.handleHttpError));
   }
+  createshipmenttransportIndent(postBody) {
+    const url = 'shipment/saveTransportPermitRequest';
+    const requestBody = {
+      requestData: postBody
+    };
+    return this._http.post<any>(url, requestBody)
+      .pipe(catchError(this._http.handleHttpError));
+  }
+  saveSpecialIndent(postBody) {
+    const url = 'ifs/saveIFS';
+   /*  const requestBody = {
+      requestData: postBody
+    }; */
+    return this._http.post<any>(url,postBody)
+      .pipe(catchError(this._http.handleHttpError));
+  }
+  getALLIFS() {
+    const url = 'ifs/getAllIFS';
+    return this._http.get<any>(url)
+      .pipe(catchError(this._http.handleHttpError));
+  }
   getDepotDts(): Observable<any> {
     return this._http.get<any>('imgt/fetchDepotDts').pipe(catchError(this._http.handleHttpError));
   }
+  getDepoNames(): Observable<any> {
+    return this._http.get<any>('imgt/fetchDepoNames').pipe(catchError(this._http.handleHttpError));
+  }
+  getDistilleryNames(): Observable<any> {
+    return this._http.get<any>('imgt/distilleryNames').pipe(catchError(this._http.handleHttpError));
+  }
+  
   getRetailersMDts() {
     return this._http.get<any>('imgt/fetchRetailersMDts').pipe(catchError(this._http.handleHttpError));
   }

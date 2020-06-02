@@ -23,7 +23,7 @@ export class ShipmentShipmentsComponent implements OnInit {
               private permService: NgxPermissionsService, private router: Router,
               private localServ: LocalStoreService) { }
 
-  ngOnInit() {
+  ngOnInit(){
     if (!(this.permService.getPermission('home/shipment') && this.permService.getPermission('home/shipment/shipment-shipments'))) {
       this.router.navigateByUrl('home/shipment');
     } else {
@@ -32,8 +32,8 @@ export class ShipmentShipmentsComponent implements OnInit {
   }
   transport() {
     const config: MatDialogConfig = {
-      height: '400px',
-      width: '500px'
+      height: '650px',
+      width: '850px'
     };
     this.transportDialog.open(ShipmentTransportPermitRequestComponent, config);
   }

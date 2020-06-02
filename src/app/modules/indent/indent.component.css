@@ -5,7 +5,6 @@
 .content-header{    
     background-color:rgb(217, 235, 245) ;
 }
-
 .bar-img a {
     margin-left: 5px;
     margin-top: 10px;
@@ -65,21 +64,18 @@ span.remove-date {
     background-color: red;
     color: white;
 }
+.btn-fourth{
+    background-color: rgb(48, 99, 146);
+    color: white; 
+}
+.btn-fifth{
+    background-color: rgb(241, 181, 27);
+    color: white;
+    margin-left: 10px;
+}
 .btn-success {
     color: #fff;
     background-color: turquoise;
     border-color: turquoise;
 }
 
-.gotohome-btn {
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    background: rgb(45, 79, 107);
-    border-radius: 10px;
-    height: 30px;
-    float: right;
-    margin: 15px 0;
-    width: 150px;
-    padding: 0 15px;
-}
