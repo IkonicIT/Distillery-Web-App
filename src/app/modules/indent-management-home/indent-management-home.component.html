@@ -1,5 +1,5 @@
 <div *ngIf="hasIndentMgmtPerm">
-  <section class="content-header">
+  <section style="background-color:rgb(157, 202, 229) ;" class="content-header">
     <div class="header-icon">
       <i class="fa fa-indent"></i>
     </div>
@@ -8,15 +8,15 @@
       <small>Detailed of Indents Modules</small>
     </div>
   </section>
-  <section class="content">
+  <section class="content" >
     <div class="row">
       <!-- first one starts-->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2"  *ngxPermissionsOnly="['home/module/indent/active']">
-        <div id="cardbox1">
+        <div style="background-color: rgb(157, 202, 229);" id="cardbox1">
           <div class="statistic-box">
             <a [appSubMenu]="'home/module/indent/active'" [routerLink]="['../module/indent/active']">
-              <i class="fa fa-indent fa-2x"></i>
-              <h3> Active Indents</h3>
+              <i class="fa fa-indent fa-2x" style="color: black;"></i>
+              <h3 style="color: black;"> Active Indents</h3>
             </a>
           </div>
         </div>
@@ -24,11 +24,11 @@
       <!-- first one ends-->
       <!-- second starts-->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngxPermissionsOnly="['home/module/indent/old']">
-        <div id="cardbox1">
+        <div id="cardbox1" style="background-color: rgb(157, 202, 229);">
           <div class="statistic-box">
             <a [appSubMenu]="'home/module/indent/old'" [routerLink]="['../module/indent/old']">
-              <i class="fa fa-indent fa-2x"></i>
-              <h3>Old Indents</h3>
+              <i class="fa fa-indent fa-2x" style="color: black;"></i>
+              <h3 style="color: black;">Old Indents</h3>
             </a>
           </div>
         </div>
@@ -36,12 +36,12 @@
       <!-- second ends-->
       <!-- three starts-->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngIf="hasCreateIndentPer">
-        <div id="cardbox1">
+        <div id="cardbox1" style="background-color: rgb(157, 202, 229);">
           <div class="statistic-box">
             <a [appSubMenu]="'home/module/indent/create'" [routerLink]="['../module/indent/create']">
-              <i class="fa fa-indent fa-2x"></i>
+              <i class="fa fa-indent fa-2x" style="color: black;"></i>
               
-              <h3>Create Indent</h3>
+              <h3 style="color: black;">Create Indent</h3>
             </a>
           </div>
         </div>
@@ -49,13 +49,13 @@
       <!-- three ends-->
       <!-- four starts-->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngxPermissionsOnly="['home/indent-management/aged-challans']">
-        <div id="cardbox1">
+        <div id="cardbox1" style="background-color: rgb(157, 202, 229);">
           <div class="statistic-box">
             <a [appSubMenu]="'home/indent-management/aged-challans'" [routerLink]="['../indent-management/aged-challans']">
-              <p></p>
-              <i class="fa fa-indent fa-2x"></i>
               
-              <h3>Aged Challans</h3>
+              <i class="fa fa-indent fa-2x" style="color: black;"></i>
+              
+              <h3 style="color: black;">Aged Challans</h3>
             </a>
           </div>
         </div>
@@ -63,12 +63,12 @@
       <!-- four ends-->
       <!-- five starts-->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngxPermissionsOnly="['home/indent-management/cancelled-idc']">
-        <div id="cardbox1">
+        <div id="cardbox1" style="background-color: rgb(157, 202, 229);">
           <div class="statistic-box">
             <a [appSubMenu]="'home/indent-management/cancelled-idc'" [routerLink]="['../indent-management/cancelled-idc']">
-              <i class="fa fa-indent fa-2x"></i>
+              <i class="fa fa-indent fa-2x" style="color: black;"></i>
               
-              <h3>Cancelled Icdc</h3>
+              <h3 style="color: black;">Cancelled Icdc</h3>
             </a>
           </div>
         </div>
@@ -76,12 +76,12 @@
       <!-- five ends-->
       <!-- six starts-->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngxPermissionsOnly="['home/indent-management/challan-status']">
-        <div id="cardbox1">
+        <div id="cardbox1" style="background-color: rgb(157, 202, 229);">
           <div class="statistic-box">
             <a [appSubMenu]="'home/indent-management/challan-status'" [routerLink]="['../indent-management/challan-status']">
-              <i class="fa fa-indent fa-2x"></i>
+              <i class="fa fa-indent fa-2x" style="color: black;"></i>
               
-              <h3>Challans Status</h3>
+              <h3 style="color: black;">Challans Status</h3>
             </a>
           </div>
         </div>
@@ -90,12 +90,12 @@
       <!-- seven starts-->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2"
         *ngxPermissionsOnly="['home/indent-management/distillery-indent']">
-        <div id="cardbox1">
+        <div id="cardbox1" style="background-color: rgb(157, 202, 229);">
           <div class="statistic-box">
             <a [appSubMenu]="'home/indent-management/distillery-indent'" [routerLink]="['../indent-management/distillery-indent']">
-              <i class="fa fa-indent fa-2x"></i>
+              <i class="fa fa-indent fa-2x" style="color: black;"></i>
               
-              <h3>Distillery Indent</h3>
+              <h3 style="color: black;">Distillery Indent</h3>
             </a>
           </div>
         </div>
@@ -103,12 +103,12 @@
       <!-- seven ends-->
       <!-- eight starts-->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngxPermissionsOnly="['home/indent-management/retailer-cards']">
-        <div id="cardbox1">
+        <div id="cardbox1" style="background-color: rgb(157, 202, 229);">
           <div class="statistic-box">
             <a [appSubMenu]="'home/indent-management/retailer-cards'" [routerLink]="['../indent-management/retailer-cards']">
-              <i class="fa fa-indent fa-2x"></i>
+              <i class="fa fa-indent fa-2x" style="color: black;"></i>
               
-              <h3>Retailer Cards</h3>
+              <h3 style="color: black;">Retailer Cards</h3>
             </a>
           </div>
         </div>
@@ -116,12 +116,12 @@
       <!-- eight ends-->
       <!-- nine starts-->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngxPermissionsOnly="['home/indent-management/special-indent']">
-        <div id="cardbox1">
+        <div id="cardbox1" style="background-color: rgb(157, 202, 229);">
           <div class="statistic-box">
             <a [appSubMenu]="'home/indent-management/special-indent'" [routerLink]="['../indent-management/special-indent']">
-              <i class="fa fa-indent fa-2x"></i>
+              <i class="fa fa-indent fa-2x" style="color: black;"></i>
               
-              <h3>Special Indent</h3>
+              <h3 style="color: black;">Special Indent</h3>
             </a>
           </div>
         </div>
@@ -129,12 +129,12 @@
       <!-- nine ends-->
       <!-- ten starts-->
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2"  *ngxPermissionsOnly="['home/indent-management/special-ifs']">
-        <div id="cardbox1">
+        <div id="cardbox1" style="background-color: rgb(157, 202, 229);">
           <div class="statistic-box">
             <a [appSubMenu]="'home/indent-management/special-ifs'" [routerLink]="['../indent-management/special-ifs']">
-              <i class="fa fa-indent fa-2x"></i>
+              <i class="fa fa-indent fa-2x" style="color: black;"></i>
               
-              <h3>IFS</h3>
+              <h3 style="color: black;">IFS</h3>
             </a>
           </div>
         </div>
@@ -145,30 +145,31 @@
             <a [appSubMenu]="'home/indent-management/upload-cards'" [routerLink]="['../indent-management/upload-cards']">
               <i class="fa fa-indent fa-2x"></i>
               
-              <h3>Upload Cards</h3>
+              <h3 style="color: black;">Upload Cards</h3>
             </a>
           </div>
         </div>
       </div>
-      <!-- ten ends-->
-      <!-- eleven starts-->
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2"
+      <!-- <-- ten ends--> 
+      <!-- eleven starts -->
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2"
         *ngxPermissionsOnly="['home/indent-management/retailer-indent']">
         <div id="cardbox1">
           <div class="statistic-box">
             <a [appSubMenu]="'home/indent-management/aged-challans'" [routerLink]="['../module/indent/old']">
               <i class="fa fa-indent fa-2x"></i>
               
-              <h3>Retailer Indent</h3>
+              <h3 style="color: black;">Retailer Indent</h3>
             </a>
           </div>
         </div>
       </div>
-      <!-- eleven ends-->
-      <!-- twelve starts-->
+      <!-- eleven ends
+      twelve starts
      
-      <!-- twelve ends-->
-    </div>
+      twelve ends --> 
+      </div>
+    
   </section>
 </div>
 <div *ngIf="!hasIndentMgmtPerm">
