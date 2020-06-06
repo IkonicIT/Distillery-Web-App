@@ -20,7 +20,7 @@ export class ViewComponent implements OnInit {
        this.indentNo = route.snapshot.params['indentId'];
 
       // this.indentNo = route.snapshot.params['id'];  
-        console.log('indentNo is'+ this.indentNo);
+        console.log('indentno is'+ this.indentNo);
        
      }
 
