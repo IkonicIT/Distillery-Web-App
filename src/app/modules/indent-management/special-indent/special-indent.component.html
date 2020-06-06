@@ -63,8 +63,8 @@ padding: 6px;">
             <td>{{sindent.depotId}}</td>
             <td>{{sindent.indentDate}}</td>
             <td>{{sindent.status}}</td>
-            <td>
-                <button type="button" style="margin-left: 12px; background-color: rgb(48,99,146);"  tooltip="view Special Indent" >View</button>
+            <td> 
+                <button type="button" style="margin-left: 12px; background-color: rgb(48,99,146);" [routerLink]="['../view',sindent.indentNo]" tooltip="view Special Indent" >View</button>
                 <button type="button" style="margin-left: 12px; background-color: rgb(241,181,27);" tooltip="Edit Special Indent" >Edit</button>
                 <button type="button" style="margin-left: 12px;  background-color: red;" tooltip="Delete Special Indent">Delete</button>
             </td>

@@ -1,0 +1,152 @@
+<div class="animated fadeIn">
+    <!--/.row-->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <!-- Large modal -->
+          <div class="card-body">
+            <div class="modal-body mobile-padding">
+              <div class="col-sm-12 mobile-padding">
+                <div class="card">
+                  <div class="card-header">
+                      <strong>Viewing IFS Details </strong>
+                      </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="form-group col-sm-6">
+                        <label for="indentNo">IndentNumber</label>
+                        <!-- <input type="text" [(ngModel)]="model.indentNo" name="_id" #_id="ngModel" id="name" hidden>  -->
+                        <input type="text" readonly class="form-control" [(ngModel)]="indentNo" name="indentNo"  >
+                      </div>
+                      <div class="form-group col-sm-6">
+                        <label for="productCode">ProductCode</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="model.productCode" name="productCode"  >
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="form-group col-sm-6">
+                        <label for="distilleryId">DistilleryId</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="model.distilleryId" name="distilleryId" >
+                      </div>
+                      <div class="form-group col-sm-6">
+                        <label for="depotId">DepotId</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="model.depotId" id="fax" name="depotId" >
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="form-group col-sm-6">
+                        <label for="status">Status</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="model.status" name="status" >
+                      </div>
+                      <div class="form-group col-sm-6">
+                        <label for="indentDate">IndentDate</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="model.indentDate" name="indentDate"  >
+                      </div>
+                    </div>
+  
+  
+                    <div class="row">
+                      <div class="form-group col-sm-6">
+                        <label for="brandName">BrandName</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="model.brandName" name="brandName">
+                      </div>
+                      <div class="form-group col-sm-6">
+                        <label for="size">Size</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="model.size" name="size" >
+                      </div>
+                    </div>
+  
+  
+                    <div class="row">
+                      <div class="form-group col-sm-6">
+                        <label for="qtyInCases">QuantityInCases</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="model.qtyInCases" name="qtyInCases" 
+                          >
+                      </div>
+                      <div class="form-group col-sm-6">
+                        <label for="ratePerCase">RatePerCase</label>
+                        <select disabled class="form-control" [(ngModel)]="model.ratePerCase" name="ratePerCase" >
+                          <option value="">Choose..</option>
+                          <option [ngValue]="stat.statusid" *ngFor="let stat of statuses">{{stat.status}}
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                          <label for="totalAmount">TotalAmount</label>
+                          <input type="text" readonly class="form-control" [(ngModel)]="model.totalAmount" name="qtyInCases" 
+                            >
+                        </div>
+  
+  
+  
+  
+                    <!-- <div class="row">
+                      <div class="form-group col-sm-12">
+                        <label for="desc">Company Types</label>
+                        <select disabled class="form-control" [(ngModel)]="model.type.typeid" name="type" #type="ngModel" id="companyType">
+                          <option [value]="undefined">Choose..</option>
+                          <option [ngValue]="type.typeid" *ngFor="let type of companyTypes">{{type.name}}
+                          </option>
+                        </select>
+                      </div>
+                    </div> -->
+  
+                    <!-- <div class="row">
+                      <div class="form-group col-sm-12">
+                        <label for="desc"> Company Logo:</label>
+                        <label for="desc">{{model.companyfilename}}</label>
+                        <!-- <input type="text" readonly class="form-control" [(ngModel)]="model.companyfilename" id="desc" name="companyfilename"
+                          #companyfilename="ngModel"> -->
+                      <!-- </div>
+                    </div> -->
+  
+  
+                    <!-- <div class="row">
+                      <div class="form-group col-sm-12">
+                        <label for="desc">Primary Contact Name</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="model.primaryContactName" id="desc" name="primaryContactName"
+                          #primaryContactName="ngModel">
+                      </div>
+                    </div>
+   
+                    <div class="row" *ngIf="isOwnerAdmin ==='true'">
+                      <div class="form-group col-sm-12">
+                        <label for="tracratAnnouncements" >Tracrat Announcements</label>
+                        <textarea  id="tracratAnnouncement" name="textarea-input" rows="2" cols="4" name="tracratAnnouncements" #tracratAnnouncements="ngModel" class="form-control"
+                                  [(ngModel)]="model.announcementtext" placeholder="Enter Description"></textarea>
+                                  <button (click)="saveMessage()"  tooltip="Save Message" class="btn btn-primary">Save Message</button>     
+                      </div>
+                    </div> -->
+  
+                    <!-- <div class="row">
+                      <div class="form-group col-sm-12">
+                        <label for="desc">Company Announcements</label>
+                        <textarea readonly id="desc" name="textarea-input" rows="2" cols="4" name="companyAnnouncements" #companyAnnouncements="ngModel"
+                          class="form-control" [(ngModel)]="model.announcement.announcementtext" ></textarea>
+                      </div>
+                    </div>  -->
+  
+              
+                   
+               
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-sm-12 text-center">
+                      <button type="button" style="background-color: rgb(177, 209, 228);" [routerLink]="['../../edit',model.companyid]" tooltip="Edit this Company" class="btn btn-primary">Edit</button>&nbsp;&nbsp;&nbsp;
+                      <button type="button" style="background-color: rgb(241,181,27);" (click)="cancelDetails()" tooltip="Cancel" class="btn btn-primary">Back</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/.col-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

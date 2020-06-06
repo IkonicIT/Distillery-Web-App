@@ -453,7 +453,7 @@ const appRoutes: Routes = [
       { path: 'indent-management/retailer-indent', component:RetailerIndentComponent },
       { path: 'indent-management/special-indent', component:SpecialIndentComponent },
       { path: 'indent-management/add-special-indent', component:AddSpecialIndentComponent },
-      { path: 'indent-management/view', component: ViewComponent },
+      { path: 'indent-management/view/:indentId', component: ViewComponent },
 
       { path: 'indent-management/upload-cards', component:UploadCardsComponent },
       { path: 'indent-management/special-ifs', component:SpecialIfsComponent },
