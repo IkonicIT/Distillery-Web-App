@@ -1,5 +1,14 @@
-button{
-    background: rgb(47,79,107);
+.btn-primary{
+    background: rgb(48,99,146);
+    color: white;
+    padding: 11px;
+    border-style: hidden;
+    border-radius: 9px;
+    margin-right: 2px;
+    font-weight: 500;
+}
+.btn-secondary{
+    background-color: rgb(241,181,27);
     color: white;
     padding: 11px;
     border-style: hidden;

@@ -1,0 +1,16 @@
+    .content-header{
+        background-color: rgb(217,235,245);
+        color: black;
+    }
+    .btn-primary{
+        background-color: rgb(8,99,146);
+        color: white;
+    }
+    .btn-secondary{
+        background-color: rgb(241,181,27);
+        color: white;
+    }
+.panel-body{
+    background-color: rgb(217,235,245);
+color: white;
+}

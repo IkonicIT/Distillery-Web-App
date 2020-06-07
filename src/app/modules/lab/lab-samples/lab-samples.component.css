@@ -2,10 +2,19 @@ p{
     margin-bottom: 0rem;
 }
 .bg-dark{
-    background-color: #2e5d74!important;
+    background-color: rgb(217,235,245)!important;
+}
+.content-header{
+    background-color: rgb(217,235,245);   
+}   
+.panel-body{
+    background-color: rgb(217,235,245);   
 }
 nav{
     height: 3rem;
+}
+th{
+    background-color: rgb(217,235,245);   
 }
 
 input{
@@ -26,8 +35,11 @@ select{
 #search{
     margin-left: 38rem;
 }
-.btn-success{
-    background-color: #2e5d74;
+.btn-primary{
+    background-color: rgb(48,99,146);
+}
+.btn-secondary{
+    background-color: rgb(241,181,27);
 }
 #next{
     margin-left: 44rem;

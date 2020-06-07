@@ -1,14 +1,19 @@
 table{
     border: 1px solid;
-    border-color: thistle;
+    border-color: rgb(217,235,245);
     border-right: 1px solid;
-    border-right-color: thistle;
+    border-right-color: rgb(217,235,245);
 }
 button{
-    background: rgb(45,79,107);
+    background: rgb(48,99,146);
     color: white;
     padding: 13px;
     font-weight: 700;
     border-style: hidden;
     border-radius: 11px;
+}
+h1{
+    color: black;
+    text-align: center;
+    background-color: rgb(217,235,245);
 }

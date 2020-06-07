@@ -4,8 +4,8 @@
         <div class="col-12 bac">
             <p></p>
             <form class="form-inline" action="/action_page.php">
-                <label for="date">Start Date :</label>
-                <input type="date" class="form-control" placeholder="" id="email" (change)="selectStartDate($event)">&nbsp;
+                <label for="date" style="color: black;">Start Date :</label>
+                <input type="date" class="form-control" placeholder="" id="email" (change)="selectStartDate($event)">&nbsp;&nbsp;&nbsp;&nbsp;
                 <!-- <mat-form-field>
                     <input matInput [matDatepicker]="picker" placeholder="Start Date" (change)="selectStartDate($event)">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -16,16 +16,16 @@
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field> -->
-                <label for="pwd">End Date:</label>
-                <input type="date" class="form-control" placeholder="" id="pwd" (change)="selectEndDate($event)">&nbsp;
+                <label for="pwd" style="color: black;">End Date:</label>
+                <input type="date" class="form-control" placeholder="" id="pwd" (change)="selectEndDate($event)">&nbsp;&nbsp;&nbsp;&nbsp;
                 <select class="form-control">
                     <option>Bottle Breakage</option>
                     <!-- <option>CSD</option> -->
                  
-                </select>&nbsp;
-                <i class="fa fa-search" (click)="searchBreakage($event)" aria-hidden="true"></i> &nbsp;
-                <i class="fa fa-print" (click)="print()"></i> &nbsp;
-                <button type="button" class="btn btn-success" (click)="exportexcel()">Export to Excel</button>
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa fa-search" (click)="searchBreakage($event)" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa fa-print" (click)="print()"></i> &nbsp;&nbsp;&nbsp;&nbsp;  
+                <button type="button" class="btn btn-success" (click)="exportexcel()" style="background-color: rgb(48,99,146);">Export to Excel</button>
                 <!-- <img src="https://img.icons8.com/officel/30/000000/label-printer.png" class="img-print"> -->
             </form>
             <div class="example-header">
@@ -78,7 +78,7 @@
                 </mat-table>
                 <p class="noRecords" *ngIf="response.length<=0">No Records found</p>
                 <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-                <button class="breakages-back-btn" (click)="navToBreakages()"> Back</button>
+                <button class="breakages-back-btn" (click)="navToBreakages()" style="background-color:rgb(48,99,146);"> Back</button>
             </div>
 
 

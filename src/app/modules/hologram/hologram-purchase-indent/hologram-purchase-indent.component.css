@@ -2,7 +2,7 @@ p{
     margin-bottom: 0rem;
 }
 .bg-dark{
-    background-color: #2e5d74!important;
+    background-color: rgb(217,235,245)!important;
 }
 nav{
     height: 3rem;
@@ -30,14 +30,18 @@ select{
     margin-top:6rem;
 }
 #search{
-    margin-left: 38rem;
+    margin-left: 15rem;
+    color: black;
 }
 .table td, .table th{
     padding: 0rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.btn-success{
-    background-color: #2e5d74!important;
+.btn-primary{
+    background-color: rgb(48,99,146)!important;
+}
+.btn-secondary{
+    background-color: rgb(241,181,27)!important;
 }
 #next{
     margin-left: 44rem;

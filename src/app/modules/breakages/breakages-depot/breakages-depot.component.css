@@ -1,5 +1,5 @@
 .bac {
-    background-color: rgb(45, 79, 107);
+    background-color: rgb(217,235,245);
     height: auto;
 }
 
@@ -10,7 +10,7 @@
 }
 
 label {
-    color: white;
+    color: black;
 }
 
 th {
@@ -61,8 +61,8 @@ th {
 }
 
 th {
-    background-color: #2bc0c7;
-    color: white;
+    background-color: rgb(217,235,245);
+    color: black;
 }
 
 .but {
@@ -104,8 +104,8 @@ span {
 
 .mat-header-cell {
     border-right: 1px solid #dee2e6;
-    background-color: #2bc0c7;
-    color: white;
+    background-color: rgb(217,235,245);
+    color: black;
     font-size: 15px;
     padding-left: 24px;
     font-weight: 700;
@@ -184,7 +184,7 @@ span {
 .fa-search,
 .fa-print {
     font-size: 2rem;
-    color: #ffffff;
+    color: black;
     cursor: pointer;
 }
 

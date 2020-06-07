@@ -1,2 +1,13 @@
+.content-header{    
+    background-color:rgb(217, 235, 245) ;
+}
+.panel-body{
+    background-color:rgb(217, 235, 245) ;
 
-
+}
+.btn-primary{
+    background-color: rgb(48,99,146);
+}
+.btn-secondary{
+    background-color: rgb(241,181,27);
+}

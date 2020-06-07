@@ -1,13 +1,13 @@
 
 thead{
-    background: #2bc0c7;
-    color: white;
+    background: rgb(217,235,245);
+    color: black;
 }
 tbody{
     font-weight: 450;
 }
 button{
-    background-color: #2e5d74!important;
+    background-color: rgb(234,24,2)!important;
 border: none;
 color: white;
 padding: 10px 20px;
@@ -31,7 +31,7 @@ select{
     margin-top:6rem;
 }
 .navbar-dark{
-    background-color: #2e5d74!important;
+    background-color: rgb(217,235,245)!important;
     height: 48px;
 }
 #search{
@@ -60,8 +60,8 @@ label{
 }
 .mat-header-cell{
     border-right: 1px solid #dee2e6;
-    background-color: #2bc0c7;
-    color: white;
+    background-color: rgb(217,235,245);
+    color: black;
     padding: 2px;
     font-size: 15px;
     font-weight: 700;
@@ -85,11 +85,11 @@ label{
 }
 ::ng-deep .mat-paginator-container button{
     width: 21%;
-    background: rgb(45, 79, 107);
+    background: rgb(48,99,146);
     border-radius: 10px;
     margin-right: 13px;
     height: 30px;
-}
+}   
 ::ng-deep .mat-paginator-container button:focus {
     outline: 1px dotted;
     outline: 0px auto -webkit-focus-ring-color;
@@ -102,6 +102,7 @@ label{
     top: -3px;
     left: 17%;
     position: absolute;
+
 }
 ::ng-deep .mat-paginator-navigation-next:after {
     content: "Next";
@@ -121,4 +122,4 @@ label{
     margin-bottom: 0px;
     margin-top: 10px;
     }
-    .bac{background-color: rgb(45, 79, 107);height: auto;}
+    .bac{background-color: rgb(217,235,245);height: auto;}

@@ -1,9 +1,17 @@
 th{
-    background: #2bc0c7;
-    color: white;
+    background: rgb(217,235,245);
+    color: black;
 }
-button{
-    background: rgb(45,79,107);
+.btn-primary{
+    background: rgb(48,99,146);
+    color: white;
+    padding: 13px;
+    font-weight: 700;
+    border-style: hidden;
+    border-radius: 11px;
+}
+.btn-secondary{
+    background-color: rgb(241,181,27);
     color: white;
     padding: 13px;
     font-weight: 700;
