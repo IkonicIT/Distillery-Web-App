@@ -36,7 +36,7 @@
   font-weight: 300;
   overflow: hidden;
   background-color: #0c0b0c;
-  color: #241d1d;
+  color:white;
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
   border-bottom: 2px solid #0c0b0c;
@@ -63,8 +63,8 @@
   border: none;
   min-height: 60px;
   border-radius: 0;
-  background-color: #2A3F54;
-  border-bottom: 1px solid #2A3F54;
+  background-color: rgb(157, 202, 229);
+  /* border-bottom: 1px solid #2A3F54; */
 }
 
 .main-header .sidebar-toggle {
@@ -108,15 +108,15 @@
 .navbar-nav>li>a {
   padding: 4px 9px;
   position: relative;
-  color: #009688;
+  /* color: #009688; */
   word-spacing: 2px;
 }
 
-.navbar-nav>li>a:visited {
+  .navbar-nav>li>a:visited {
   background-color: #222;
   background: #222;
-  color: #009688;
-}
+  /* color: #009688; */
+} 
 
 .nav>li>a>img {
   max-width: none;

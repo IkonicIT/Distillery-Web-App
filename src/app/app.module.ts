@@ -289,12 +289,13 @@ import { NoPrivilegesComponent } from './services/common/no-privileges/no-privil
 import { FiledErrorComponent } from './common/filed-error/filed-error.component';
 import { SubMenuDirective } from './services/sub-menu.directive';
 import { DialogComponent } from './dialog/dialog.component';
+import { ViewComponent } from './view/view.component';
 
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'features', component: FeaturesComponent, canActivate: [AuthGuard] },
-  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent }, 
   { path: 'manage-users', component: ManageUsersComponent, canActivate: [AuthGuard] },
   {
     path: 'login', component: LoginlayoutComponent,
@@ -350,6 +351,7 @@ const appRoutes: Routes = [
       { path: 'spirit/receipit', component: SpiritReceiptsComponent },
       { path: 'module/profile', component: MyProfileComponent },
       { path: 'lab', component: LabHomeComponent },
+     
       { path: 'lab/batch-deactivation', component: LabBatchDeactivationComponent },
       { path: 'lab/reports', component: LabReportsComponent },
       { path: 'lab/samples', component: LabSamplesComponent },
@@ -451,6 +453,7 @@ const appRoutes: Routes = [
       { path: 'indent-management/retailer-indent', component:RetailerIndentComponent },
       { path: 'indent-management/special-indent', component:SpecialIndentComponent },
       { path: 'indent-management/add-special-indent', component:AddSpecialIndentComponent },
+      { path: 'indent-management/view/:indentId', component: ViewComponent },
 
       { path: 'indent-management/upload-cards', component:UploadCardsComponent },
       { path: 'indent-management/special-ifs', component:SpecialIfsComponent },
@@ -768,7 +771,8 @@ const appRoutes: Routes = [
     NoPrivilegesComponent,
     FiledErrorComponent,
     SubMenuDirective,
-    DialogComponent
+    DialogComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,

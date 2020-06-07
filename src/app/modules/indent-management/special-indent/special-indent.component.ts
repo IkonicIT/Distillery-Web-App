@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxPermissionsService } from 'ngx-permissions';
-import { Router } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { AddSpecialIndentComponent } from '../add-special-indent/add-special-indent.component';
 import { IndentService } from '../../../services/apiServices/indent.service';
@@ -14,7 +14,7 @@ import { IndentService } from '../../../services/apiServices/indent.service';
 export class SpecialIndentComponent implements OnInit {
   specialindents: any;
   count:number=0;
-  constructor(private permissionServ: NgxPermissionsService, private router: Router,private addspecialindent:MatDialog,private indentService: IndentService) { 
+  constructor(private permissionServ: NgxPermissionsService, private router: Router,route: ActivatedRoute,private addspecialindent:MatDialog,private indentService: IndentService) { 
     
   }
 
