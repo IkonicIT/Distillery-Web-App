@@ -3,7 +3,7 @@
       
         <div class="col-12 bac">
             <p></p>
-            <form class="form-inline" action="/action_page.php">
+            <form class="form-inline" >
                 <label for="date">Start Date :</label>
                 <input type="date" class="form-control" placeholder="" id="email">&nbsp;
                 <label for="pwd">End Date:</label>
@@ -25,6 +25,7 @@
                         <option>10</option>
                         <option>10</option>
                     </select>
+                    <p *ngIf="!hasAddIfsPer"> <img src="https://img.icons8.com/flat_round/20/000000/plus.png" style="cursor: pointer;" (click)="sampleFormWindow()"> IFS </p>
                     <input type="text" class=" dd search-query form-control" placeholder="Search" />
                     <span class="input-group-btn">
                         <button class="btn btn-danger" type="button">
@@ -64,7 +65,7 @@
           </table>
     </div>
       <div class="col-12">
-        <p *ngIf="hasAddIfsPer"> <img src="https://img.icons8.com/flat_round/20/000000/plus.png" style="cursor: pointer;" (click)="sampleFormWindow()"> IFS </p>
+        <p *ngIf="!hasAddIfsPer"> <img src="https://img.icons8.com/flat_round/20/000000/plus.png" style="cursor: pointer;" (click)="sampleFormWindow()"> IFS </p>
         
       <span class="but">  <button type="button" class="btn btn-info">Pervious</button>&nbsp;
         <button type="button" class="btn btn-info">Next</button></span>

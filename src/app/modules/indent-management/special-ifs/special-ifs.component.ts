@@ -21,26 +21,37 @@ export class SpecialIfsComponent implements OnInit {
               private store: Store<State>, private permissionsService: NgxPermissionsService,
               private router: Router, private localServ: LocalStoreService) { }
 
-  ngOnInit() {
-    if (this.permissionsService.getPermission('home/module/indent') &&
-    this.permissionsService.getPermission('home/indent-management/special-ifs')) {
-        this.permissionsList = this.localServ.getUserPermissions();
-        if (this.permissionsList && this.permissionsList.length && this.verifyPermsission('home/indent-management/special-ifs')) {
-          this.hasAddIfsPer = this.verifyPermsission('home/indent-management/special-ifs').isAdd === 1 ? true : false;
-        }
-    } else {
-      this.router.navigateByUrl('home/indent-management');
-    }
-  }
-  sampleFormWindow(): void {
-    const config: MatDialogConfig = {
-      height: '200px',
-      width: '1100px'
-    };
-    this.dialog.open(IfsComponent, config);
+              // ngOnInit() {
+              //   if ((this.permissionsService.getPermission('home/module/indent') &&
+              //   this.permissionsService.getPermission('home/indent-management/special-ifs'))) {
+              //     this.router.navigateByUrl('home/indent-management');
+              //   }
+              // }
+ngOnInit(){
+
+}
+  // ngOnInit() {
+  //   if (this.permissionsService.getPermission('home/module/indent') &&
+  //   this.permissionsService.getPermission('home/indent-management/special-ifs')) { 
+       
+    
+  //       // this.permissionsList = this.localServ.getUserPermissions();
+  //       // if (this.permissionsList && this.permissionsList.length && this.verifyPermsission('home/indent-management/special-ifs')) {
+  //       //   this.hasAddIfsPer = this.verifyPermsission('home/indent-management/special-ifs').isAdd === 1 ? true : false;
+  //       // }
+  //   } else {
+  //     this.router.navigateByUrl('home/indent-management');
+  //   }
+  // }
+   sampleFormWindow(){ //void {
+  //   const config: MatDialogConfig = {
+  //     height: '400px',
+  //     width: '1000px'
+  //   };
+    this.dialog.open(IfsComponent);
   }
   verifyPermsission(key: string): any {
-    if (this.permissionsService.hasPermission(key)) {
+    if(this.permissionsService.hasPermission(key)) {
      return this.permissionsList.find(per => per.path === key);
    }
     return null;

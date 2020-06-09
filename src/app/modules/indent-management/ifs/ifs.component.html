@@ -1,44 +1,175 @@
-<h1>Indent for Supply Information</h1>
+<div class="animated fadeIn">
+    <!--/.row-->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <!-- Large modal -->
+          <div class="card-body">
+           
+  
+            <div class="modal-body mobile-padding">
+  
+              <div class="col-sm-12 mobile-padding">
+                <div class="card">
+                  <div class="card-header" style="background-color: rgb(205, 227, 240);">
+                    <strong>Adding Special Indent   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <th>SelectDepotName</th>
+                        <td> <select class="form-control" [(ngModel)]="indentModel.depotName" name="depotName">
+                            <option value="0">Select</option>
+                            <option *ngFor="let item of depotNames" [value]="item">{{item}}</option>
+                          </select></td> </strong>
+                   
+                  </div>
+                   <!-- <form name="form" (ngSubmit)="f.form.valid && saveSpecialIndent()" #f="ngForm" nphonephonneovalidate>  -->
+                    <div style="overflow: auto;">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                           
+                           
+                            <th>Product Code</th>
+                            <th>BrandName</th>
+                            <th>Size</th>
+                            <th> QuantityInCases</th>
+                            <th>RatePerCase</th>
+                            <th>TotalAmount</th>
+                            
+                            <th>Add</th>
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of indentModel.iFSProducts;let i=index" >
+              
+                           
+                          
+                               <!-- <td> <select class="form-control" [(ngModel)]="item.description" (change)="onProductChange()">
+                                <option value="0"> Product Name</option>
+                                <option *ngFor="let item of products">{{item.productName}}</option>
+                              </select></td>    -->
+               
+                             <!-- <td><input type="text" [(ngModel)]="item.description" class="form-control" /></td>  -->
+                            <td><input type="text" class="form-control" [(ngModel)]="item.productCode" name="productCode" #productCode="ngModel" id="productCode" required minlength="4" placeholder="Enter ProductCode">
+                              <!-- <div *ngIf="productCode.errors.required">
+                                ProductCode is required.
+                            </div> <div *ngIf="productCode.errors.minlength">
+                              ProductCode must be at least 4 characters long.
+                         </div></td> -->
+                            <td><input type="text" class="form-control" [(ngModel)]="item.brandName" name="brandName" #brandName="ngModel" id="brandName" required placeholder="Enter BrandName"></td>
+                            <td><input type="number" class="form-control" [(ngModel)]="item.size" id="size" name="size" #fax="ngModel" required placeholder="Enter Size"></td>
+                            <td> <input type="number" class="form-control" [(ngModel)]="item.qtyInCases" name="qtyInCases" #qtyInCases="ngModel"
+                              id="QtyInCases" required placeholder="Enter QtyInCases"></td>
+                                <td> <input type="number" class="form-control" [(ngModel)]="item.ratePerCases" name="ratePerCases" #ratePerCases="ngModel"
+                                  id="ratePerCases" required placeholder="Enter RatePerCases"></td>
+                            <td><input type="number" class="form-control" [(ngModel)]="item.totalAmount" name="totalAmount" #totalAmount="ngModel" id="totalAmount" required placeholder="Enter TotalAmount"></td>
+                            <!-- <td><input type="number" [(ngModel)]="item.shipmentQty" class="form-control" /></td>
+                            <td><input type="number" [(ngModel)]="item.balanceQty"
+                               class="form-control" /></td>
+                                -->
+                            <td><button type="button" class="btn btn-success" (click)="addProduct(i)"><i class="fa fa-plus"
+                                  aria-hidden="true"></i></button>
+                              <button type="button" class="btn btn-danger" (click)="deleteProduct(i)"
+                                *ngIf="indentModel.iFSProducts.length>1"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-sm-12 text-center">
+                        <button type="button" (click)="saveIfs()" tooltil="save button" class="btn btn-primary">Save</button>
+                       &nbsp;&nbsp;
+                        <button type="button" (click)="back()"  tooltip="Back button" class="btn btn-danger">Back</button>
+                      </div>
+                    </div>
 
 
+                    <!-- <div class="card-body">
+                      <div class="row">
+                        <div class="form-group col-md-4">
+                          <label>Select DepotName:</label>
+                          <select class="form-control" [(ngModel)]="indentModel.depotName" name="depotName">
+                            <option value="0">Select</option>
+                            <option *ngFor="let item of depotNames" [value]="item">{{item}}</option>
+                          </select>
+                        </div>&nbsp;&nbsp;
+                        <div class="form-group col-sm-6">
+                          <label for="productCode">ProductCode</label>
+                          <input type="text" class="form-control" [(ngModel)]="indentModel.productCode" name="productCode" #productCode="ngModel" id="productCode" required minlength="4" placeholder="Enter ProductCode">
+                        </div>
+                        <div *ngIf="productCode.invalid && (productCode.dirty || productCode.touched)" class="alert alert-danger">
 
-<div>
-    
-    <label for="" style="margin-left: 500px;">
-        To Depot* :
-        <input type="text">
-    </label>
-    <br>
-</div>
-<div>
-    <table>
-        <tr>
-            <th><input type="checkbox"></th>
-            <th>Product Code</th>
-            <th>Brand Name</th>
-            <th>Size (in ml)</th>
-            <th>Quantity (in cases) </th>
-            <th>Rate in Rs Per case F.O.R destination </th>
-            <th>Value(RS)  </th>
-            
+                        <div *ngIf="productCode.errors.required">
+                            ProductCode is required.
+                        </div>
+                       <div *ngIf="productCode.errors.minlength">
+                            ProductCode must be at least 4 characters long.
+                       </div>
+  
+                     </div>
+                      </div>
+  
+                      <div class="row">
+                        <div class="form-group col-sm-6">
+                          <label for="brandName">BrandName</label>
+                          <input type="text" class="form-control" [(ngModel)]="indentModel.brandName" name="brandName" #brandName="ngModel" id="brandName" required placeholder="Enter BrandName">
+                        </div>
+                        <div *ngIf="brandName.invalid && (brandName.dirty || brandName.touched)" class="alert alert-danger">
 
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text" style="width: 100%;"></td>
-            <td><input type="text"></td>
-            
-        </tr>
-    </table>
-</div>
-<br>
-<div>
-    <button>New Row</button>
-    <button>Remove Row</button>
-    <button mat-dialog-close style="margin-left: 45rem;"  (click)="save()">Save</button>
-    <button mat-dialog-close>Cancel</button>
-</div>
+                            <div *ngIf="brandName.errors.required">
+                                BrandName is required.
+                            </div>
+                           <div *ngIf="brandName.errors.minlength">
+                               BrandName must be at least 4 characters long.
+                           </div>
+                         </div>
+                        <div class="form-group col-sm-6">
+                          <label for="size">Size</label>
+                          <input type="number" class="form-control" [(ngModel)]="indentModel.size" id="size" name="size" #fax="ngModel" required placeholder="Enter Size">
+                        </div>
+                      </div>
+  
+                      <div class="row">
+                        <div class="form-group col-sm-6">
+                          <label for="QtyInCases">QtyInCases</label>
+                          <input type="number" class="form-control" [(ngModel)]="indentModel.qtyInCases" name="qtyInCases" #qtyInCases="ngModel"
+                                 id="QtyInCases" required placeholder="Enter QtyInCases">
+                        </div>
+                        <div class="form-group col-sm-6">
+                          <label for="ratePerCases">RatePerCases</label>
+                          <input type="number" class="form-control" [(ngModel)]="indentModel.ratePerCases" name="ratePerCases" #ratePerCases="ngModel"
+                                 id="ratePerCases" required placeholder="Enter RatePerCases">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="totalAmount">TotalAmount</label>
+                            <input type="number" class="form-control" [(ngModel)]="indentModel.totalAmount" name="totalAmount" #totalAmount="ngModel" id="totalAmount" required placeholder="Enter TotalAmount">
+                          </div>
+                      </div>
+  
+  
+                      
+  
+  
+                      <div class="row">
+                        <div class="form-group col-sm-12 text-center">
+                          <button tooltip="Save SpecialIndent"  class="btn btn-primary">Save</button>
+                         &nbsp;&nbsp;
+                          <button type="button" (click)="back()"  tooltip="Back button" class="btn btn-danger">Back</button>
+                        </div>
+                      </div>
+                    </div>
+   -->
+  
+                  <!-- </form>  -->
+                </div>
+              </div>
+              <!--/.col-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
+    <p style="color: white">Please Wait. </p>  
+    </ngx-spinner>

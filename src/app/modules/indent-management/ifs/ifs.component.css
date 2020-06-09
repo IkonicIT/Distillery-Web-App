@@ -1,25 +1,6 @@
-h1{
-    background: #2e5d74;
-    color: white;
-    text-align: center;
-    font-size: x-large;
+.btn-primary{
+    background-color: rgb(48,99,146);;
 }
-
-div{
-    font-size: smaller;
-}
-label{
-    font-weight: 400;
-}
-button{
-    background-color: #2e5d74;
-    color: white;
-}
-table{
-    border: 1px solid ;
-    border-color: black;
-}
-td,th{
-    border-right: 1px solid;
-    border-right-color: black;
+.btn-danger{
+    background-color: rgb(242,181,27);
 }

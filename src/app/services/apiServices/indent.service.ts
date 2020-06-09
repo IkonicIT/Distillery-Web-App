@@ -50,6 +50,17 @@ export class IndentService {
     return this._http.post<any>(url,requestBody)
       .pipe(catchError(this._http.handleHttpError));
   }
+  SaveIfs(postBody){
+    const url = 'ifs/saveIndentTypes';
+    const requestBody = {
+     requestData: postBody
+   }; 
+   /*  const requestBody = {
+     requestData: postBody
+   }; */
+   return this._http.post<any>(url,requestBody)
+     .pipe(catchError(this._http.handleHttpError));
+  }
   getALLIFS() {
     const url = 'ifs/getAllIFS';
     return this._http.get<any>(url)
