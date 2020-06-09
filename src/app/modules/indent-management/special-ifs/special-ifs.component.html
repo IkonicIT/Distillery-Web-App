@@ -5,9 +5,9 @@
             <p></p>
             <form class="form-inline" >
                 <label for="date">Start Date :</label>
-                <input type="date" class="form-control" placeholder="" id="email">&nbsp;
+                <input type="date" class="form-control" placeholder="" id="email">&nbsp;&nbsp;&nbsp;&nbsp;
                 <label for="pwd">End Date:</label>
-                <input type="date" class="form-control" placeholder="" id="pwd">&nbsp;
+                <input type="date" class="form-control" placeholder="" id="pwd">&nbsp;&nbsp;&nbsp;&nbsp;
                &nbsp;
                 <i class="fa fa-search" aria-hidden="true" ></i>
               
@@ -25,7 +25,7 @@
                         <option>10</option>
                         <option>10</option>
                     </select>
-                    <p *ngIf="!hasAddIfsPer"> <img src="https://img.icons8.com/flat_round/20/000000/plus.png" style="cursor: pointer;" (click)="sampleFormWindow()"> IFS </p>
+                   
                     <input type="text" class=" dd search-query form-control" placeholder="Search" />
                     <span class="input-group-btn">
                         <button class="btn btn-danger" type="button">
@@ -54,9 +54,14 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>No data avalible</td>
-                
+              <tr *ngFor="let indent of indents">
+                <td>{{indent.consignmentType}}</td>
+               
+                <td>{{indent.ifsNo}}</td>
+                <td>{{indent.depotId}}</td>
+                <td>{{indent.creationDate}}</td>
+                <td>{{indent.indentDate}}</td>
+                <td>{{indent.status}}</td>
                
               </tr>
              
@@ -65,10 +70,10 @@
           </table>
     </div>
       <div class="col-12">
-        <p *ngIf="!hasAddIfsPer"> <img src="https://img.icons8.com/flat_round/20/000000/plus.png" style="cursor: pointer;" (click)="sampleFormWindow()"> IFS </p>
+        <p *ngIf="!hasAddIfsPer"> <img src="https://img.icons8.com/flat_round/20/000000/plus.png" style="cursor: pointer;" (click)="sampleFormWindow()">Add IFS </p>
         
-      <span class="but">  <button type="button" class="btn btn-info">Pervious</button>&nbsp;
-        <button type="button" class="btn btn-info">Next</button></span>
+      <span class="but">  <button type="button" style="background-color:  rgb(48,99,146);" class="btn btn-info">Pervious</button>&nbsp;
+        <button type="button" style="background-color: rgb(241,181,27);" class="btn btn-info">Next</button></span>
         
         
     </div>

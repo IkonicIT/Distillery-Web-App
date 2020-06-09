@@ -66,6 +66,11 @@ export class IndentService {
     return this._http.get<any>(url)
       .pipe(catchError(this._http.handleHttpError));
   }
+  fetchAllIFS (){
+    const url = 'ifs/fetchAllIFS';
+    return this._http.get<any>(url)
+      .pipe(catchError(this._http.handleHttpError));
+  }
   getifsdetails(indentId) {
     const url = 'ifs/getIfsDetails?indentNo=';
     return this._http.get<any>(url + indentId)

@@ -73,6 +73,7 @@ deleteProduct(index: number) {
 getDistilleryNames(){
   this.indentService.getDistilleryNames().subscribe(response => {
     this.distilleryList =response;
+    console.log('distlerrtlist is:' + this.distilleryList[0]);
     this.distilleryList.forEach(dis => {
     this.distilleryNames.push(dis.name.toUpperCase());    
     });

@@ -27,6 +27,11 @@ export class IfsComponent implements OnInit {
     this.getDistilleryNames();
     this.IfsOnLoad();
   }
+  back()
+  {
+    this.transport.closeAll();
+  }
+  
 IfsOnLoad(){
   this.indentModel={
     iFSProducts:[

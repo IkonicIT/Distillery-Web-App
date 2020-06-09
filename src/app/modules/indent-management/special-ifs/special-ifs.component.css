@@ -1,4 +1,4 @@
-.bac{background-color: rgb(45, 79, 107);height: auto;}
+.bac{background-color: rgb(157, 202, 229);height: auto;}
 .form-control{height: 30px;}
 label{color: white;}
 
@@ -43,7 +43,7 @@ label{color: white;}
     z-index: 3;   
 }
 .dd{margin-left: 750px;}
-th{background-color: #2bc0c7;color: white;font-size: 10px;}
+th{background-color: rgb(157, 202, 229);color: black;font-size: 10px;}
 .but{float: right;}
 .btn-info{background-color:rgb(45, 79, 107) ;}
 .fa-plus-circle{color:rgb(45, 79, 107) }
