@@ -6,7 +6,7 @@ mat-sidenav, mat-sidenav-content{
 }
 
 mat-sidenav{
-    background-color:skyblue;
+    background-color:rgb(217,235,245);
     width: 200px;
 }
 li{

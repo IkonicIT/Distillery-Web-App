@@ -1,6 +1,14 @@
 h1{
     text-align: center;
-    background: #2bc0c7;;
-    color: white;
+    background: rgb(217,235,245);
+    color: black;
     font-family: serif;
+}
+.btn-primary{
+    background-color: rgb(48,99,146);
+    color: white;
+}
+.btn-secondary{
+    background-color: rgb(241,181,27);
+    color:white;
 }
