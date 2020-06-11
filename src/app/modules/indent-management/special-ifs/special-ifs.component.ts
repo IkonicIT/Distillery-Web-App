@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import { NgxPermissionsService } from 'ngx-permissions';
 import { State } from 'src/app/store';
 import { Subscription } from 'rxjs';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 import { LocalStoreService } from 'src/app/services/common/local-store.service';
 import { IndentService } from '../../../services/apiServices/indent.service';
 import { DatePipe } from '@angular/common';
@@ -18,11 +18,19 @@ export class SpecialIfsComponent implements OnInit {
   subscriptions: Subscription[] = [];
   permissionsList: any[] = [];
   indents:any;
+  ifs:any;
   createdate:any;
   hasAddIfsPer = false;
-  constructor(private dialog: MatDialog, private status: MatDialog,
+  constructor(private dialog: MatDialog, private status: MatDialog,private route:ActivatedRoute,
               private store: Store<State>, private permissionsService: NgxPermissionsService,private indentService: IndentService,private datepipe:DatePipe,
-              private router: Router, private localServ: LocalStoreService) { }
+              private router: Router, private localServ: LocalStoreService) {
+
+                this.ifs = route.snapshot.params['ifsNo'];
+
+      // this.indentNo = route.snapshot.params['id'];  
+        console.log('ifsno is'+ this.ifs);
+       
+               }
 
               // ngOnInit() {
               //   if ((this.permissionsService.getPermission('home/module/indent') &&
@@ -34,7 +42,7 @@ ngOnInit(){
  this.fetchIFS();
 }
 fetchIFS(){
-  this.createdate=this.datepipe.transform(this.createdate, 'yyyy-MM-dd hh:mm:ss');
+  this.createdate= this.datepipe.transform(this.createdate, 'yyyy-MM-dd hh:mm:ss');
   //this.spinner.show();
   this.indentService.fetchAllIFS().subscribe(response => {
    // this.spinner.hide();

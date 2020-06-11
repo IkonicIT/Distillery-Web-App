@@ -1,5 +1,5 @@
 <div class="content-wrapper">
-  <section class="content-header" style="background-color: rgb(217, 235, 245);">
+  <section class="content-header" style="background-color: rgb(174, 213, 235);">
     <div class="header-icon">
       <i class="fa fa-tachometer"></i>
     </div>
@@ -11,7 +11,7 @@
   <section class="content">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2" *ngFor="let item of sideNavData?.featuresData">
-        <div id="cardbox1">
+        <div id="cardbox1" style="background-color: rgb(174, 213, 235);  color: #2e5d74;">
           <div class="statistic-box">
               <div class="row">
                 <div class="col-12">
@@ -19,7 +19,7 @@
                   <div class="counter-number pull-right">
                     <i title="Add to Favorite" class="fa fa-heart fa-1x float-right" [ngClass]="{'dark-favourite': item.isFav}"(click)="addFav($event, item.key)"></i>
                   </div>
-                  <a (click)="navigate(item)"><h3>{{item.title}}</h3></a>
+                  <a (click)="navigate(item)"><h3 style="color: #2e5d74;">{{item.title}}</h3></a>
                 </div>
               </div>
             

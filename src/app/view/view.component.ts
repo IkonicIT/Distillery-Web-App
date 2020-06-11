@@ -27,7 +27,7 @@ export class ViewComponent implements OnInit {
   ngOnInit() {
     
     this._indentService.getifsdetails(this.indentNo).subscribe(response => {
-      this.model = response.responseData;
+      this.model = response.responseData[0];
       console.log('response is'+ this.model );
       this.getAllSpecialIFS();
    })
