@@ -290,6 +290,8 @@ import { FiledErrorComponent } from './common/filed-error/filed-error.component'
 import { SubMenuDirective } from './services/sub-menu.directive';
 import { DialogComponent } from './dialog/dialog.component';
 import { ViewComponent } from './view/view.component';
+import { SpecialIfsViewComponent } from './special-ifs-view/special-ifs-view.component';
+import { SpecialIfsEditComponent } from './special-ifs-edit/special-ifs-edit.component';
 
 
 const appRoutes: Routes = [
@@ -457,6 +459,8 @@ const appRoutes: Routes = [
 
       { path: 'indent-management/upload-cards', component:UploadCardsComponent },
       { path: 'indent-management/special-ifs', component:SpecialIfsComponent },
+      { path: 'indent-management/special-ifs-view/:ifsNo', component:SpecialIfsViewComponent },
+      { path: 'indent-management/special-ifs-edit/:ifsNo', component:SpecialIfsEditComponent },
       { path: 'breakages', component: BreakagesComponent },
       { path: 'breakages/brakages-depot', component: BreakagesDepotComponent },
       { path: 'breakages/shortage', component: ShortagesComponent },
@@ -772,7 +776,9 @@ const appRoutes: Routes = [
     FiledErrorComponent,
     SubMenuDirective,
     DialogComponent,
-    ViewComponent
+    ViewComponent,
+    SpecialIfsViewComponent,
+    SpecialIfsEditComponent
   ],
   imports: [
     BrowserModule,

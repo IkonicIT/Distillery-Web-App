@@ -71,11 +71,22 @@ export class IndentService {
     return this._http.get<any>(url)
       .pipe(catchError(this._http.handleHttpError));
   }
+  fetchByIfs(ifsNo){
+    const url = 'ifs/fetchIFSByIFSNO?ifsNo=';
+    return this._http.get<any>(url + ifsNo)
+      .pipe(catchError(this._http.handleHttpError));
+  }
   getifsdetails(indentId) {
     const url = 'ifs/getIfsDetails?indentNo=';
     return this._http.get<any>(url + indentId)
       .pipe(catchError(this._http.handleHttpError));
   }
+  updateIfs(requestBody) {
+    const url='ifs/updateIFSProduct';
+   
+    return this._http.put<any>(url,requestBody)
+      .pipe(catchError(this._http.handleHttpError));
+}
   getDepotDts(): Observable<any> {
     return this._http.get<any>('imgt/fetchDepotDts').pipe(catchError(this._http.handleHttpError));
   }
