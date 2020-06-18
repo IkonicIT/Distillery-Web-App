@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { IfsComponent } from '../ifs/ifs.component';
 import { Store } from '@ngrx/store';
 import { NgxPermissionsService } from 'ngx-permissions';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+
 import { State } from 'src/app/store';
 import { Subscription } from 'rxjs';
 import { Router,ActivatedRoute } from '@angular/router';
@@ -19,9 +21,11 @@ export class SpecialIfsComponent implements OnInit {
   permissionsList: any[] = [];
   indents:any;
   ifs:any;
+  index:number;
+  modalRef: BsModalRef;
   createdate:any;
   hasAddIfsPer = false;
-  constructor(private dialog: MatDialog, private status: MatDialog,private route:ActivatedRoute,
+  constructor(private dialog: MatDialog, private status: MatDialog,private route:ActivatedRoute, 
               private store: Store<State>, private permissionsService: NgxPermissionsService,private indentService: IndentService,private datepipe:DatePipe,
               private router: Router, private localServ: LocalStoreService) {
 
@@ -77,6 +81,7 @@ fetchIFS(){
   //   };
     this.dialog.open(IfsComponent);
   }
+  
   verifyPermsission(key: string): any {
     if(this.permissionsService.hasPermission(key)) {
      return this.permissionsList.find(per => per.path === key);

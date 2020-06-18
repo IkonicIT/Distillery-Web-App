@@ -292,6 +292,9 @@ import { DialogComponent } from './dialog/dialog.component';
 import { ViewComponent } from './view/view.component';
 import { SpecialIfsViewComponent } from './special-ifs-view/special-ifs-view.component';
 import { SpecialIfsEditComponent } from './special-ifs-edit/special-ifs-edit.component';
+import { SpecialIfsViewPidComponent } from './special-ifs-view-pid/special-ifs-view-pid.component';
+import { SpecialIfsEditPidComponent } from './special-ifs-edit-pid/special-ifs-edit-pid.component';
+import { SpecialIfsDeletePidComponent } from './special-ifs-delete-pid/special-ifs-delete-pid.component';
 
 
 const appRoutes: Routes = [
@@ -461,6 +464,8 @@ const appRoutes: Routes = [
       { path: 'indent-management/special-ifs', component:SpecialIfsComponent },
       { path: 'indent-management/special-ifs-view/:ifsNo', component:SpecialIfsViewComponent },
       { path: 'indent-management/special-ifs-edit/:ifsNo', component:SpecialIfsEditComponent },
+      { path: 'indent-management/special-ifs-view/:ifsNo/special-ifs-edit-pid/:ifsPid', component:SpecialIfsEditPidComponent },
+      { path: 'indent-management/special-ifs-view/:ifsNo/special-ifs-view-pid/:ifsPid', component:SpecialIfsViewPidComponent },
       { path: 'breakages', component: BreakagesComponent },
       { path: 'breakages/brakages-depot', component: BreakagesDepotComponent },
       { path: 'breakages/shortage', component: ShortagesComponent },
@@ -778,7 +783,10 @@ const appRoutes: Routes = [
     DialogComponent,
     ViewComponent,
     SpecialIfsViewComponent,
-    SpecialIfsEditComponent
+    SpecialIfsEditComponent,
+    SpecialIfsViewPidComponent,
+    SpecialIfsEditPidComponent,
+    SpecialIfsDeletePidComponent
   ],
   imports: [
     BrowserModule,
@@ -810,7 +818,7 @@ const appRoutes: Routes = [
     NgxSpinnerModule  
 
   ],
-  entryComponents: [IfsComponent,ExiseRemitanceFormComponent,DialogComponent,
+  entryComponents: [IfsComponent,ExiseRemitanceFormComponent,DialogComponent,SpecialIfsDeletePidComponent,
     ChangePasswordComponent, SpiritBottlingComponent,
     SpiritBlendStockComponent, SpiritUnloadComponent,
     SpiritGenerateReceiptComponent, SpiritRefernceComponent,

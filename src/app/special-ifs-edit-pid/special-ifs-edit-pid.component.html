@@ -9,70 +9,89 @@
               <div class="col-sm-12 mobile-padding">
                 <div class="card">
                   <div class="card-header">
-                      <strong>Viewing IFS Details </strong>
+                      <strong>Edit Product Details </strong>
                       </div>
                   <div class="card-body">
                     <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="ratePerCase">IfsPid</label>
+                            <input type="text" disabled class="form-control" [(ngModel)]="model.ifsPid" name="ifsPid" >
+                              
+                            
+                         
+                           </div> 
+  
                       <div class="form-group col-sm-6">
-                        <label for="indentNo">IFS Number</label>
-                        <!-- <input type="text" [(ngModel)]="model.indentNo" name="_id" #_id="ngModel" id="name" hidden>  -->
-                        <input type="text" readonly class="form-control" [(ngModel)]="indents.ifsNo" name="ifsNo"  >
+
+                        <label for="productCode" >ProductCode</label>
+                        <input type="text" class="form-control" [(ngModel)]="model.productCode" name="productCode"  >
+                      </div>
+                     
+                    </div>
+  
+                    <!-- <div class="row">
+                      <div class="form-group col-sm-6">
+                        <label for="distilleryId">DistilleryId</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="model.distilleryId" name="distilleryId" >
                       </div>
                       <div class="form-group col-sm-6">
-                        <label for="indentNo">DepotId</label>
-                        <!-- <input type="text" [(ngModel)]="model.indentNo" name="_id" #_id="ngModel" id="name" hidden>  -->
-                        <input type="text" readonly class="form-control" [(ngModel)]="indents.depotId" name="ifsNo"  >
+                        <label for="depotId">DepotId</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="model.depotId" id="fax" name="depotId" >
                       </div>
                     </div>
+  
                     <div class="row">
                       <div class="form-group col-sm-6">
-                        <label for="indentNo">DistilleryId</label>
-                        <!-- <input type="text" [(ngModel)]="model.indentNo" name="_id" #_id="ngModel" id="name" hidden>  -->
-                        <input type="text" readonly class="form-control" [(ngModel)]="indents.distilleryId" name="ifsNo"  >
+                        <label for="status">Status</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="model.status" name="status" >
                       </div>
                       <div class="form-group col-sm-6">
-                        <label for="indentNo">IndentDate</label>
-                        <!-- <input type="text" [(ngModel)]="model.indentNo" name="_id" #_id="ngModel" id="name" hidden>  -->
-                        <input type="text" readonly class="form-control" [(ngModel)]="indents.indentDate" name="ifsNo"  >
+                        <label for="indentDate">IndentDate</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="model.indentDate" name="indentDate"  >
                       </div>
                     </div>
-                    <div class="col-md-12">
-                      <table class="table table-bordered">
-                          <thead style="background-color: rgb(157, 202, 229);color: black;">
-                            <tr>
-                              <th>IfsPid</th>
-                              <th>ProductCode</th>
-                              <th>BrandName</th>
-                              <th> Size </th>
-                              <th>QuantityInCases</th>
-                              <th>RatePerCase</th>
-                              <th>TotalAmount</th>
-                              <th>Actions</th>
-                             
-                              
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr  *ngFor="let model of models">
-                              <td>{{model.ifsPid}}</td>
-                              <td>{{model.productCode}}</td>
-                              <td>{{model.brandName}}</td>
-                              <td>{{model.size}}</td>
-                              <td>{{model.qtyInCases}}</td>
-                              <td>{{model.ratePerCase}}</td>
-                              <td>{{model.totalAmount}}</td>
-                              <td> 
-                                <button type="button" style="margin-left: 12px; background-color: rgb(48,99,146);" [routerLink]="['special-ifs-view-pid',model.ifsPid]" tooltip="view Special Ifs" >View</button>
-                                <button type="button" style="margin-left: 12px; background-color: rgb(241,181,27);" [routerLink]="['special-ifs-edit-pid',model.ifsPid]" tooltip="Edit Special IfsPid" >Edit</button>
-                                <button type="button" style="margin-left: 12px;  background-color: red;" tooltip="Delete Special Ifs" (click)="openDialog()">Delete</button>
-                            </td>
-                            </tr>
-                           
-                           
-                          </tbody>
-                        </table>
-                  </div>
+   -->
   
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="brandName">BrandName</label>
+                            <input type="text" class="form-control" [(ngModel)]="model.brandName" name="brandName">
+                          </div>
+                      
+                      <div class="form-group col-sm-6">
+                        <label for="size">Size</label>
+                        <input type="number" class="form-control" [(ngModel)]="model.size" name="size" >
+                      </div>
+                     
+                    </div>
+  
+  
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="qtyInCases">QuantityInCases</label>
+                            <input type="number" class="form-control" [(ngModel)]="model.qtyInCases" name="qtyInCases" 
+                              >
+                          </div>
+                     
+                      <div class="form-group col-sm-6">
+                        <label for="ratePerCase">RatePerCase</label>
+                        <input type="number" class="form-control" [(ngModel)]="model.ratePerCase" name="ratePerCase" >
+                          
+                        
+                     
+                      </div>
+                     
+                    </div>
+  
+                       <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="totalAmount">TotalAmount</label>
+                             <input type="number" class="form-control" [(ngModel)]="model.totalAmount" name="qtyInCases" 
+                             >
+                         </div>
+                         
+   
+                        </div>
   
                     <!-- <div class="row">
                       <div class="form-group col-sm-12">
@@ -122,11 +141,11 @@
   
               
                    
-                  </div>
-                  
+               
+                   
                   <div class="row">
                     <div class="form-group col-sm-12 text-center">
-                      <button type="button" style="background-color: rgb(177, 209, 228);" [routerLink]="['../../edit']" tooltip="Edit this Company" class="btn btn-primary">Edit</button>&nbsp;&nbsp;&nbsp;
+                      <button type="button" style="background-color: rgb(177, 209, 228);" (click)="updateifs()" tooltip="Edit this Company" class="btn btn-primary">Update</button>&nbsp;&nbsp;&nbsp;
                       <button type="button" style="background-color: rgb(241,181,27);" (click)="cancelDetails()" tooltip="Cancel" class="btn btn-primary">Back</button>
                     </div>
                   </div>

@@ -31,6 +31,7 @@ export class IndentService {
     return this._http.post<any>(url, requestBody)
       .pipe(catchError(this._http.handleHttpError));
   }
+  
   createshipmenttransportIndent(postBody) {
     const url = 'shipment/saveTransportPermitRequest';
     const requestBody = {
@@ -69,6 +70,16 @@ export class IndentService {
   fetchAllIFS (){
     const url = 'ifs/fetchAllIFS';
     return this._http.get<any>(url)
+      .pipe(catchError(this._http.handleHttpError));
+  }
+  fetchByPid(ifsPid){
+    const url = 'ifs/fetchPrdctByIfsPid?ifsPid=';
+    return this._http.get<any>(url + ifsPid)
+      .pipe(catchError(this._http.handleHttpError));
+  }
+  deleteproduct(ifsPid){
+    const url='ifs/deleteIFSPrdct?ifsPid=';
+    return this._http.delete<any>(url + ifsPid )
       .pipe(catchError(this._http.handleHttpError));
   }
   fetchByIfs(ifsNo){

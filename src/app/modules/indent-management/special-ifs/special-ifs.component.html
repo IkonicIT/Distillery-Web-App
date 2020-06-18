@@ -65,7 +65,7 @@
                 <td> 
                   <button type="button" style="margin-left: 12px; background-color: rgb(48,99,146);" [routerLink]="['../special-ifs-view',indent.ifsNo]" tooltip="view Special Ifs" >View</button>
                   <button type="button" style="margin-left: 12px; background-color: rgb(241,181,27);" [routerLink]="['../special-ifs-edit',indent.ifsNo]" tooltip="Edit Special Ifs" >Edit</button>
-                  <button type="button" style="margin-left: 12px;  background-color: red;" tooltip="Delete Special Ifs">Delete</button>
+                  <button type="button" style="margin-left: 12px;  background-color: red;" tooltip="Delete Special Ifs" (click)="openModal(confirmtemplate,indent.ifsNo)">Delete</button>
               </td>
               </tr>
              
