@@ -466,6 +466,7 @@ const appRoutes: Routes = [
       { path: 'indent-management/special-ifs-edit/:ifsNo', component:SpecialIfsEditComponent },
       { path: 'indent-management/special-ifs-view/:ifsNo/special-ifs-edit-pid/:ifsPid', component:SpecialIfsEditPidComponent },
       { path: 'indent-management/special-ifs-view/:ifsNo/special-ifs-view-pid/:ifsPid', component:SpecialIfsViewPidComponent },
+      { path: 'indent-management/special-ifs-view/:ifsNo/special-ifs-view-pid/:ifsPid/special-ifs-edit-pid/:ifsPid', component:SpecialIfsEditPidComponent },
       { path: 'breakages', component: BreakagesComponent },
       { path: 'breakages/brakages-depot', component: BreakagesDepotComponent },
       { path: 'breakages/shortage', component: ShortagesComponent },

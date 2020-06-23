@@ -8,7 +8,7 @@
             <div class="modal-body mobile-padding">
               <div class="col-sm-12 mobile-padding">
                 <div class="card">
-                  <div class="card-header">
+                  <div class="card-header" style="background-color: rgb(177, 209, 228);">
                       <strong>Viewing IFS Details </strong>
                       </div>
                   <div class="card-body">
@@ -18,29 +18,39 @@
                         <!-- <input type="text" [(ngModel)]="model.indentNo" name="_id" #_id="ngModel" id="name" hidden>  -->
                         <input type="text" readonly class="form-control" [(ngModel)]="indents.ifsNo" name="ifsNo"  >
                       </div>
+                       <div class="form-group col-sm-6">
+                        <label for="indentNo">ConsignmentType</label>
+                        <!-- <input type="text" [(ngModel)]="model.indentNo" name="_id" #_id="ngModel" id="name" hidden>  -->
+                        <input type="text" readonly class="form-control" [(ngModel)]="indents.consignmentType" name="ifsNo"  >
+                      </div>
+                    </div>
+                      <div class="row">
                       <div class="form-group col-sm-6">
                         <label for="indentNo">DepotId</label>
                         <!-- <input type="text" [(ngModel)]="model.indentNo" name="_id" #_id="ngModel" id="name" hidden>  -->
                         <input type="text" readonly class="form-control" [(ngModel)]="indents.depotId" name="ifsNo"  >
                       </div>
-                    </div>
-                    <div class="row">
+                 
+                    
                       <div class="form-group col-sm-6">
                         <label for="indentNo">DistilleryId</label>
                         <!-- <input type="text" [(ngModel)]="model.indentNo" name="_id" #_id="ngModel" id="name" hidden>  -->
                         <input type="text" readonly class="form-control" [(ngModel)]="indents.distilleryId" name="ifsNo"  >
                       </div>
+                    </div>
+                    <div class="row">
                       <div class="form-group col-sm-6">
                         <label for="indentNo">IndentDate</label>
                         <!-- <input type="text" [(ngModel)]="model.indentNo" name="_id" #_id="ngModel" id="name" hidden>  -->
                         <input type="text" readonly class="form-control" [(ngModel)]="indents.indentDate" name="ifsNo"  >
                       </div>
                     </div>
+                    
                     <div class="col-md-12">
                       <table class="table table-bordered">
                           <thead style="background-color: rgb(157, 202, 229);color: black;">
                             <tr>
-                              <th>IfsPid</th>
+                              <!-- <th>IfsPid</th> -->
                               <th>ProductCode</th>
                               <th>BrandName</th>
                               <th> Size </th>
@@ -54,7 +64,7 @@
                           </thead>
                           <tbody>
                             <tr  *ngFor="let model of models">
-                              <td>{{model.ifsPid}}</td>
+                              <!-- <td>{{model.ifsPid}}</td> -->
                               <td>{{model.productCode}}</td>
                               <td>{{model.brandName}}</td>
                               <td>{{model.size}}</td>

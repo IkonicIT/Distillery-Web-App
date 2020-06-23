@@ -28,6 +28,11 @@ export class SpecialIfsViewPidComponent implements OnInit
         console.log("ifspid are" + this.model);
       })
   }
+  edit()
+  
+  {
+    
+  }
   cancelDetails(){
     this._location.back();
   } 

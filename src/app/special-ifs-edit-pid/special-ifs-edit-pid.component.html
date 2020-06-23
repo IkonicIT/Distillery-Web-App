@@ -8,23 +8,27 @@
             <div class="modal-body mobile-padding">
               <div class="col-sm-12 mobile-padding">
                 <div class="card">
-                  <div class="card-header">
+                  <div class="card-header" style="background-color: rgb(177, 209, 228);">
                       <strong>Edit Product Details </strong>
                       </div>
                   <div class="card-body">
                     <div class="row">
-                        <div class="form-group col-sm-6">
+                        <!-- <div class="form-group col-sm-6">
                             <label for="ratePerCase">IfsPid</label>
                             <input type="text" disabled class="form-control" [(ngModel)]="model.ifsPid" name="ifsPid" >
                               
                             
                          
-                           </div> 
+                           </div>  -->
   
                       <div class="form-group col-sm-6">
 
                         <label for="productCode" >ProductCode</label>
                         <input type="text" class="form-control" [(ngModel)]="model.productCode" name="productCode"  >
+                      </div>
+                      <div class="form-group col-sm-6">
+                        <label for="brandName">BrandName</label>
+                        <input type="text" class="form-control" [(ngModel)]="model.brandName" name="brandName">
                       </div>
                      
                     </div>
@@ -53,25 +57,23 @@
    -->
   
                     <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="brandName">BrandName</label>
-                            <input type="text" class="form-control" [(ngModel)]="model.brandName" name="brandName">
-                          </div>
+                       
                       
                       <div class="form-group col-sm-6">
                         <label for="size">Size</label>
                         <input type="number" class="form-control" [(ngModel)]="model.size" name="size" >
+                      </div>
+                      <div class="form-group col-sm-6">
+                        <label for="qtyInCases">QuantityInCases</label>
+                        <input type="number" class="form-control" [(ngModel)]="model.qtyInCases" name="qtyInCases" 
+                          >
                       </div>
                      
                     </div>
   
   
                     <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="qtyInCases">QuantityInCases</label>
-                            <input type="number" class="form-control" [(ngModel)]="model.qtyInCases" name="qtyInCases" 
-                              >
-                          </div>
+                       
                      
                       <div class="form-group col-sm-6">
                         <label for="ratePerCase">RatePerCase</label>
@@ -80,18 +82,15 @@
                         
                      
                       </div>
+                      <div class="form-group col-sm-6">
+                        <label for="totalAmount">TotalAmount</label>
+                         <input type="number" class="form-control" [(ngModel)]="model.totalAmount" name="qtyInCases" 
+                         >
+                     </div>
                      
                     </div>
   
-                       <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="totalAmount">TotalAmount</label>
-                             <input type="number" class="form-control" [(ngModel)]="model.totalAmount" name="qtyInCases" 
-                             >
-                         </div>
-                         
-   
-                        </div>
+                      
   
                     <!-- <div class="row">
                       <div class="form-group col-sm-12">
