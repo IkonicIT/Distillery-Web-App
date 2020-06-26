@@ -446,7 +446,7 @@ const appRoutes: Routes = [
       { path: 'bcl-outlets/outlet-returns', component: OutletRetunsComponent },
       { path: 'bcl-outlets/outlet-sales', component: OutletSalesComponent },
       { path: 'bcl-outlets/outlet-status', component: OutletStatusComponent },
-      // Indent Management
+      // Indent Managment
       { path: 'indent-management', component:IndentManagementHomeComponent },
       { path: 'indent-management/aged-challans', component:AgedChallansComponent },
       { path: 'indent-management/cancelled-idc', component:CancelledIdcComponent},
