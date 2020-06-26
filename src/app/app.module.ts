@@ -295,6 +295,10 @@ import { SpecialIfsEditComponent } from './special-ifs-edit/special-ifs-edit.com
 import { SpecialIfsViewPidComponent } from './special-ifs-view-pid/special-ifs-view-pid.component';
 import { SpecialIfsEditPidComponent } from './special-ifs-edit-pid/special-ifs-edit-pid.component';
 import { SpecialIfsDeletePidComponent } from './special-ifs-delete-pid/special-ifs-delete-pid.component';
+import { filter } from 'rxjs/operators';
+import { NoComponent } from './no/no.component';
+import { IndentManagementComponent } from './modules/indent-management/indent-management.component';
+import { FilterPipe } from './services/apiServices/filter.pipe';
 
 
 const appRoutes: Routes = [
@@ -516,6 +520,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
+    
     LandingComponent,
     HomeComponent,
     IndentComponent,
@@ -546,6 +551,7 @@ const appRoutes: Routes = [
     TransactionComponent,
     SupplierPaymentComponent,
     DateFilterPipe,
+    FilterPipe,
     ManageUsersComponent,
     SpiritHomeComponent,
     SpiritProcurementComponent,
@@ -683,6 +689,8 @@ const appRoutes: Routes = [
     DepotLocalSupplierComponent,
     ImportHomeComponent,
     ImportShipmentComponent,
+    IndentManagementComponent,
+    NoComponent,
     ProductsProductsComponent,
     ProductsBrandComponent,
     ProductsItemcodeMappingComponent,
@@ -810,6 +818,8 @@ const appRoutes: Routes = [
     OwlNativeDateTimeModule,
     MatDatepickerModule, MatInputModule, MatNativeDateModule,
     FormsModule,
+    
+    
     NgSelectModule,
     MatTableModule,
     MatPaginatorModule,
