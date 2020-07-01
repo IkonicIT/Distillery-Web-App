@@ -26,6 +26,8 @@ export class AddSpecialIndentComponent implements OnInit {
     this.getDepoNames();
     this.getDistilleryNames();
     this.SpecialIndentOnLoad();
+  }back(){
+    
   }
 SpecialIndentOnLoad(){
   this.indentModel={

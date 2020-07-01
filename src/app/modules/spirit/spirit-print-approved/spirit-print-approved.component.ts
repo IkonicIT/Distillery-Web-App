@@ -40,6 +40,9 @@ export class SpiritPrintApprovedComponent implements OnInit {
     }
     this.dialog.open(SpiritBottlingComponent,config);
   }
+  validateDate(){
+
+  };
 
 }
 

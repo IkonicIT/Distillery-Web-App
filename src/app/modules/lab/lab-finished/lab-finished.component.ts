@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./lab-finished.component.css']
 })
 export class LabFinishedComponent implements OnInit {
+  pager:any;
+  var:any;
   constructor(private permServ: NgxPermissionsService, private router: Router) { }
 
   ngOnInit() {
@@ -15,5 +17,12 @@ export class LabFinishedComponent implements OnInit {
       this.router.navigateByUrl('home/lab');
     }
   }
+  validateDate(){
 
+  };
+  setPage(_id) {
+    
+  
+
+  };
 }

@@ -11,5 +11,7 @@ export class ManualProductionLineInformatonComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  preview(){
+    
+  }
 }

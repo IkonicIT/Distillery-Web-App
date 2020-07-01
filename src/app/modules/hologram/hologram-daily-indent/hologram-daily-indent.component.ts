@@ -14,6 +14,9 @@ import { LocalStoreService } from 'src/app/services/common/local-store.service';
 export class HologramDailyIndentComponent implements OnInit {
   isAddPermission = false;
   permissionList = [];
+  pager:any;
+  labSampleListForm:any;
+  searchParam:any;
   constructor(private dailyIndentDialog: MatDialog, private checkInventoryDialog: MatDialog,
               private permServ: NgxPermissionsService, private router: Router, private localStore: LocalStoreService) { }
 
@@ -25,7 +28,18 @@ export class HologramDailyIndentComponent implements OnInit {
           const tempPerm = this.permissionList.find(per => per.path === 'home/hologram/indent-daily');
           this.isAddPermission = tempPerm ? tempPerm.isAdd === 1 ? true : false : false;
       }
-    }
+    }setPage(_id){
+
+    };
+    indentFormEvent(){
+
+    };
+    searchRecords(){
+
+    };
+    validateDate(){
+
+    };
   dailyIndent() {
     const config: MatDialogConfig = {
       height: '200px',

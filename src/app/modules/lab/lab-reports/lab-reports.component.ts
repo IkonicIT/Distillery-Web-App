@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./lab-reports.component.css']
 })
 export class LabReportsComponent implements OnInit {
+  labSampleListForm:any;
+  searchParam:any;
+  pager:any;
 
   constructor(private permServ: NgxPermissionsService, private router: Router) { }
 
@@ -15,6 +18,16 @@ export class LabReportsComponent implements OnInit {
     if (!(this.permServ.getPermission('home/lab') && this.permServ.getPermission('home/lab/reports'))) {
       this.router.navigateByUrl('home/lab');
     }
+    
   }
+  validateDate(){
+      
+  };
+  searchRecords(){
+
+  };
+  setPage(_id){
+
+  };
 
 }

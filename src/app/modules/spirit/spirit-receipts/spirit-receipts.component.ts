@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./spirit-receipts.component.css']
 })
 export class SpiritReceiptsComponent implements OnInit {
+  isAddPerm:any;
 
   constructor(private permServ: NgxPermissionsService, private router: Router) { }
 
@@ -16,5 +17,10 @@ export class SpiritReceiptsComponent implements OnInit {
       this.router.navigateByUrl('home/spirit');
     }
   }
+  sampleFormWindow(){
 
+  };
+  validateDate(){
+    
+  };
 }

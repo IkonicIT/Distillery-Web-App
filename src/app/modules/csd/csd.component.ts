@@ -22,6 +22,8 @@ export class CsdComponent implements OnInit {
       width:'2000px'
     }
     this.dialog.open(CsdReportComponent,config);
+  }indentFormWindow(){
+    
   }
 
   csdFormWindow(){

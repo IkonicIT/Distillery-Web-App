@@ -32,4 +32,10 @@ export class ManulaProductionComponent implements OnInit {
   upload() {
     this.uploadSpoolDialog.open(ManualProductionUploadSpoolComponent);
   }
+  editQuantity(){
+
+  }
+  editBatch(){
+    
+  }
 }

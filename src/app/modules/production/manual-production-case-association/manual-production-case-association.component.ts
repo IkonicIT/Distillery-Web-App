@@ -16,4 +16,7 @@ export class ManualProductionCaseAssociationComponent implements OnInit {
   previewCase(){
     this.previewCaseDialog.open(ManualProductionCaseAssociationPreviewComponent);
   }
+  spool(){
+    
+  }
 }

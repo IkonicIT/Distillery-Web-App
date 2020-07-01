@@ -118,5 +118,8 @@ changeRecPerPage(event: any): void {
   this.recordsPerPage = Number(event);
   this.setPage(1);
 }
+validateDate(){
+
+};
   }
 

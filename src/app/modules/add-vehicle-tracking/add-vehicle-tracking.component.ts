@@ -11,6 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 export class AddVehicleTrackingComponent implements OnInit {
   vehicleTrackForm: FormGroup;
   destinationList = [];
+  length:any;
   constructor(private fb: FormBuilder, private vehicleServ: AddVehicleService,
               private toasterService: ToastrService) { }
 

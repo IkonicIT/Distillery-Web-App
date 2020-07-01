@@ -68,9 +68,9 @@
                       <div class="form-group col-sm-6">
                         <label for="ratePerCase">RatePerCase</label>
                         <select disabled class="form-control" [(ngModel)]="model.ratePerCase" name="ratePerCase" >
-                          <option value="">Choose..</option>
+                          <!-- <option value="">Choose..</option>
                           <option [ngValue]="stat.statusid" *ngFor="let stat of statuses">{{stat.status}}
-                          </option>
+                          </option> -->
                         </select>
                       </div>
                     </div>
@@ -100,7 +100,7 @@
                       <div class="form-group col-sm-12">
                         <label for="desc"> Company Logo:</label>
                         <label for="desc">{{model.companyfilename}}</label>
-                        <!-- <input type="text" readonly class="form-control" [(ngModel)]="model.companyfilename" id="desc" name="companyfilename"
+                         <input type="text" readonly class="form-control" [(ngModel)]="model.companyfilename" id="desc" name="companyfilename"
                           #companyfilename="ngModel"> -->
                       <!-- </div>
                     </div> -->

@@ -60,9 +60,9 @@
                                             class="fa fa-plus" aria-hidden="true"></i></button>
 
                                     <button style="margin-left: 10px;" type="button" class="btn btn-danger"
-                                        *ngIf="vehicleTrackForm.controls.routeName.length > 1" (click)="removeRow(i)"><i
+                                        (click)="removeRow(i)"><i
                                             class="fa fa-trash-o" aria-hidden="true"></i></button>
-
+                                            <!-- *ngIf="vehicleTrackForm.controls.routeName.length > 1" -->
                                 </div>
                             </div>
                         </ng-container>
@@ -75,7 +75,7 @@
                     <table >
                         <thead>
                             <tr>
-                                <!-- <th>Path</th>
+                                 <th>Path</th>
                                 <th>view</th>
                                 <th>Delete</th>
                                 <th>Add</th>
@@ -89,7 +89,7 @@
                                 <td>
                                     <label for="" style="margin-left: 21rem;">Route
                                     <input type="text" class="form-control" style="margin-left: 5.8rem;margin-top: 5px;"/></label> </td>
-                                <!-- <td><input type="checkbox" [checked]="item.isView==1" (change)="item.isView=(item.isView==1?0:1)"/></td>
+                                 <td><input type="checkbox" [checked]="item.isView==1" (change)="item.isView=(item.isView==1?0:1)"/></td>
                                 <td><input type="checkbox" [checked]="item.isDelete==1" (change)="item.isDelete=(item.isDelete==1?0:1)"/></td>
                                 <td><input type="checkbox" [checked]="item.isAdd==1" (change)="item.isAdd=(item.isAdd==1?0:1)"/></td>
                                 <td><input type="checkbox" [checked]="item.isEdit==1" (change)="item.isEdit=(item.isEdit==1?0:1)"/></td> -->
